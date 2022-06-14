@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Django stuff:
+*.log
+
+# Jupyter otebookN
+.ipynb_checkpoints
+
+# Environments
+.env
+
+# GCP Key
+towebsite/sinyi-eco-data-towebsite.json
+
+# DB
+db.sqlite3
+
+# MAC
+**/.DS_Store

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}轉型辦公室網站-轉型專欄{% endblock %}
+
+    {% block content %}
+    <section class="main-article">
+        <div class="container">
+
+            <img src="{% static 'images/circle.svg' %}" class="ca-1">
+            <div class="row justify-content-center page-title">
+
+                <h1>轉型專欄</h1>
+            </div>
+            <div class="row hot">
+                <!--------------------------------------編輯主要文章-------------------------------->
+                {% comment %} <div class="col-lg main-photo">
+                    <img src="{% static 'images/article/2021/interview/1001-cover.png' %}">
+                </div>
+                <div class="col-lg main-des">
+                    <div>
+                        <p>2021-10-01</p>
+                        <h2>開啟未來美好新生活</h2>
+                        <p class="article-des">
+                            十月開始推出信義會員制，將逐步從購售屋的過程延伸到成交代書流程再到交屋後的社區生活、居家服務，提供安心、貼心、專業、便利的數位化服務平台給客戶，讓第一線同仁有更多的資源可以來經營客戶...</p>
+                        <a class="w-link" href="interview1001.html">詳細閱讀</a>
+                    </div>
+                </div> {% endcomment %}
+                <div class="col-lg main-photo">
+                    <img src="{{ latest_article.article_image.url }}">
+                </div>
+                <div class="col-lg main-des">
+                    <div>
+                        <p>{{ latest_article.datetime }}</p>
+                        <h2>{{ latest_article.title }}</h2>
+                        <p class="article-des">
+                            {{ latest_article.context }}</p>
+                        <a class="w-link" href="{{ latest_article.id }}">詳細閱讀</a>
+                    </div>
+                </div> 
+
+
+
+
+                <!--------------------------------------編輯主要結束-------------------------------->
+            </div>
+        </div>
+    </section>
+    <section id="article" class="pt-6">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="filter-tab">
+                    <ul id="article-flters">
+                        <li data-filter="*" class="filter-active">全部</li>
+                        <li data-filter=".filter-cto">人物專訪</li>
+                        <li data-filter=".filter-vlog">轉型日記</li>
+                        <li data-filter=".filter-newinfo">新知報導</li>
+                    </ul>
+                    <span class="tabitemmark"></span>
+                </div>
+            </div>
+
+            <div class="row article-container" id="article-container">
+                <!--------------------------------------文章列表開始，最新文章貼在這句下面-------------------------------->
+
+
+                {% for article in articles %}
+                <div class="col-lg-4 col-md-4 article-item filter-{{ article.category }}">
+                    <div class="card">
+                        {% comment %} <a href="templates/toAppOne/article/2022/{{ article.filename }}"> {% endcomment %}
+                        {% comment %} <a href="{{ article.id }}/{{ article.filename }}"> {% endcomment %}
+                        <a href="{{ article.id }}">
+                        {% comment %} <a href="{% url 'article_details' %}"> {% endcomment %}
+                        {% comment %} <a href="/{{ article.upload_file }}"> {% endcomment %}
+                                <img src="{{ article.article_image.url }}" class="img-fluid" alt="">
+                            <div class="article-info">
+                                <div class="datetime">{{ article.datetime }}</div>
+                                <div class="title">{{ article.title }}</div>
+                                <div class="des">{{ article.context }}</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+             
+            </div>
+
+            <!-----------------------------------------------文章列表結束---------------------------------------------->
+
+            <!--頁碼元件
+            <div class="pagination justify-content-md-center">
+                <ul class="pagelist">
+                    <li><a href="#" class="prev">上一頁</a></li>
+                    <li class="pageNumber active"><a href="#">1</a></li>
+                    <li class="pageNumber"><a href="#">2</a></li>
+                    <li class="pageNumber"><a href="#">3</a></li>
+                 <li><a href="#" class="next">下一頁</a></li>
+                  </ul>
+            </div>-->
+
+            <div class="emptyhight"></div>
+            <!---這只是個撐開高度的空東西-->
+    </section>
+
+    {% endblock %}

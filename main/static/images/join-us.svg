@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="46" viewBox="0 0 200 46">
+    <defs>
+        <linearGradient id="lbj71k69aa" x1="1.611%" x2="100%" y1="43.71%" y2="56.29%">
+            <stop offset="0%" stop-color="#4ED497"/>
+            <stop offset="100%" stop-color="#44A8F2"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" font-family="Roboto-Bold, Roboto" font-size="60" font-weight="bold">
+        <g fill="url(#lbj71k69aa)" fill-rule="nonzero" transform="translate(-350 -4099)">
+            <g>
+                <text transform="translate(330 4085)">
+                    <tspan x="19.382" y="58">Join Us</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

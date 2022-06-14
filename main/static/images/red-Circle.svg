@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>red-Circle</title>
+    <defs>
+        <linearGradient x1="90.4011835%" y1="30.701358%" x2="50.2394847%" y2="99.5892208%" id="linearGradient-1">
+            <stop stop-color="#FFC1C1" offset="0%"></stop>
+            <stop stop-color="#FF6F6F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M120,0 C53.72583,0 0,53.72583 0,120 C0,186.27417 53.72583,240 120,240 C186.27417,240 240,186.27417 240,120 C240,53.72583 186.27417,0 120,0 Z M119.5,50 C158.436075,50 190,81.5639251 190,120.5 C190,159.436075 158.436075,191 119.5,191 C80.5639251,191 49,159.436075 49,120.5 C49,81.5639251 80.5639251,50 119.5,50 Z" id="red-Circle" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+    </g>
+</svg>
