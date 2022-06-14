@@ -22,7 +22,7 @@ env_file = Path(env_file_path)
 
 if env_file.exists():
     from dotenv import load_dotenv
-    load_dotenv()
+    load_dotenv(env_file)
     DEBUG = True
 else:
     DEBUG = False
