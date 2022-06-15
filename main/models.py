@@ -13,9 +13,9 @@ class Video(models.Model):
 
 class Article(models.Model):
     article_type = (
-        ('人物專訪', '人物專訪'),
-        ('轉型日記', '轉型日記'),
-        ('新知報導', '新知報導'),
+        ('cto', '人物專訪'),
+        ('vlog', '轉型日記'),
+        ('newinfo', '新知報導'),
     )
     article_image = models.ImageField(upload_to="images/article/cover/", null=False, blank=False, default="")
     datetime = models.DateField()
@@ -29,13 +29,13 @@ class Article(models.Model):
 
     def filepath(self):
         return f'article/{self.filename}'
-    
+
     def __str__(self):
         return os.path.basename(self.html.name)
 
 class ArticleImage(models.Model):
     post = models.ForeignKey(Article, default=None, on_delete=models.CASCADE)
     images = models.FileField(upload_to = "images/article/content/")
- 
+
     def __str__(self):
         return self.images.name
