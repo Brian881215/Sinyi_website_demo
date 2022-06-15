@@ -9,6 +9,7 @@ from django.template import Template, Context
 
 
 def index(request):
+    showUpArticle = Article.objects.all().order_by('-datetime')
     return render(request, 'index.html', locals())
 
 def video(request):
