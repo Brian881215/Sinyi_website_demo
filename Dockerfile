@@ -3,7 +3,7 @@ LABEL maintainer="s446394@sinyi.com.tw"
 
 RUN apt-get update \
         && apt-get upgrade -y \
-        && apt-get install -y build-essential python3-dev default-libmysqlclient-dev
+        && apt-get install -y build-essential python3-dev default-libmysqlclient-dev nginx
 
 # Install project package
 WORKDIR /home/to-website
@@ -17,6 +17,6 @@ RUN pip3 install --upgrade pip \
         && mkdir logs \
         && chmod u+x ./config/init.sh
 
-EXPOSE 8000
+EXPOSE 80
 
 CMD  ["bash","-c","/home/to-website/config/init.sh"]
