@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from google.oauth2 import service_account
 import os
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,13 +140,15 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # STATIC_URL = '/static/'
 
-
+with open(os.path.join(BASE_DIR, os.environ.get('GS_CREDENTIALS_PATH')), "r") as f:
+    GCP_KEY = json.load(f)
+    GCP_KEY['private_key'] = os.environ.get('GS_PRIVATE_KEY').replace('\\n', '\n')
 
 STATIC_URL = os.environ.get('STATIC_URL')
 DEFAULT_FILE_STORAGE = os.environ.get('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE = os.environ.get('STATICFILES_STORAGE')
 GS_BUCKET_NAME = os.environ.get('GS_BUCKET_NAME')
-GS_CREDENTIALS = service_account.Credentials.from_service_account_file(os.path.join(BASE_DIR, os.environ.get('GS_CREDENTIALS_PATH')))
+GS_CREDENTIALS = service_account.Credentials.from_service_account_info(GCP_KEY)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

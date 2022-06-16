@@ -10,9 +10,6 @@ __pycache__/
 # Environments
 .env
 
-# GCP Key
-towebsite/sinyi-eco-data-towebsite.json
-
 # DB
 db.sqlite3
 
