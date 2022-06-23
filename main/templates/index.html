@@ -197,29 +197,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--推動事項開始-->
     <section id="doc">
         <img src="{% static 'images/project@2x.png' %}" class="doc-project" width="400">
+
         <div class="container fade-in">
             <div class="row">
                 <div class="section-header">
                     <!-- <a class="section-link" href="doc.html"> -->
                         <h2>推動事項</h2>
-                    </a>
+                    <!-- </a> -->
                 </div>
             </div>
             <div class="row doc-container" id="doc-container">
 
                 <div class="col-lg-3 col-md-3">
-                    <a class="last-doc-item-link" href="doc/2021/project/doc_example.html">
-                        <div class="last-doc-item">
-                            <div class="wrap">
-                                <div class="title">Super Agent</div>
-                                <div class="datetime">搶先看</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-3">
-                    <a class="last-doc-item-link" href="doc/2021/project/doc_example.html">
+                    <a class="last-doc-item-link" href="#">
                         <div class="last-doc-item">
                             <div class="wrap">
                                 <div class="title">施工中</div>
@@ -230,7 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="col-lg-3 col-md-3">
-                    <a class="last-doc-item-link" href="doc/2021/project/doc_example.html">
+                    <a class="last-doc-item-link" href="#">
                         <div class="last-doc-item">
                             <div class="wrap">
                                 <div class="title">施工中</div>
@@ -241,7 +231,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="col-lg-3 col-md-3">
-                    <a class="last-doc-item-link" href="doc.html">
+                    <a class="last-doc-item-link" href="#">
+                        <div class="last-doc-item">
+                            <div class="wrap">
+                                <div class="title">施工中</div>
+                                <div class="datetime">COMING SOON</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-3">
+                    <a class="last-doc-item-link" href="#">
                         <div class="last-doc-item">
                             <div class="wrap">
                                 <div class="title">施工中</div>
@@ -321,6 +322,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div> -->
 
         </div>
+
+        <div class="emptyhight"></div>
+        <!---這只是個撐開高度的空東西-->
     </section>
 
     <!--轉型專欄開始-->
@@ -351,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="article/{{ article.id }}">
                             <img src="{{ article.article_image.url }}" class="img-fluid" alt="">
                             <div class="article-info">
-                                <div class="datetime">{{ article.datetime }}</div>
+                                <div class="datetime">{{ article.created_at }}</div>
                                 <div class="title">{{ article.title }}</div>
                                 <div class="des">{{ article.context }}</div>
                             </div>

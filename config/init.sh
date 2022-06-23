@@ -3,7 +3,7 @@
 # Django project directory
 DJANGODIR=/home/to-website
 # which settings file should Django use
-DJANGO_SETTINGS_MODULE=towebsite.settings
+DJANGO_SETTINGS_MODULE=towebsite.production_settings
 # WSGI module name
 DJANGO_WSGI_MODULE=towebsite.wsgi
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
@@ -44,7 +44,7 @@ exec gunicorn ${DJANGO_WSGI_MODULE}:application \
 --name $NAME \
 --workers $NUM_WORKERS \
 --bind=unix:$SOCKFILE \
---timeout 120 \
+--timeout 600 \
 --log-level=debug \
 --access-logfile=/home/to-website/logs/gunicorn_access.log \
 --error-logfile=/home/to-website/logs/gunicorn_error.log

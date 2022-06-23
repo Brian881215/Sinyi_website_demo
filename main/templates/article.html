@@ -30,13 +30,13 @@
                 </div>
                 <div class="col-lg main-des">
                     <div>
-                        <p>{{ latest_article.datetime }}</p>
+                        <p>{{ latest_article.created_at }}</p>
                         <h2>{{ latest_article.title }}</h2>
                         <p class="article-des">
                             {{ latest_article.context }}</p>
                         <a class="w-link" href="{{ latest_article.id }}">詳細閱讀</a>
                     </div>
-                </div> 
+                </div>
 
 
 
@@ -73,7 +73,7 @@
                         {% comment %} <a href="/{{ article.upload_file }}"> {% endcomment %}
                                 <img src="{{ article.article_image.url }}" class="img-fluid" alt="">
                             <div class="article-info">
-                                <div class="datetime">{{ article.datetime }}</div>
+                                <div class="datetime">{{ article.created_at }}</div>
                                 <div class="title">{{ article.title }}</div>
                                 <div class="des">{{ article.context }}</div>
                             </div>
@@ -83,7 +83,7 @@
                 {% endfor %}
 
 
-             
+
             </div>
 
             <!-----------------------------------------------文章列表結束---------------------------------------------->

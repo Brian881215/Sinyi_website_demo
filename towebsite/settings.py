@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from google.oauth2 import service_account
 import os
 import json
 
@@ -24,33 +23,16 @@ env_file = Path(env_file_path)
 if env_file.exists():
     from dotenv import load_dotenv
     load_dotenv(env_file)
-    DEBUG = True
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
 else:
-    DEBUG = False
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ['MYSQL_DATABASE'],
-            'HOST': os.environ['MYSQL_HOST'],
-            'PORT': os.environ['MYSQL_PORT'],
-            'USER': os.environ['MYSQL_USER'],
-            'PASSWORD': os.environ['MYSQL_PWD'],
-        },
-    }
+    print('.env not found. Read the secret setting from the env variables.')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+
+DEBUG = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
@@ -101,6 +83,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'towebsite.wsgi.application'
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -125,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Taipei'
 
 USE_I18N = True
 
@@ -138,17 +128,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
-with open(os.path.join(BASE_DIR, os.environ.get('GS_CREDENTIALS_PATH')), "r") as f:
-    GCP_KEY = json.load(f)
-    GCP_KEY['private_key'] = os.environ.get('GS_PRIVATE_KEY').replace('\\n', '\n')
-
-STATIC_URL = os.environ.get('STATIC_URL')
-DEFAULT_FILE_STORAGE = os.environ.get('DEFAULT_FILE_STORAGE')
-STATICFILES_STORAGE = os.environ.get('STATICFILES_STORAGE')
-GS_BUCKET_NAME = os.environ.get('GS_BUCKET_NAME')
-GS_CREDENTIALS = service_account.Credentials.from_service_account_info(GCP_KEY)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

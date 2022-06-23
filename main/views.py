@@ -13,23 +13,26 @@ from django.contrib.auth.models import User, Permission
 def index(request):
     creatuser()
 
-    showUpArticle = Article.objects.all().order_by('-datetime')
+    showUpArticle = Article.objects.all().order_by('-created_at')
     return render(request, 'index.html', locals())
 
 def video(request):
-    videos = Video.objects.exclude(filename='index.mp4').order_by('-created_at')
+    videos = Video.objects.exclude(video_file='static/videos/index.mp4').order_by('-created_at')
     return render(request, 'video.html', {'videos': videos})
 
+def doc(request):
+    return render(request, 'doc.html')
+
 def article(request):
-    articles = Article.objects.all().order_by('-datetime')
-    latest_article = Article.objects.order_by('datetime').last
+    articles = Article.objects.all().order_by('-created_at')
+    latest_article = Article.objects.order_by('created_at').last
     context = {'articles':articles, 'latest_article':latest_article}
     return render(request, 'article.html', context)
 
 def article_details(request,pk):
     article = Article.objects.get(pk=pk)
-    html_path = str(article.html)
-    response = requests.get(static(html_path))
+    html_path = request.build_absolute_uri(f'/{str(article.html)}')
+    response = requests.get(html_path)
     response.encoding = 'utf-8'
     template = Template(response.text)
 
@@ -55,5 +58,7 @@ def creatuser():
                                 is_staff = True,
                                 is_active = True,
                                 )
-        to_perm = Permission.objects.filter(codename__in=['add_video', 'view_video', 'delete_video'])
+        to_perm = Permission.objects.filter(codename__in=['add_video', 'view_video', 'change_video', 'delete_video',
+                                                        'add_article', 'view_article', 'change_article', 'delete_article',
+                                                        'add_articleimage', 'view_articleimage', 'change_articleimage', 'delete_articleimage'])
         to_user.user_permissions.set(to_perm)
