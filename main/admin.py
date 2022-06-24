@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Video, Article, ArticleImage, Feature
+from .models import Video, Article, ArticleImage, Feature, FeatureImage
 
 
 @admin.register(Video)
@@ -23,7 +23,15 @@ class ArticleAdmin(admin.ModelAdmin):
        model = Article
 
 
+class FeatureImageAdmin(admin.StackedInline):
+    model = FeatureImage
+
+
 @admin.register(Feature)
 class FeatureAdmin(admin.ModelAdmin):
     list_display = ('title', 'sub_title', 'filepath', 'created_at')
     search_fields = ('title', )
+    inlines = [FeatureImageAdmin]
+
+    class Meta:
+       model = Feature

@@ -153,3 +153,33 @@ def pre_save_file(sender, instance, *args, **kwargs):
                 os.remove(old_file)
     except:
         pass
+
+
+class FeatureImage(models.Model):
+    post = models.ForeignKey(Feature, default=None, on_delete=models.CASCADE)
+    images = models.FileField(upload_to = "static/features/content/")
+
+@receiver(post_delete, sender=FeatureImage)
+def post_save_file(sender, instance, *args, **kwargs):
+    """ Clean Old file """
+    try:
+        instance.images.delete(save=False)
+    except:
+        pass
+
+@receiver(pre_save, sender=FeatureImage)
+def pre_save_file(sender, instance, *args, **kwargs):
+    """ instance old file will delete from os """
+    try:
+        old_img = instance.__class__.objects.get(id=instance.id).images.path
+
+        try:
+            new_img = instance.images.path
+        except:
+            new_img = None
+        if new_img != old_img:
+            import os
+            if os.path.exists(old_img):
+                os.remove(old_img)
+    except:
+        pass

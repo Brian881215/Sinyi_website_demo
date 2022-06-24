@@ -69,5 +69,6 @@ def creatuser():
         to_perm = Permission.objects.filter(codename__in=['add_video', 'view_video', 'change_video', 'delete_video',
                                                         'add_article', 'view_article', 'change_article', 'delete_article',
                                                         'add_articleimage', 'view_articleimage', 'change_articleimage', 'delete_articleimage',
-                                                        'add_feature', 'view_feature', 'change_feature', 'delete_feature',])
+                                                        'add_feature', 'view_feature', 'change_feature', 'delete_feature',
+                                                        'add_featureimage', 'view_featureimage', 'change_featureimage', 'delete_featureimage',])
         to_user.user_permissions.set(to_perm)
