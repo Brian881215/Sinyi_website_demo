@@ -3,7 +3,7 @@ from django.dispatch import receiver
 from django.db.models.signals import pre_save, post_delete
 import os
 
-# Create your models here.
+
 class Video(models.Model):
     title = models.CharField(max_length=50, null=False, blank=False)
     video_file = models.FileField(upload_to='static/videos/')
@@ -117,5 +117,39 @@ def pre_save_file(sender, instance, *args, **kwargs):
             import os
             if os.path.exists(old_img):
                 os.remove(old_img)
+    except:
+        pass
+
+
+class Feature(models.Model):
+    title = models.CharField(max_length=50, null=False, blank=False)
+    sub_title = models.CharField(max_length=50, null=False, blank=False)
+    html = models.FileField(upload_to='static/features/')
+    created_at = models.DateField(auto_now_add=True)
+
+    def filepath(self):
+        return f'features/{os.path.basename(self.html.name)}'
+
+@receiver(post_delete, sender=Feature)
+def post_save_file(sender, instance, *args, **kwargs):
+    """ Clean Old file """
+    try:
+        instance.html.delete(save=False)
+    except:
+        pass
+
+@receiver(pre_save, sender=Feature)
+def pre_save_file(sender, instance, *args, **kwargs):
+    """ instance old file will delete from os """
+    try:
+        old_file = instance.__class__.objects.get(id=instance.id).html.path
+        try:
+            new_file = instance.html.path
+        except:
+            new_file = None
+        if new_file != old_file:
+            import os
+            if os.path.exists(old_file):
+                os.remove(old_file)
     except:
         pass

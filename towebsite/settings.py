@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     #project app
     'main',
+    'sa_page.apps.SaPageConfig',
 ]
 
 MIDDLEWARE = [

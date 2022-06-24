@@ -210,46 +210,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a class="last-doc-item-link" href="#">
                         <div class="last-doc-item">
                             <div class="wrap">
-                                <div class="title">施工中</div>
-                                <div class="datetime">COMING SOON</div>
+                                <div class="title">Super Agent</div>
+                                <div class="datetime">搶先看</div>
                             </div>
                         </div>
                     </a>
                 </div>
 
+                {% for feature in features %}
                 <div class="col-lg-3 col-md-3">
-                    <a class="last-doc-item-link" href="#">
+                    <a class="last-doc-item-link" href="/feature/{{ feature.id }}">
                         <div class="last-doc-item">
                             <div class="wrap">
-                                <div class="title">施工中</div>
-                                <div class="datetime">COMING SOON</div>
+                                <div class="title">{{ feature.title }}</div>
+                                <div class="datetime">{{ feature.sub_title }}</div>
                             </div>
                         </div>
                     </a>
                 </div>
-
-                <div class="col-lg-3 col-md-3">
-                    <a class="last-doc-item-link" href="#">
-                        <div class="last-doc-item">
-                            <div class="wrap">
-                                <div class="title">施工中</div>
-                                <div class="datetime">COMING SOON</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-3">
-                    <a class="last-doc-item-link" href="#">
-                        <div class="last-doc-item">
-                            <div class="wrap">
-                                <div class="title">施工中</div>
-                                <div class="datetime">COMING SOON</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
+                {% endfor %}
 
             </div>
             <!-- <div class="row doc-container" id="doc-container">
