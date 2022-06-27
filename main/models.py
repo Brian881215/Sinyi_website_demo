@@ -15,6 +15,7 @@ class Video(models.Model):
 @receiver(post_delete, sender=Video)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
+    print('Clean Old file')
     try:
         instance.video_file.delete(save=False)
     except Exception as e:
@@ -23,6 +24,7 @@ def post_save_file(sender, instance, *args, **kwargs):
 @receiver(pre_save, sender=Video)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
+    print('Clean Old file')
     try:
         old_file = instance.__class__.objects.get(id=instance.id).video_file.path
         try:
@@ -58,6 +60,7 @@ class Article(models.Model):
 @receiver(post_delete, sender=Article)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
+    print('Clean Old file')
     try:
         instance.article_image.delete(save=False)
         instance.html.delete(save=False)
@@ -67,6 +70,7 @@ def post_save_file(sender, instance, *args, **kwargs):
 @receiver(pre_save, sender=Article)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
+    print('Clean Old file')
     try:
         old_img = instance.__class__.objects.get(id=instance.id).article_image.path
         old_html = instance.__class__.objects.get(id=instance.id).html.path
@@ -98,6 +102,7 @@ class ArticleImage(models.Model):
 @receiver(post_delete, sender=ArticleImage)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
+    print('Clean Old file')
     try:
         instance.images.delete(save=False)
     except Exception as e:
@@ -106,6 +111,7 @@ def post_save_file(sender, instance, *args, **kwargs):
 @receiver(pre_save, sender=ArticleImage)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
+    print('Clean Old file')
     try:
         old_img = instance.__class__.objects.get(id=instance.id).images.path
 
@@ -133,6 +139,7 @@ class Feature(models.Model):
 @receiver(post_delete, sender=Feature)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
+    print('Clean Old file')
     try:
         instance.html.delete(save=False)
     except Exception as e:
@@ -141,6 +148,7 @@ def post_save_file(sender, instance, *args, **kwargs):
 @receiver(pre_save, sender=Feature)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
+    print('Clean Old file')
     try:
         old_file = instance.__class__.objects.get(id=instance.id).html.path
         try:
@@ -162,6 +170,7 @@ class FeatureImage(models.Model):
 @receiver(post_delete, sender=FeatureImage)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
+    print('Clean Old file')
     try:
         instance.images.delete(save=False)
     except Exception as e:
@@ -170,6 +179,7 @@ def post_save_file(sender, instance, *args, **kwargs):
 @receiver(pre_save, sender=FeatureImage)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
+    print('Clean Old file')
     try:
         old_img = instance.__class__.objects.get(id=instance.id).images.path
 
