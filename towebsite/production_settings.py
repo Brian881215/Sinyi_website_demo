@@ -23,4 +23,4 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # replace this with your deployed app's public URL
 ALLOWED_HOSTS = ['to-website.azurewebsites.net', 'to-website-staging.azurewebsites.net', 'to-website-development.azurewebsites.net']
 # don't allow debug on prod
-DEBUG = True
+DEBUG = False
