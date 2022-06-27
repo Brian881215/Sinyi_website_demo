@@ -17,8 +17,8 @@ def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.video_file.delete(save=False)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 @receiver(pre_save, sender=Video)
 def pre_save_file(sender, instance, *args, **kwargs):
@@ -33,8 +33,8 @@ def pre_save_file(sender, instance, *args, **kwargs):
             import os
             if os.path.exists(old_file):
                 os.remove(old_file)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 class Article(models.Model):
     article_type = (
@@ -61,8 +61,8 @@ def post_save_file(sender, instance, *args, **kwargs):
     try:
         instance.article_image.delete(save=False)
         instance.html.delete(save=False)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 @receiver(pre_save, sender=Article)
 def pre_save_file(sender, instance, *args, **kwargs):
@@ -88,8 +88,8 @@ def pre_save_file(sender, instance, *args, **kwargs):
             import os
             if os.path.exists(old_html):
                 os.remove(old_html)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 class ArticleImage(models.Model):
     post = models.ForeignKey(Article, default=None, on_delete=models.CASCADE)
@@ -100,8 +100,8 @@ def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.images.delete(save=False)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 @receiver(pre_save, sender=ArticleImage)
 def pre_save_file(sender, instance, *args, **kwargs):
@@ -117,8 +117,8 @@ def pre_save_file(sender, instance, *args, **kwargs):
             import os
             if os.path.exists(old_img):
                 os.remove(old_img)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 
 class Feature(models.Model):
@@ -135,8 +135,8 @@ def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.html.delete(save=False)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 @receiver(pre_save, sender=Feature)
 def pre_save_file(sender, instance, *args, **kwargs):
@@ -151,8 +151,8 @@ def pre_save_file(sender, instance, *args, **kwargs):
             import os
             if os.path.exists(old_file):
                 os.remove(old_file)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 
 class FeatureImage(models.Model):
@@ -164,8 +164,8 @@ def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.images.delete(save=False)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
 
 @receiver(pre_save, sender=FeatureImage)
 def pre_save_file(sender, instance, *args, **kwargs):
@@ -181,5 +181,5 @@ def pre_save_file(sender, instance, *args, **kwargs):
             import os
             if os.path.exists(old_img):
                 os.remove(old_img)
-    except:
-        pass
+    except Exception as e:
+        print('File delete error,', e)
