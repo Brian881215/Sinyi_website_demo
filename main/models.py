@@ -12,15 +12,15 @@ class Video(models.Model):
     def filepath(self):
         return f'videos/{os.path.basename(self.video_file.name)}'
 
-@receiver(post_delete, sender=Video)
+@receiver(post_delete, sender=Video, weak=False)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.video_file.delete(save=False)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
-@receiver(pre_save, sender=Video)
+@receiver(pre_save, sender=Video, weak=False)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
     try:
@@ -34,7 +34,7 @@ def pre_save_file(sender, instance, *args, **kwargs):
             if os.path.exists(old_file):
                 os.remove(old_file)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
 class Article(models.Model):
     article_type = (
@@ -55,16 +55,16 @@ class Article(models.Model):
     def filepath(self):
         return f'article/{self.filename}'
 
-@receiver(post_delete, sender=Article)
+@receiver(post_delete, sender=Article, weak=False)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.article_image.delete(save=False)
         instance.html.delete(save=False)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
-@receiver(pre_save, sender=Article)
+@receiver(pre_save, sender=Article, weak=False)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
     try:
@@ -89,21 +89,21 @@ def pre_save_file(sender, instance, *args, **kwargs):
             if os.path.exists(old_html):
                 os.remove(old_html)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
 class ArticleImage(models.Model):
     post = models.ForeignKey(Article, default=None, on_delete=models.CASCADE)
     images = models.FileField(upload_to = "static/articles/content/")
 
-@receiver(post_delete, sender=ArticleImage)
+@receiver(post_delete, sender=ArticleImage, weak=False)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.images.delete(save=False)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
-@receiver(pre_save, sender=ArticleImage)
+@receiver(pre_save, sender=ArticleImage, weak=False)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
     try:
@@ -118,7 +118,7 @@ def pre_save_file(sender, instance, *args, **kwargs):
             if os.path.exists(old_img):
                 os.remove(old_img)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
 
 class Feature(models.Model):
@@ -130,15 +130,15 @@ class Feature(models.Model):
     def filepath(self):
         return f'features/{os.path.basename(self.html.name)}'
 
-@receiver(post_delete, sender=Feature)
+@receiver(post_delete, sender=Feature, weak=False)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.html.delete(save=False)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
-@receiver(pre_save, sender=Feature)
+@receiver(pre_save, sender=Feature, weak=False)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
     try:
@@ -152,22 +152,22 @@ def pre_save_file(sender, instance, *args, **kwargs):
             if os.path.exists(old_file):
                 os.remove(old_file)
     except Exception as e:
-        print('File delete error,', e)
+        pass
 
 
 class FeatureImage(models.Model):
     post = models.ForeignKey(Feature, default=None, on_delete=models.CASCADE)
     images = models.FileField(upload_to = "static/features/content/")
 
-@receiver(post_delete, sender=FeatureImage)
+@receiver(post_delete, sender=FeatureImage, weak=False)
 def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.images.delete(save=False)
     except Exception as e:
-        print('File delete error,', e)
+        print('File delete error,', e, flush=True)
 
-@receiver(pre_save, sender=FeatureImage)
+@receiver(pre_save, sender=FeatureImage, weak=False)
 def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
     try:
@@ -182,4 +182,4 @@ def pre_save_file(sender, instance, *args, **kwargs):
             if os.path.exists(old_img):
                 os.remove(old_img)
     except Exception as e:
-        print('File delete error,', e)
+        print('File delete error,', e, flush=True)
