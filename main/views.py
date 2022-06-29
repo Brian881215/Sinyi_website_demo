@@ -12,10 +12,11 @@ def index(request):
 
     features = Feature.objects.order_by('-created_at')
     showUpArticle = Article.objects.all().order_by('-created_at')
+    index_video = Video.objects.filter(is_index=True).order_by('-created_at').first()
     return render(request, 'index.html', locals())
 
 def video(request):
-    videos = Video.objects.exclude(video_file='static/videos/index.mp4').order_by('-created_at')
+    videos = Video.objects.order_by('-created_at')
     return render(request, 'video.html', {'videos': videos})
 
 def article(request):

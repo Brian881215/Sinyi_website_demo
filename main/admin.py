@@ -4,7 +4,7 @@ from .models import Video, Article, ArticleImage, Feature, FeatureImage
 
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):
-    list_display = ('title', 'filepath', 'created_at')
+    list_display = ('title', 'is_index', 'filepath', 'created_at')
     search_fields = ('title', )
 
 
