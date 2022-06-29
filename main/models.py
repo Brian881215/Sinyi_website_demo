@@ -6,6 +6,7 @@ import os
 
 class Video(models.Model):
     title = models.CharField(max_length=50, null=False, blank=False)
+    is_index = models.BooleanField()
     video_file = models.FileField(upload_to='static/videos/')
     created_at = models.DateField()
 
