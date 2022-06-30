@@ -126,7 +126,7 @@ class Feature(models.Model):
     title = models.CharField(max_length=50, null=False, blank=False)
     sub_title = models.CharField(max_length=50, null=False, blank=False)
     html = models.FileField(upload_to='static/features/')
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateField()
 
     def filepath(self):
         return f'features/{os.path.basename(self.html.name)}'
