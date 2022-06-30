@@ -5,23 +5,31 @@ import requests
 from django.template import Template, Context
 import os
 from django.contrib.auth.models import User, Permission
+from datetime import datetime
 
 
 def index(request):
     creatuser()
 
     features = Feature.objects.order_by('-created_at')
-    showUpArticle = Article.objects.all().order_by('-created_at')
+    showUpArticle = Article.objects.all().order_by('-created_at')[:8]
+    for article in showUpArticle:
+        article.created_at = datetime.strftime(article.created_at, '%Y-%m-%d')
     index_video = Video.objects.filter(is_index=True).order_by('-created_at').first()
     return render(request, 'index.html', locals())
 
 def video(request):
     videos = Video.objects.order_by('-created_at')
+    for video in videos:
+        video.created_at = datetime.strftime(video.created_at, '%Y-%m-%d')
     return render(request, 'video.html', {'videos': videos})
 
 def article(request):
     articles = Article.objects.all().order_by('-created_at')
-    latest_article = Article.objects.order_by('created_at').last
+    for article in articles:
+        article.created_at = datetime.strftime(article.created_at, '%Y-%m-%d')
+    latest_article = Article.objects.order_by('-created_at').first()
+    latest_article.created_at = datetime.strftime(latest_article.created_at, '%Y-%m-%d')
     context = {'articles':articles, 'latest_article':latest_article}
     return render(request, 'article.html', context)
 
