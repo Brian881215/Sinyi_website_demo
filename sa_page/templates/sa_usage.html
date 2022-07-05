@@ -1,0 +1,8 @@
+<script>
+    const context = JSON.parse('{{ context|safe }}');
+    const overview = context['overview']
+    const bar_chart = context['bar_chart']
+    const heatmap = context['heatmap']
+
+    console.log(context)
+</script>
