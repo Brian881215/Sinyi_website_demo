@@ -84,4 +84,4 @@ def usage(request):
 
     context = {'overview': overview, 'bar_chart': bar_chart, 'heatmap': heatmap}
     context = json.dumps(context)
-    return render(request, 'sa_usage.html', {'context': context})
+    return render(request, 'pd_data.html', {'context': context})

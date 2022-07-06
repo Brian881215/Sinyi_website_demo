@@ -4,5 +4,5 @@ from sa_page.views import *
 
 urlpatterns = [
     path('', index, name='index'),
-    path('usage/', usage, name='usage'),
+    path('pd_data/', usage, name='pd_data'),
 ]
