@@ -304,7 +304,6 @@ body.thumbsupgo .row.boxwrap {
 
   body.thumbsupgo .row.boxwrap .carditem a:hover .pjimg img {
     width: calc(100% + 120px); } }
-
 /* 專案內頁 */
 body.thumbsupgo .keyviewwrap {
   width: 100%;
@@ -319,7 +318,6 @@ body.thumbsupgo .keyviewwrap.solution2 {
   background-image: url(../img/thumbsupgo/pj2kvbg.png); }
 body.thumbsupgo .keyviewwrap.solution3 {
   background-image: url(../img/thumbsupgo/pj3kvbg.png); }
-
 body.thumbsupgo .keyviewwrap .bar {
   width: 100%;
   padding-top: 10px;
@@ -426,8 +424,7 @@ body.thumbsupgo .keyviewwrap .col.kv img.kv-img {
   transform: translate(-10%, 0%);
   transition: all 0.5s ease; }
 
-
- @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   body.thumbsupgo .keyviewwrap {
     width: 100%;
     height: auto;
@@ -462,8 +459,6 @@ body.thumbsupgo .keyviewwrap .col.kv img.kv-img {
     -webkit-transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%); } }
-
-
 body.thumbsupgo section.pjintrosec .row {
   display: flex;
   margin-top: 30px;
@@ -486,7 +481,7 @@ body.thumbsupgo section.pjintrosec .row {
         height: 4px;
         display: block;
         background-color: #5ECDA8; }
-  body.thumbsupgo section.pjintrosec .col {
+body.thumbsupgo section.pjintrosec .col {
   width: calc(50% - 3px);
   text-align: center; }
   body.thumbsupgo section.pjintrosec .col:nth-child(odd) {
@@ -510,7 +505,6 @@ body.thumbsupgo section.pjintrosec .row {
     body.thumbsupgo section.pjintrosec .col .introtextwrap h4 {
       font-size: 18px;
       color: #17C289; }
-    
 
 @media screen and (max-width: 768px) {
   body.thumbsupgo section.pjintrosec .row {
@@ -520,7 +514,7 @@ body.thumbsupgo section.pjintrosec .row {
     width: 100%;
     margin-bottom: 20px;
     padding-left: 40px;
-    padding-right: 40px;  }
+    padding-right: 40px; } }
 body.thumbsupgo section.pjscenariosec {
   background-color: #FAFBFD; }
   body.thumbsupgo section.pjscenariosec .row {
@@ -556,18 +550,16 @@ body.thumbsupgo section.pjscenariosec {
     text-align: center;
     padding: 40px; }
     body.thumbsupgo section.pjscenariosec .col img {
-      width: calc(90% - 20px); 
-  }
-}
+      width: calc(90% - 20px); }
 
 @media screen and (max-width: 768px) {
   body.thumbsupgo section.pjscenariosec .box {
     display: flex;
-
     flex-direction: column; }
 
   body.thumbsupgo section.pjscenariosec .col {
     width: calc(100% - 40px);
     margin-left: auto;
-    margin-right: auto; } 
-  } 
+    margin-right: auto; } }
+
+/*# sourceMappingURL=commons.css.map */
