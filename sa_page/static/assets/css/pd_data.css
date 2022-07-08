@@ -122,6 +122,10 @@ aside nav h1 {
     width: 100px;
     height:32px;
 }
+.d_nav_item img {
+    display: inline-block;
+    margin-left:16px;
+}
 #d_nav li.d_nav_s{
     color: #0A192D;
     font-weight: bold;
@@ -218,7 +222,7 @@ article {
     height: 24px;
     line-height: 24px;
 }
-.s2 span {
+.s2 .s2_span {
     position: relative;
     top:1.4px;
 }
@@ -228,9 +232,11 @@ article {
 .s2_140 div {
     margin-top: 6px;
     padding-left: 12px;
+    color:#23989F;
+}
+#s2_span1,#s2_span2 {
     font-size: 48px;
     font-weight: 600;
-    color:#23989F;
 }
 .s2_140 div span {
     padding-left: 8px;
