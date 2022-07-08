@@ -1,0 +1,225 @@
+{% load static %}
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/img/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/img/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/img/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/img/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/img/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/img/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'assets/img/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" class="next-head">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" rel="stylesheet" class="next-head">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="theme-color" content="#ffffff">
+
+
+    <title>信義房屋 - Super Agent 打造您的職能守護神</title>
+    <meta name="description" content="Sinyi - Super Agent 打造您的職能守護神" />
+
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SuperAgent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務" />
+    <meta property="og:image" content="assets/img/logo-small.png" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:description" content="打造您的職能守護神、數位賦能 服務全能、一鍵生成 工作即報表、數據整合 秒懂客戶" />
+    <meta property="og:site_name" content="Super Agent" />
+
+
+
+    <link rel="home" href="/sa/" />
+    <link rel="canonical" href="/sa/">
+    <link rel="stylesheet" href="{% static 'assets/css/sa.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="screen">
+
+
+    <div id="top"></div>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-ML8B9HB');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body class="content">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="background" data-toggle-menu></div>
+
+        <div class="nav-container">
+            <div class="top">
+                <a href="/sa/" class="logo"></a>
+
+                <nav class="main">
+                    <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                    <a href="{% static 'videos/sa_p_v1.mp4' %}" class="nav-link" data-trigger-page-transition><span class="text">新功能查看</span> <span class="line"></span></a>
+                    <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">數據總覽</span> <span class="line"></span></a>
+                    <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">點贊Go!</span> <span class="line"></span></a>
+                </nav>
+
+
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+            </div>
+
+            <div class="bottom">
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+
+                <div class="form-container tabs-container">
+                    <div class="tabs">
+                        <a href="/sa/#" class="heading tab active" data-open-tab="trialForm">聯絡我們</a>
+
+                    </div>
+
+
+                    <div class="tab-content-container">
+                        <div class="tab-content active" data-tab="trialForm">
+                            <p>同仁有任何想法，歡迎與SuperAgent團隊聯絡</p>
+                            <p>E-Mail:
+                                <a href="mailto:SuperAgent@sinyi.com.tw?subject=主旨&body=內容">SuperAgent@sinyi.com.tw</a></p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-bar-container">
+            <div class="menu-bar">
+                <a href="/sa/" class="logo small" data-trigger-page-transition></a>
+                <a href="/sa/#" class="menu-button" data-toggle-menu>
+                    <span class="menu-button-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
+                </a>
+
+                <a href="/sa/#" class="trial-link" data-toggle-trial><span class="text">Contact Us</span></a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <div class="wrapper">
+        <section class="content-split-container background-fixed" data-section-active data-section="0" data-video-intro>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="inner">
+                <div class="top">
+                    <div class="logo-container">
+                        <a href="/sa/" class="logo" data-trigger-page-transition></a>
+
+                    </div>
+
+
+                </div>
+
+                <div class="bottom">
+                    <nav class="footer">
+
+                        <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                        <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">新功能查看</span> <span class="line"></span></a>
+                        <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">數據總覽</span> <span class="line"></span></a>
+                        <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點贊Go!</span> <span class="line"></span></a>
+
+                    </nav>
+
+                    <div class="right">
+                        <nav class="footer-sub">
+                            <span>Copyright &copy; 2022 信義房屋股份有限公司 Transformation Office . All rights reserved.</span>
+
+                        </nav>
+
+
+
+                        <div id="gRecaptcha" class="g-recaptcha"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="messages-container">
+            <a href="/sa/#" class="close-icon"></a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/interface.js' %}"></script>
+
+    <script>
+        window.onRecaptchaLoad = function() {
+            window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
+                'sitekey': '6LeNkL4UAAAAAJcRfruukBp2lab65JDvT8AmeKTS',
+                'badge': 'inline',
+                'size': 'invisible',
+                'theme': 'dark'
+            });
+        };
+    </script>
+
+
+</body>
+
+</html>
