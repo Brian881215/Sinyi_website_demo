@@ -1,6 +1,8 @@
-{% load static%}
+{% load static %}
 <!doctype html>
-<html lang="zh"><head>
+<html lang="zh">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -21,46 +23,59 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" class="next-head">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" rel="stylesheet" class="next-head">
     <meta name="msapplication-TileColor" content="#ffffff">
 
     <meta name="theme-color" content="#ffffff">
 
 
-	<title>信義房屋 - Super Agent 打造您的職能守護神</title>
-	<meta name="description" content="Sinyi - Super Agent 打造您的職能守護神" />
+    <title>信義房屋 - Super Agent 打造您的職能守護神</title>
+    <meta name="description" content="Sinyi - Super Agent 打造您的職能守護神" />
 
-	<meta property="fb:app_id" content="">
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="SuperAgent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務" />
-	<meta property="og:image" content="assets/img/logo-small.png" />
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SuperAgent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務" />
+    <meta property="og:image" content="assets/img/logo-small.png" />
 
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="600" />
-	<meta property="og:description" content="打造您的職能守護神、數位賦能 服務全能、一鍵生成 工作即報表、數據整合 秒懂客戶" />
-	<meta property="og:site_name" content="Super Agent" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:description" content="打造您的職能守護神、數位賦能 服務全能、一鍵生成 工作即報表、數據整合 秒懂客戶" />
+    <meta property="og:site_name" content="Super Agent" />
 
 
 
-	<link rel="home" href="/sa/" />
+    <link rel="home" href="/sa/" />
 	<link rel="canonical" href="/sa/">
     <link rel="stylesheet" href="{% static 'assets/css/sa.css' %}">
 	<link href="{% static 'css/style.css' %}" rel="stylesheet"  media="screen">
 
 
-<div id="top"></div>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML8B9HB');</script>
-<!-- End Google Tag Manager -->
+    <div id="top"></div>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-ML8B9HB');
+    </script>
+    <!-- End Google Tag Manager -->
 
-    </head>
+</head>
+
 <body class=" home-page">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header>
     <div class="background" data-toggle-menu></div>
@@ -75,73 +90,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">數據總覽</span> <span class="line"></span></a>
             </nav>
 
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+            </div>
 
-            <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
-        </div>
+            <div class="bottom">
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
 
-        <div class="bottom">
-            <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+                <div class="form-container tabs-container">
+                    <div class="tabs">
+                        <a href="/sa/#" class="heading tab active" data-open-tab="trialForm">聯絡我們</a>
 
-            <div class="form-container tabs-container">
-                <div class="tabs">
-                    <a href="/sa/#" class="heading tab active" data-open-tab="trialForm">聯絡我們</a>
-
-                </div>
+                    </div>
 
 
-                <div class="tab-content-container">
-                                            <div class="tab-content active" data-tab="trialForm">
+                    <div class="tab-content-container">
+                        <div class="tab-content active" data-tab="trialForm">
                             <p>同仁有任何想法，歡迎與SuperAgent團隊聯絡</p>
-												<p>E-Mail:
-													<a href="mailto:SuperAgent@sinyi.com.tw?subject=主旨&body=內容">SuperAgent@sinyi.com.tw</a></p>
+                            <p>E-Mail:
+                                <a href="mailto:SuperAgent@sinyi.com.tw?subject=主旨&body=內容">SuperAgent@sinyi.com.tw</a></p>
 
                         </div>
 
-                                    </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="menu-bar-container">
-        <div class="menu-bar">
-            <a href="/sa/" class="logo small" data-trigger-page-transition></a>
-            <a href="/sa/#" class="menu-button" data-toggle-menu>
-                <span class="menu-button-icon">
+        <div class="menu-bar-container">
+            <div class="menu-bar">
+                <a href="/sa/" class="logo small" data-trigger-page-transition></a>
+                <a href="/sa/#" class="menu-button" data-toggle-menu>
+                    <span class="menu-button-icon">
                     <span></span>
                     <span></span>
                     <span></span>
-                </span>
-            </a>
+                    </span>
+                </a>
 
-            <a href="/sa/#" class="trial-link" data-toggle-trial><span class="text">Contact Us</span></a>
-        </div>
-
+                <a href="/sa/#" class="trial-link" data-toggle-trial><span class="text">Contact Us</span></a>
             </div>
-</header>
+
+        </div>
+    </header>
 
     <a href="/sa/#top" class="logo top" data-scroll-to></a>
 
-<div class="wrapper">
+    <div class="wrapper">
         <section class="content-split-container background-fixed" data-section-active data-section="0" data-video-intro>
 
-			<div class="video-container">
-           <video class="video" autoplay="" loop="" muted="" poster="{% static 'assets/img/Social-Card.jpg' %}">
-        <source src="{% static 'videos/sa_p_v1.mp4' %}" type="video/mp4">
-        <source src="{% static 'videos/sa_p_v1.webm' %}" type="video/webm">
-      </video>
-        </div>
-        <div class="left-container large">
-            <div class="text-container bottom">
-                <!--<h1 class="heading">Super Agent讓您成為萬中選一的金牌業務</h1>-->
-                <p></p>
-
-
-                <a href="{% static 'videos/sa_p_v1.mp4' %}" class="btn-lead btn play-home js-play button">開啟播放</a>
-              </div>
+            <div class="video-container">
+                <video class="video" autoplay="" loop="" muted="" poster="{% static 'assets/img/Social-Card.jpg' %}">
+                    <source src="{% static 'videos/sa_p_v1.mp4' %}" type="video/mp4">
+                    <source src="{% static 'videos/sa_p_v1.webm' %}" type="video/webm">
+                </video>
             </div>
-        </div>
+            <div class="left-container large">
+                <div class="text-container bottom">
+                    <!--<h1 class="heading">Super Agent讓您成為萬中選一的金牌業務</h1>-->
+                    <p></p>
 
-        <a href="/sa/#intro" class="next-arrow" data-scroll-to></a>
+
+
+                    <a href="/sa/pd_data/" class="btn-lead btn  button" target="_blank">數據總覽</a>
+                    <a href="/sa/voting/" class="btn-lead btn  button" target="_blank">點讚GO!</a>
+                </div>
+            </div>
+    </div>
+
+    <a href="/sa/#intro" class="next-arrow" data-scroll-to></a>
     </section>
 
     <section class="custom-layout-container style-18 background-white logo-reverse menu-reverse" data-section-active data-section="0.5" id="intro">
@@ -150,14 +166,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="heading-container">
                 <p>無論您是新手或是沙場老將，只要改變心態、掌握關鍵利器，人人都可以大幅提升績效，創造傲人業績。
-<br>
-                   Super Agent 能成為您的銷售關鍵，幫助您心態轉彎＋技巧調整，打造客戶非您莫屬的優越特質！
+                    <br> Super Agent 能成為您的銷售關鍵，幫助您心態轉彎＋技巧調整，打造客戶非您莫屬的優越特質！
 
-</p>
+                </p>
             </div>
 
             <div class="diagram-container">
-                	<svg class="t22-single-wave-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 585.3 99.61">
+                <svg class="t22-single-wave-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 585.3 99.61">
     <defs>
         <clipPath id="t22-single-wave-1-clip-path" transform="translate(-6.9 -97.01)">
             <rect class="cls-1" x="216.3" y="-159.29" width="160" height="573.76" transform="translate(120.22 397.9) rotate(-80.22)"/>
@@ -173,7 +188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </g>
 </svg>
 
-                	<svg class="t22-single-wave-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 779.34 73.64">
+                <svg class="t22-single-wave-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 779.34 73.64">
     <defs>
         <clipPath id="t22-single-wave-2-clip-path" transform="translate(-2.71 -57.78)">
             <rect class="cls-1" x="350.67" y="-303.32" width="81" height="778.21" transform="translate(260.17 464.22) rotate(-83.28)"/>
@@ -195,7 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </g>
 </svg>
 
-                	<svg class="t22-single-wave-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 659.97 111.52">
+                <svg class="t22-single-wave-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 659.97 111.52">
     <defs>
         <clipPath id="t22-single-wave-3-clip-path" transform="translate(-0.14 -0.48)">
             <rect class="cls-1" width="660.11" height="112"/>
@@ -225,8 +240,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2>金牌業務秘技大全</h2>
                 <div class="menu-container">
                     <a href="/sa/#versatility" class="menu-link" data-scroll-to><span class="text">數位賦能 服務全能</span></a>
-                  <a href="/sa/#utilities" class="menu-link" data-scroll-to><span class="text">數據整合 秒懂客戶</span></a>
-				   <a href="/sa/#resources" class="menu-link" data-scroll-to><span class="text">一鍵生成 工作即報表</span></a>
+                    <a href="/sa/#utilities" class="menu-link" data-scroll-to><span class="text">數據整合 秒懂客戶</span></a>
+				    <a href="/sa/#resources" class="menu-link" data-scroll-to><span class="text">一鍵生成 工作即報表</span></a>
 
                 </div>
             </div>
@@ -237,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="menu-container">
             <a href="/sa/#" class="menu-link active" data-go-to-slide="0">數位賦能 服務全能</a>
             <a href="/sa/#" class="menu-link" data-go-to-slide="1">數據整合 秒懂客戶</a>
-             <a href="/sa/#" class="menu-link" data-go-to-slide="2">一鍵生成 工作即報表</a>
+            <a href="/sa/#" class="menu-link" data-go-to-slide="2">一鍵生成 工作即報表</a>
         </div>
 
         <div class="carousel" data-carousel-options='{"mobileFirst": true, "responsive": [{"breakpoint": 767, "settings": "unslick"}]}'>
@@ -246,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="inner">
                     <div class="right-container background-white">
                         <div class="tiles style-1">
-                            	<svg class="t1-shapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.85 27.61" data-parallax="10">
+                            <svg class="t1-shapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.85 27.61" data-parallax="10">
     <defs>
         <linearGradient id="t1-shapes" x1="0" y1="0" x2="14.85" y2="26.84" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#00ffb4">
@@ -294,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <div class="text"></div>
                                             </div>
                                         </div>
-                                        	<svg class="t1-single-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1893.55 1179.25">
+                                        <svg class="t1-single-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1893.55 1179.25">
     <defs>
         <linearGradient id="t1-single-wave" x1="80" y1="17.84" x2="80.04" y2="36.07" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#2758a5"></stop>
@@ -305,7 +320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <path class="cls-1" d="M2,1179.13s38.69-661,534-762.88,371.5,429.9,803.37,82S1892,1.26,1892,1.26"/>
     </g>
 </svg>
-                                        	<svg class="t1-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203.87 36.07">
+                                        <svg class="t1-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203.87 36.07">
     <defs>
         <linearGradient id="t1-waves" x1="80" y1="17.84" x2="80.04" y2="36.07" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#2758a5"></stop>
@@ -347,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="highlight-background active" style="background-image: url({% static 'assets/img/sa_02.png' %})"></div>
                                 </div>
-                                <a class="tile text background-blue" data-parallax="16" >
+                                <a class="tile text background-blue" data-parallax="16">
                                     <div class="heading">數位賦能 服務全能</div>
                                     <p>Super Agent您的超級金牌秘書 - 打造全面數位賦能、提示經營商機不漏接、簡化繁雜流程智慧化、客戶需求全紀錄、服務歷程可視化。</p>
 
@@ -369,15 +384,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
 
                             <div class="tile-row">
-                                <a  class="tile text" data-parallax="-12" >
-                                   <div class="heading">數據整合 秒懂客戶</div>
+                                <a class="tile text" data-parallax="-12">
+                                    <div class="heading">數據整合 秒懂客戶</div>
                                     <p>全渠道無縫整合公司客戶資訊、360°解鎖客戶全視角、客戶標籤識別數據化，建立更有意義且持久的客戶關係。</p>
 
                                     <div class="background-square"></div>
                                 </a>
                                 <div class="tile small" style="background-image: url({% static 'assets/img/sa_05.jpg' %})" data-parallax="-4">
                                     <div class="diagram-container">
-                                        	<svg class="t2-single-wave-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1097.17 164.05" data-aos>
+                                        <svg class="t2-single-wave-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1097.17 164.05" data-aos>
     <defs>
         <linearGradient id="t2-single-wave-1" y1="17.84" x2="1000.04" y2="127.84" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#9bfff9">
@@ -390,7 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <path class="cls-1" d="M1,61S15.61-4.2,146,27.72,329.53,271.14,549,91.57,869.57,50.33,960,76.94s137,20,137,20"/>
     </g>
 </svg>
-                                        	<svg class="t2-single-wave-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3255.93 301.91">
+                                        <svg class="t2-single-wave-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3255.93 301.91">
     <defs>
         <linearGradient id="t2-single-wave-2" y1="17.84" x2="3000.04" y2="227.84" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#9bfff9">
@@ -403,7 +418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <path class="cls-1" d="M0.4,103.6c0,0,766.2-221.6,1398.7-12s778.2,187.6,1203.1,18s652.4,191.5,652.4,191.5"/>
     </g>
 </svg>
-                                        	<svg class="t2-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 199.92 52.58">
+                                        <svg class="t2-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 199.92 52.58">
     <defs>
         <linearGradient id="t2-waves-linear" x1="0.05" y1="34.49" x2="200.09" y2="34.49" gradientUnits="userSpaceOnUse">
             <stop offset="0.2" stop-color="#025"/>
@@ -474,7 +489,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="right-container background-white">
                         <div class="tiles style-3">
                             <div id="resources"></div>
-                            	<svg class="t1-shapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.85 27.61" data-parallax="10">
+                            <svg class="t1-shapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.85 27.61" data-parallax="10">
     <defs>
         <linearGradient id="t1-shapes" x1="0" y1="0" x2="14.85" y2="26.84" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#00ffb4">
@@ -520,8 +535,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
 
                             <div class="tile-row">
-                                <a class="tile text background-blue" data-parallax="4" >
-                                   <div class="heading"> 一鍵生成數據報表，實現您的報表自由 </div>
+                                <a class="tile text background-blue" data-parallax="4">
+                                    <div class="heading"> 一鍵生成數據報表，實現您的報表自由 </div>
                                     <p>快、狠、準的行程自動分類，全面提升行程安排效率；工作完成後即生成有效數據報表。</p>
 
 
@@ -529,7 +544,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </a>s
                                 <div class="tile small" style="background-image: url({% static 'assets/img/sa_08.jpg' %})" data-parallax="-10">
                                     <div class="diagram-container">
-                                        	<svg class="t3-single-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2283.66 1750.86">
+                                        <svg class="t3-single-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2283.66 1750.86">
     <defs>
         <linearGradient id="t3-single-wave" y1="17.84" x2="3000.04" y2="227.84" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#00ffb4">
@@ -542,7 +557,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <path class="cls-1" d="M16.66,1750.47S-129-91.15,609.25,244.05,1094.09,88.43,1608.87,16.6s670.4,213.49,670.4,213.49"/>
     </g>
 </svg>
-     <svg class="t1-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203.87 36.07">
+                                        <svg class="t1-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203.87 36.07">
     <defs>
         <linearGradient id="t1-waves" x1="80" y1="17.84" x2="80.04" y2="36.07" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#2758a5"></stop>
@@ -600,7 +615,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="left-container">
             <div class="text-container bottom">
-               <h2 class="heading">Super Agent新功能查看</h2>
+                <h2 class="heading">Super Agent新功能查看</h2>
                 <p>客戶快找/秒懂客戶/人脈管理/客戶需求卡/多元配案機制/流程整合快速建立帶看/社區百科/一鍵生成報表</p>
                 <a href="{% static 'videos/sa_p_v1.mp4' %}" class="btn-lead btn play-home js-play button"><span class="text">立即查看</span>
                 </a>
@@ -641,73 +656,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
                                     </div>
                                     <div class="text">
-                                      人
+                                        人
                                     </div>
                                 </div>
-								            <div class="progress-chart-column">
-                                <div class="progress-chart small seconds" data-parallax="-7">
-                                    <div class="progress-circle">
-                                        <canvas class="progress-circle-canvas" width="332" height="332" data-start-colour="#00adee" data-end-colour="#eb008b" data-stroke-width="26" data-delta="1" data-speed=".7" data-count="" data-percent="95"></canvas>
-                                        <div class="progress-circle-count">
+                                <div class="progress-chart-column">
+                                    <div class="progress-chart small seconds" data-parallax="-7">
+                                        <div class="progress-circle">
+                                            <canvas class="progress-circle-canvas" width="332" height="332" data-start-colour="#00adee" data-end-colour="#eb008b" data-stroke-width="26" data-delta="1" data-speed=".7" data-count="" data-percent="95"></canvas>
+                                            <div class="progress-circle-count">
 
-                                            <div class="text">責任精耕</div>
+                                                <div class="text">責任精耕</div>
+                                            </div>
+                                        </div>
+                                        <div class="text">
+                                            物
                                         </div>
                                     </div>
-                                    <div class="text">
-                                      物
-                                    </div>
-                                </div> </div>
-
-
-								<div class="progress-chart-column">
-								   <div class="progress-chart small mins" data-parallax="-7">
-                                    <div class="progress-circle">
-                                        <canvas class="progress-circle-canvas" width="366" height="366" data-start-colour="#00adee" data-end-colour="#eb008b" data-stroke-width="26" data-delta="1" data-speed=".3" data-percent="95"></canvas>
-                                        <div class="progress-circle-count">
-                                            <div class="text">任務引導</div>
-                                        </div>
-                                    </div>
-                                    <div class="text">事</div>
                                 </div>
-								</div>
+
+
+                                <div class="progress-chart-column">
+                                    <div class="progress-chart small mins" data-parallax="-7">
+                                        <div class="progress-circle">
+                                            <canvas class="progress-circle-canvas" width="366" height="366" data-start-colour="#00adee" data-end-colour="#eb008b" data-stroke-width="26" data-delta="1" data-speed=".3" data-percent="95"></canvas>
+                                            <div class="progress-circle-count">
+                                                <div class="text">任務引導</div>
+                                            </div>
+                                        </div>
+                                        <div class="text">事</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
 
                         </div>
+                    </div>
+                </div>
 
+                <div class="left-container">
+                    <div class="text-container bottom">
+                        <h2 class="heading">Super Agnet <br> 願景</h2>
+                        <p>Super Agent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務</p>
 
                     </div>
                 </div>
             </div>
+            <div class="edge-lines" data-parallax="-6">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-            <div class="left-container">
-                <div class="text-container bottom">
-                    <h2 class="heading">Super Agnet <br> 願景</h2>
-                    <p>Super Agent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務</p>
+            <div class="text-area">
+
+                <div class="div" data-parallax="-3"></div>
+
+                <div class="stats">
 
                 </div>
+
             </div>
-        </div>
-			 <div class="edge-lines" data-parallax="-6">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-
-			<div class="text-area">
-
-                        <div class="div" data-parallax="-3"></div>
-
-                        <div class="stats">
-
-                        </div>
-
-                    </div>
 
     </section>
 
 
-    <section id="trial" class="content-full-container background-fixed logo-hide" data-section-active data-section="4" >
+    <section id="trial" class="content-full-container background-fixed logo-hide" data-section-active data-section="4">
         <div class="fixed-container" style="background-image: url({% static 'assets/img/sa_03.png' %})">
-            <div class="mobile">	<svg class="t7-waves-mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 241.71 34.52">
+            <div class="mobile"> <svg class="t7-waves-mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 241.71 34.52">
     <defs>
         <linearGradient id="t7-waves-mobile" x1="50.49" y1="0.17" x2="240.58" y2="34.17" gradientUnits="userSpaceOnUse">
             <stop offset="0.5" stop-color="#00ffb4"/>
@@ -733,26 +749,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </g>
     </g>
 </svg>
-</div>
+            </div>
 
             <div class="inner">
                 <div class="text-container">
-					<br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
                     <h1>About Us</h1>
 
-					<h3>Super Agent 核心價值</h3>
-					<p> ● 使用者導向：以業務夥伴為核心開發的APP，幫助升級專業能力並簡化工作流程。
-<br>● 敏捷式開發：導入敏捷開發，提供MVP體驗產品並收集回饋，快速迭代優化產品，符合使用者需求。
-<br>● 產品共創：大家一起發展有用的功能，好用的工具，就由您來設計。
-<br>● 好用才有用：挑戰有人愛用的產品才是好產品，使用數據透明公開。</p>
+                    <h3>Super Agent 核心價值</h3>
+                    <p> ● 使用者導向：以業務夥伴為核心開發的APP，幫助升級專業能力並簡化工作流程。
+                        <br>● 敏捷式開發：導入敏捷開發，提供MVP體驗產品並收集回饋，快速迭代優化產品，符合使用者需求。
+                        <br>● 產品共創：大家一起發展有用的功能，好用的工具，就由您來設計。
+                        <br>● 好用才有用：挑戰有人愛用的產品才是好產品，使用數據透明公開。</p>
 
-					<h3>Super Agent 為何存在</h3>
-					 <p>● 全新思維導入，讓信義夥伴都能參與開發並有感迭代。
-<br>● 次世代智能協作平台，顛覆過往認知。</p>
+                    <h3>Super Agent 為何存在</h3>
+                    <p>● 全新思維導入，讓信義夥伴都能參與開發並有感迭代。
+                        <br>● 次世代智能協作平台，顛覆過往認知。</p>
 
                     <div class="button-with-waves t7">
 
-                        	<svg class="t7-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 241.71 34.52">
+                        <svg class="t7-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 241.71 34.52">
     <defs>
         <linearGradient id="t7-waves" x1="50.49" y1="0.17" x2="240.58" y2="34.17" gradientUnits="userSpaceOnUse">
             <stop offset="0.5" stop-color="#00ffb4"/>
@@ -786,69 +802,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
 
-<footer>
-    <div class="inner">
-        <div class="top">
-            <div class="logo-container">
-                <a href="/sa/" class="logo" data-trigger-page-transition></a>
+    <footer>
+        <div class="inner">
+            <div class="top">
+                <div class="logo-container">
+                    <a href="/sa/" class="logo" data-trigger-page-transition></a>
+
+                </div>
+
 
             </div>
 
-
-        </div>
-
-        <div class="bottom">
-            <nav class="footer">
-
-                <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
-                <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">新功能查看</span> <span class="line"></span></a>
-
-            </nav>
-
-            <div class="right">
-                <nav class="footer-sub">
-                    <span>Copyright &copy; 2022 信義房屋股份有限公司 Transformation Office . All rights reserved.</span>
-
+            <div class="bottom">
+                <nav class="footer">
+                    <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                    <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">數據總覽</span> <span class="line"></span></a>
+                    <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點贊Go!</span> <span class="line"></span></a>
                 </nav>
 
+                <div class="right">
+                    <nav class="footer-sub">
+                        <span>Copyright &copy; 2022 信義房屋股份有限公司 Transformation Office . All rights reserved.</span>
+
+                    </nav>
 
 
-                <div id="gRecaptcha" class="g-recaptcha"></div>
+
+                    <div id="gRecaptcha" class="g-recaptcha"></div>
+                </div>
             </div>
         </div>
+    </footer>
+
+    <div class="messages-container">
+        <a href="/sa/#" class="close-icon"></a>
     </div>
-</footer>
-
-    <div class="messages-container"><a href="/sa/#" class="close-icon"></a></div>
-</div>
+    </div>
 
 
-<script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
-<script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
-<script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
-<script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/smoothscroll.js' %}"></script>
-<script src="{% static 'js/wow.min.js' %}"></script>
-<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-<script src="{% static 'js/owl.carousel.min.js' %}"></script>
-<script src="{% static 'js/jquery.validate.min.js' %}"></script>
-<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
-<script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
-<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-<script src="{% static 'js/interface.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/interface.js' %}"></script>
 
-<script>
-    window.onRecaptchaLoad = function() {
-        window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
-            'sitekey': '6LeNkL4UAAAAAJcRfruukBp2lab65JDvT8AmeKTS',
-            'badge': 'inline',
-            'size': 'invisible',
-            'theme': 'dark'
-        });
-    };
-</script>
+    <script>
+        window.onRecaptchaLoad = function() {
+            window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
+                'sitekey': '6LeNkL4UAAAAAJcRfruukBp2lab65JDvT8AmeKTS',
+                'badge': 'inline',
+                'size': 'invisible',
+                'theme': 'dark'
+            });
+        };
+    </script>
 
 
 </body>
+
 </html>

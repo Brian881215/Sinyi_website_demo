@@ -85,3 +85,9 @@ def usage(request):
     context = {'overview': overview, 'bar_chart': bar_chart, 'heatmap': heatmap}
     context = json.dumps(context)
     return render(request, 'pd_data.html', {'context': context})
+
+def voting(request):
+    solution = request.GET.get('solution', False)
+    if solution: return render(request, f'voting/solution{solution}.html')
+
+    return render(request, 'voting.html')
