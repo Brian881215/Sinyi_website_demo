@@ -15,6 +15,24 @@ DATABASES = {
         'PASSWORD': os.environ['CLOUD002_PWD'],
         'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server',},
     },
+    'ADS': {
+        'ENGINE': 'mssql',
+        'NAME': os.environ['DW001_ANC'],
+        'HOST': os.environ['DW001_HOST'],
+        'PORT': os.environ['DW001_PORT'],
+        'USER': os.environ['DW001_USER'],
+        'PASSWORD': os.environ['DW001_PWD'],
+        'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server',},
+    },
+    # 'ADS': {
+    #     'ENGINE': 'mssql',
+    #     'NAME': os.environ['CLOUD002_ADS'],
+    #     'HOST': os.environ['CLOUD002_HOST'],
+    #     'PORT': os.environ['CLOUD002_PORT'],
+    #     'USER': os.environ['CLOUD002_USER'],
+    #     'PASSWORD': os.environ['CLOUD002_PWD'],
+    #     'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server',},
+    # },
 }
 
 # this is so we can generate URLs for routes hosted by our app when it is hosted
