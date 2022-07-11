@@ -708,7 +708,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $(`#${id.slice(0,4)}`).attr("class","d_nav_s d_nav_item");
             $(".d_nav_item").removeClass("d_nav_h");
 
-            $("#span1").html($(`#${id.slice(0,4)}`).html());
+            var index = $(`#${id.slice(0,4)}`).attr("id").slice(3,4);
+
+            $("#span1").html(l2_items_title[index]);
             $("#span2").html(e.target.innerHTML);
 
             var type_name=l2_items_title[id.slice(3,4)];
