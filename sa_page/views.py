@@ -25,7 +25,7 @@ def usage(request):
                         ).order_by(
                             'week_number'
                         )
-        regular_usage = list(regular_usage.values())
+        regular_usage = list(regular_usage.values()[:12])
         hourly_usage = SaHourlyUsageByType.objects.using('ADS')
         hourly_usage = hourly_usage.filter(
                             type_name = type_name, type_level = type_level
@@ -34,7 +34,7 @@ def usage(request):
                         )
         hourly_usage = list(hourly_usage.values())
     else:
-        regular_usage = list(SaRegularUsersOverview.objects.using('ADS').order_by('week_number').values())
+        regular_usage = list(SaRegularUsersOverview.objects.using('ADS').order_by('week_number').values()[:12])
         hourly_usage = list(SaHourlyUsageOverview.objects.using('ADS').order_by('weekday_name_abbreviated', 'hour').values())
 
     if(len(regular_usage) != 12): return HttpResponseServerError('資料抓取未滿12週')
