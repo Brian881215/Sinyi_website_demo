@@ -636,7 +636,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  .attr("id","chart3_y")
 
             const myColor = d3.scaleLinear()
-                .range(["#EDFEFF", "#38A6AD"])
+                // .range(["#EDFEFF", "#38A6AD"])
+                .range(["#C2F1F4", "#79E0CF","#2BB5C8"])
                 .domain([0,d3.max(heatmap,d=>d.users)])
             chart.append("text")
                 .attr("y", 285)
