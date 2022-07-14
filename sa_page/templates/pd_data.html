@@ -447,12 +447,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             .tickPadding(10)
                 var axisY = d3.axisLeft(yScale)
                             .tickFormat(d => d+" 人")
+                var axisY2 = d3.axisLeft(yScale)
+                            .tickFormat("")
+                            .tickSize(-770,0)
 
                 chart.append("g")
                     .call(axisX)
                     .attr("transform", `translate(0,${height})`);
                 chart.append("g")
                     .call(axisY)
+                chart.append("g")
+                     .call(axisY2)
+                     .attr("stroke-width", "0.07px");
                 chart.append("text")
                     .attr("y", 285)
                     .attr("x", width+15)
