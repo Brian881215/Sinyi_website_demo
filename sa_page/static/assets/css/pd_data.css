@@ -313,17 +313,15 @@ article {
     box-sizing: border-box;
     z-index:1000;
     visibility: hidden;
+
+    font-size: 12px;
+    color: #333333;
 }
 #tip1 {
     display: flex;
     width: 176px;
 }
 
-
-.tip{ 
-    font-size: 12px;
-    color: #333333;
-}
 .tip div div,#tip2 div {
     height: 28px;
     line-height: 28px;
@@ -364,4 +362,55 @@ article {
     width:120px;
     height: 1px;
     background: rgb(74, 180, 144,0.8);
+}
+#tip3 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:190px;
+    height:300px;
+}
+#tip3.tip {
+    height: 128px;
+}
+#tip3 h3 {
+    margin: 0;
+    font-size: 15px;
+    color:#4AB490;
+    line-height: 30px;
+}
+#tip3 > div {
+    position: relative;
+}
+#tip3 > div > div {
+    position: absolute;
+}
+#tip3 > div > div:nth-child(2){
+    left:124px;
+}
+#tip3 > div > div > div {
+    height: 30px;
+}
+#tip3 > div > div:nth-child(1) {
+    width:100%;
+}
+#tip3 > div > div:nth-child(1) >div{
+    border-bottom: 1px solid rgb(74, 180, 144,0.8);
+}
+#tip3 > div > div:nth-child(1) >div:last-child{
+    border-bottom: 0px 
+}
+.plate {
+    margin-right: 6px;
+    display: inline-block;
+    width:10px;
+    height:10px;
+}
+.plate#color3{
+    background: rgb(43, 181, 200);
+}
+.plate#color2{
+    background: rgb(121, 224, 207);
+}
+.plate#color1{
+    background: rgb(194, 241, 244);
 }

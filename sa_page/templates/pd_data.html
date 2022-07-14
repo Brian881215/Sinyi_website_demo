@@ -203,6 +203,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <div>使用人數：<span id="tip2_info3">100</span> 人</div>
                         </div>
+                        <div id="tip3" class="tip">
+                            <h3>當週使用人數</h3>
+                            <div>
+                                <div>
+                                    <div><span id="color3" class="plate"></span>當週使用3日以上：</div>
+                                    <div><span id="color2" class="plate"></span>當週使用2日：</div>
+                                    <div><span id="color1" class="plate"></span>當週使用1日：</div>
+                                </div>
+                                <div>
+                                    <div><span id="tip3_info3">8</span> 人</div>
+                                    <div><span id="tip3_info2">50</span> 人</div>
+                                    <div><span id="tip3_info1">127</span> 人</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -500,7 +515,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         .attr("x", (d, i) => xScale(weeksName[i]))
                         .attr("y", d => yScale(d[1]))
                         .attr("width", xScale.bandwidth())
-                        .attr("height", d => yScale(d[0]) - yScale(d[1]));
+                        .attr("height", d => yScale(d[0]) - yScale(d[1]))
+                        .on("mousemove",(e,d)=>{
+                            d3.select("#tip3").style("visibility","visible")
+                                .style("top",e.offsetY-100+"px")
+                                .style("left",e.offsetX-88+"px")
+                            d3.select("#tip3_info1").text(d.data["avg_usage_over_3_days"]);
+                            d3.select("#tip3_info2").text(d.data["avg_usage_2_days"]);
+                            d3.select("#tip3_info3").text(d.data["avg_usage_1_days"]);
+                        })
+                        .on("mouseout",()=>{
+                            d3.select("#tip3").style("visibility","hidden")
+                        })
 
                 // 畫折線圖
                 var line = d3.line()
@@ -650,7 +676,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     d3.select("#tip2").style("visibility","hidden")
                 })
         }
-        // 3_2
 
         initial();
         section2(context["overview"]);
