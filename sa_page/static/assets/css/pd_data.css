@@ -296,6 +296,9 @@ article {
 #chart2_y text,#chart2_x text,#chart3_x text,#chart3_y text{
     font-size: 11px;
 }
+#heatmap #heatmap_title {
+    font-size:14px;
+}
 
 /* 比例尺 */
 .scale {
