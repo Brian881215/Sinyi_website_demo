@@ -293,6 +293,10 @@ article {
     width: 100%;
     height: 338px;
 }
+#chart2_y text,#chart2_x text,#chart3_x text,#chart3_y text{
+    font-size: 11px;
+}
+
 /* 比例尺 */
 .scale {
     position: absolute;

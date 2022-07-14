@@ -459,7 +459,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 // 建立座標軸
                 var axisX = d3.axisBottom(xScale)
-                            .tickPadding(10)
+                            .tickPadding(14)
+                            .tickSize(0,0)
                 var axisY = d3.axisLeft(yScale)
                             .tickFormat(d => d+" 人")
                 var axisY2 = d3.axisLeft(yScale)
@@ -468,9 +469,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 chart.append("g")
                     .call(axisX)
-                    .attr("transform", `translate(0,${height})`);
+                    .attr("transform", `translate(0,${height})`)
+                    .attr("id","chart2_x")
                 chart.append("g")
                     .call(axisY)
+                    .attr("id","chart2_y")
                 chart.append("g")
                      .call(axisY2)
                      .attr("stroke-width", "0.07px");
@@ -626,9 +629,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             chart.append("g")
                  .attr("transform", `translate(-1, ${height})`)
                  .call(axisX)
+                 .attr("id","chart3_x")
             chart.append("g")
                  .attr("transform", `translate(-1, 0)`)
-                 .call(axisY);
+                 .call(axisY)
+                 .attr("id","chart3_y")
 
             const myColor = d3.scaleLinear()
                 .range(["#EDFEFF", "#38A6AD"])
