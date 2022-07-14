@@ -619,7 +619,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 .attr("y", function(d) { return yScale(d.day) })
                 .attr("width", xScale.bandwidth() )
                 .attr("height", yScale.bandwidth() )
-                .style("fill", function(d) { return myColor(d.users)} )
+                .style("fill", function(d) { 
+                    if(d.users==0){
+                        return "#F4F4F480";
+                    }
+                    return myColor(d.users)} 
+                )
                 .on("mouseover",(e,d)=>{
                     d3.select(e.currentTarget).attr("stroke","#2E88BA")
                                                 .attr("stroke-width",2.5)
