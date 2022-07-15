@@ -172,12 +172,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div><sapn id="s2_span2">-</sapn><span class="s2_span">人</span></div>
                     </div>
                     <div class="s2">
-                        <h4><img src="{% static 'assets/img/pd_data/ic_selection2_3.svg' %}" /><span>近12週使用趨勢圖 （每週3日以上）</span></h4>
+                        <h4><img src="{% static 'assets/img/pd_data/ic_selection2_3.svg' %}" /><span>過去 12 週常態使用趨勢（每週使用 3 日以上）</span></h4>
                         <div class="d_chart"></div>
                     </div>
                 </div>
                 <div id="section3">
                     <div class="frame">
+                        <div id="s3_title">
+                            <h4>
+                                <img src="{% static 'assets/img/pd_data/ic_selection3.svg'%}" />
+                                <span class="s3_title_span">過去 12 週服務常態使用狀況</span>
+                            </h4>
+                        </div>
                         <div id="chart_btn">
                             <button id="chart_btn1" class="chart_btn_s">常態使用率</button>
                             <button id="chart_btn2" class="">使用時間熱度</button>
@@ -202,6 +208,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div><span id="tip2_info2">24</span> 時</div>
                             </div>
                             <div>使用人數：<span id="tip2_info3">100</span> 人</div>
+                        </div>
+                        <div id="tip3" class="tip">
+                            <h3>平均週使用人數</h3>
+                            <div>
+                                <div>
+                                    <div><span id="color3" class="plate"></span>平均週使用3日以上：</div>
+                                    <div><span id="color2" class="plate"></span>平均週使用2日：</div>
+                                    <div><span id="color1" class="plate"></span>平均週使用1日：</div>
+                                </div>
+                                <div>
+                                    <div><span id="tip3_info3">8</span> 人</div>
+                                    <div><span id="tip3_info2">50</span> 人</div>
+                                    <div><span id="tip3_info1">127</span> 人</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -324,7 +345,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             // 製作比例尺
             var xScale = d3.scaleBand()
-                        .domain(n_data.map(d => d.week))
+                        .domain(n_data.map(d => d.date))
                         .range([0, width]);
 
             var yScale = d3.scaleLinear()
@@ -359,7 +380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             // 計算折線端點座標
             var line = d3.line()
-                        .x(d => xScale(d.week))
+                        .x(d => xScale(d.date))
                         .y(d => yScale(d.avg_usage_over_3_days));
 
             var gPath = chart.append("g")
@@ -378,7 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 .enter()
                 .append("circle")
                 .attr("class", "dot")
-                .attr("cx", d => xScale(d.week))
+                .attr("cx", d => xScale(d.date))
                 .attr("cy", d => yScale(d.avg_usage_over_3_days))
                 .attr("r", 3.2)
                 .style("fill", "#23989F")
@@ -387,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 .data(n_data)
                 .enter()
                 .append("text")
-                .attr("x", d => xScale(d.week))
+                .attr("x", d => xScale(d.date))
                 .attr("y", d => yScale(d.avg_usage_over_3_days)-10)
                 .attr("text-anchor", "middle")
                 .style("fill", "#23989F")
@@ -419,7 +440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 .attr("class","pd_data_chart2");
 
                 // 週
-                var weeksName = s3_1_data["stack"].map(d=>d.week);
+                var weeksName = s3_1_data["stack"].map(d=>d.date);
                 // 常態使用人數總和
                 var counts = s3_1_data["stack"].map(d=>d.value);
                 // 總和陣列
@@ -444,22 +465,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 // 建立座標軸
                 var axisX = d3.axisBottom(xScale)
-                            .tickPadding(10)
+                            .tickPadding(14)
+                            .tickSize(0,0)
                 var axisY = d3.axisLeft(yScale)
                             .tickFormat(d => d+" 人")
+                var axisY2 = d3.axisLeft(yScale)
+                            .tickFormat("")
+                            .tickSize(-770,0)
 
                 chart.append("g")
                     .call(axisX)
-                    .attr("transform", `translate(0,${height})`);
+                    .attr("transform", `translate(0,${height})`)
+                    .attr("id","chart2_x")
                 chart.append("g")
                     .call(axisY)
+                    .attr("id","chart2_y")
+                chart.append("g")
+                     .call(axisY2)
+                     .attr("stroke-width", "0.07px");
                 chart.append("text")
                     .attr("y", 285)
                     .attr("x", width+15)
                     .text("週");
                 chart.append("text")
                     .attr("x", "30px")
-                    .attr("y", "-20px")
+                    .attr("y", "-15px")
                     .attr("text-anchor", "end")
                     .text("常態使用人數");
 
@@ -494,7 +524,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         .attr("x", (d, i) => xScale(weeksName[i]))
                         .attr("y", d => yScale(d[1]))
                         .attr("width", xScale.bandwidth())
-                        .attr("height", d => yScale(d[0]) - yScale(d[1]));
+                        .attr("height", d => yScale(d[0]) - yScale(d[1]))
+                        .on("mousemove",(e,d)=>{
+                            d3.select("#tip3").style("visibility","visible")
+                                .style("top",e.offsetY-100+"px")
+                                .style("left",e.offsetX-88+"px")
+                            d3.select("#tip3_info1").text(d.data["avg_usage_over_3_days"]);
+                            d3.select("#tip3_info2").text(d.data["avg_usage_2_days"]);
+                            d3.select("#tip3_info3").text(d.data["avg_usage_1_days"]);
+                        })
+                        .on("mouseout",()=>{
+                            d3.select("#tip3").style("visibility","hidden")
+                        })
 
                 // 畫折線圖
                 var line = d3.line()
@@ -572,7 +613,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var chart = svg
                 .append("g")
                 .attr("transform",`translate(${margin.left},${margin.top})`)
-                .attr("class","pd_data_chart2");
+                .attr("id","heatmap");
             const hourArray = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23",];
             const weekArray = ["星期日", "星期六", "星期五", "星期四", "星期三", "星期三", "星期二", "星期一"];
 
@@ -586,7 +627,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         .domain(weekArray)
                         .padding(0.01);
             var axisX = d3.axisBottom(xScale)
-                        // .tickSize(0)
                         .tickPadding(10)
             var axisY = d3.axisLeft(yScale)
                         .tickPadding(8)
@@ -594,32 +634,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             chart.append("g")
                  .attr("transform", `translate(-1, ${height})`)
                  .call(axisX)
+                 .attr("id","chart3_x")
             chart.append("g")
                  .attr("transform", `translate(-1, 0)`)
-                 .call(axisY);
+                 .call(axisY)
+                 .attr("id","chart3_y")
 
             const myColor = d3.scaleLinear()
-                .range(["#EDFEFF", "#38A6AD"])
-                .domain([0,d3.max(heatmap,d=>d.users)])
+                .range(["#C2F1F4", "#79E0CF","#2BB5C8"])
+                .domain([0,d3.max(heatmap["data"],d=>d.users)])
             chart.append("text")
                 .attr("y", 285)
                 .attr("x", width+15)
                 .text("小時");
             chart.append("text")
                 .attr("x", "-10px")
-                .attr("y", "-20px")
+                .attr("y", "-15px")
                 .attr("text-anchor", "end")
                 .text("星期");
+            chart.append("text")
+                .attr("x", "520px")
+                .attr("y", "-10px")
+                .attr("text-anchor", "end")
+                .attr("id","heatmap_title")
+                .attr("fill","#555555")
+                .attr("font-weight","bold")
+                .text(heatmap["period"]);
 
             chart.selectAll()
-                .data(heatmap, function(d) {
+                .data(heatmap["data"], function(d) {
                     return d.group+':'+d.variable;})
                 .join("rect")
                 .attr("x", function(d) { return xScale(d.hour) })
                 .attr("y", function(d) { return yScale(d.day) })
                 .attr("width", xScale.bandwidth() )
                 .attr("height", yScale.bandwidth() )
-                .style("fill", function(d) { return myColor(d.users)} )
+                .style("fill", function(d) { 
+                    if(d.users==0){
+                        return "#F4F4F480";
+                    }
+                    return myColor(d.users)} 
+                )
                 .on("mouseover",(e,d)=>{
                     d3.select(e.currentTarget).attr("stroke","#2E88BA")
                                                 .attr("stroke-width",2.5)
@@ -639,7 +694,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     d3.select("#tip2").style("visibility","hidden")
                 })
         }
-        // 3_2
 
         initial();
         section2(context["overview"]);
@@ -657,11 +711,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $("#chart_btn button").removeClass();
             let btn_id = e.target.id;
             if(btn_id == "chart_btn1"){
+                $(".s3_title_span").html("過去 12 週服務常態使用狀況");
                 $("#chart_btn1").attr("class","chart_btn_s")
                 section3_1(context["bar_chart"]);
 
                 $(".scale > img").attr("src",string1+'1'+'.svg');
             }else if(btn_id == "chart_btn2"){
+                $(".s3_title_span").html("過去 1 週服務使用時間熱度");
                 $("#chart_btn2").attr("class","chart_btn_s")
                 section3_2(context["heatmap"]);
                 $(".scale > img").attr("src",string1+'2'+'.svg');

@@ -3,6 +3,7 @@ from django.db import models
 
 class SaRegularUsersOverview(models.Model):
     id = models.IntegerField(db_column='ID', primary_key=True)
+    first_date = models.DateTimeField(db_column='FIRST_DATE')
     week_number = models.BigIntegerField(db_column='WEEK_NUMBER')
     avg_usage_over_3_days = models.BigIntegerField(db_column='AVG_USAGE_OVER_3_DAYS')
     avg_usage_2_days = models.BigIntegerField(db_column='AVG_USAGE_2_DAYS')
@@ -29,6 +30,7 @@ class SaHourlyUsageOverview(models.Model):
 
 class SaRegularUsersByType(models.Model):
     id = models.IntegerField(db_column='ID', primary_key=True)
+    first_date = models.DateTimeField(db_column='FIRST_DATE')
     week_number = models.IntegerField(db_column='WEEK_NUMBER')
     type_name = models.TextField(db_column='TYPE_NAME')
     type_level = models.TextField(db_column='TYPE_LEVEL')
