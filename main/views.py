@@ -43,7 +43,7 @@ def article_details(request, pk):
     return HttpResponse(template.render(Context(locals())))
 
 def feature(request):
-    features = Feature.objects.order_by('-created_at')
+    features = Feature.objects.order_by('order')
     return render(request, 'feature.html', {'features': features})
 
 def feature_details(request, pk):
