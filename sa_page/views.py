@@ -77,11 +77,14 @@ def usage(request):
             }
         )
 
-    first_date = hourly_usage[0]['date'] - timedelta(days=list(DAY).index(hourly_usage[0]['weekday_name_abbreviated']))
-    last_date = first_date + timedelta(days=6)
-    first_date = first_date.strftime('%Y/%m/%d')
-    last_date = last_date.strftime('%Y/%m/%d')
-    heatmap['period'] = f'{first_date} - {last_date}'
+    if len(hourly_usage) != 0:
+        first_date = hourly_usage[0]['date'] - timedelta(days=list(DAY).index(hourly_usage[0]['weekday_name_abbreviated']))
+        last_date = first_date + timedelta(days=6)
+        first_date = first_date.strftime('%Y/%m/%d')
+        last_date = last_date.strftime('%Y/%m/%d')
+        heatmap['period'] = f'{first_date} - {last_date}'
+    else:
+        heatmap['period'] = '區間範圍無資料'
 
     for usage in hourly_usage:
         day = list(DAY)
