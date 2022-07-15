@@ -29,7 +29,7 @@ class FeatureImageAdmin(admin.StackedInline):
 
 @admin.register(Feature)
 class FeatureAdmin(admin.ModelAdmin):
-    list_display = ('title', 'sub_title', 'filepath', 'created_at')
+    list_display = ('title', 'sub_title', 'filepath', 'order')
     search_fields = ('title', )
     inlines = [FeatureImageAdmin]
 

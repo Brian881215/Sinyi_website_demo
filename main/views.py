@@ -11,7 +11,7 @@ from datetime import datetime
 def index(request):
     creatuser()
 
-    features = Feature.objects.order_by('-created_at')
+    features = Feature.objects.order_by('order')
     showUpArticle = Article.objects.all().order_by('-created_at')[:8]
     for article in showUpArticle:
         article.created_at = datetime.strftime(article.created_at, '%Y-%m-%d')
