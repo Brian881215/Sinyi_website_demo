@@ -176,7 +176,7 @@ article {
     margin: 20px auto;
     padding:0px 30px;
     width: 1000px;
-    height: 600px;
+    height: 620px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     border-radius: 8px;
@@ -219,12 +219,13 @@ article {
     width:140px;
 }
 .s2 h4{
+    margin-left: 4px;
     height: 24px;
     line-height: 24px;
 }
-.s2 .s2_span {
+.s2 h4 span {
     position: relative;
-    top:1.4px;
+    top:1.5px;
 }
 .s2 h4 img{
     margin-right: 6px;
@@ -259,20 +260,32 @@ article {
 
 /* section3 */
 #section3 {
+    position: relative;
     padding-top: 20px;
 }
+#s3_title {
+    position: absolute;
+    top:10px;
+    left:8px;
+}
+#s3_title h4 span {
+    position: relative;
+    top:1.5px;
+    left:4px;
+}
+
 .frame {
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
     width:940px;
-    height: 378px;
+    height: 400px;
     border: 1px solid #E7ECF2;
     border-radius: 4px;
 }
 
 #chart_btn {
     position: absolute;
-    top:10px;
+    top:20px;
     right:10px;
     height: 40px;
 }
@@ -297,7 +310,7 @@ article {
     font-size: 11px;
 }
 #heatmap #heatmap_title {
-    font-size:14px;
+    font-size:13px;
 }
 
 /* 比例尺 */

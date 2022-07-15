@@ -172,12 +172,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div><sapn id="s2_span2">-</sapn><span class="s2_span">人</span></div>
                     </div>
                     <div class="s2">
-                        <h4><img src="{% static 'assets/img/pd_data/ic_selection2_3.svg' %}" /><span>近12週使用趨勢圖 （每週3日以上）</span></h4>
+                        <h4><img src="{% static 'assets/img/pd_data/ic_selection2_3.svg' %}" /><span>過去 12 週常態使用趨勢（每週使用 3 日以上）</span></h4>
                         <div class="d_chart"></div>
                     </div>
                 </div>
                 <div id="section3">
                     <div class="frame">
+                        <div id="s3_title">
+                            <h4>
+                                <img src="{% static 'assets/img/pd_data/ic_selection3.svg'%}" />
+                                <span class="s3_title_span">過去 12 週服務常態使用狀況</span>
+                            </h4>
+                        </div>
                         <div id="chart_btn">
                             <button id="chart_btn1" class="chart_btn_s">常態使用率</button>
                             <button id="chart_btn2" class="">使用時間熱度</button>
@@ -483,7 +489,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     .text("週");
                 chart.append("text")
                     .attr("x", "30px")
-                    .attr("y", "-20px")
+                    .attr("y", "-15px")
                     .attr("text-anchor", "end")
                     .text("常態使用人數");
 
@@ -643,15 +649,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 .text("小時");
             chart.append("text")
                 .attr("x", "-10px")
-                .attr("y", "-20px")
+                .attr("y", "-15px")
                 .attr("text-anchor", "end")
                 .text("星期");
             chart.append("text")
                 .attr("x", "520px")
-                .attr("y", "-20px")
+                .attr("y", "-10px")
                 .attr("text-anchor", "end")
                 .attr("id","heatmap_title")
-                .attr("fill","#4AB490")
+                .attr("fill","#555555")
                 .attr("font-weight","bold")
                 .text(heatmap["period"]);
 
@@ -705,11 +711,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $("#chart_btn button").removeClass();
             let btn_id = e.target.id;
             if(btn_id == "chart_btn1"){
+                $(".s3_title_span").html("過去 12 週服務常態使用狀況");
                 $("#chart_btn1").attr("class","chart_btn_s")
                 section3_1(context["bar_chart"]);
 
                 $(".scale > img").attr("src",string1+'1'+'.svg');
             }else if(btn_id == "chart_btn2"){
+                $(".s3_title_span").html("過去 1 週服務使用時間熱度");
                 $("#chart_btn2").attr("class","chart_btn_s")
                 section3_2(context["heatmap"]);
                 $(".scale > img").attr("src",string1+'2'+'.svg');
