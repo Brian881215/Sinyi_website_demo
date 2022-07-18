@@ -194,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div id="tip1" class="tip">
                             <div>
-                                <div>每週使用3日以上：</div>
+                                <div>週使用3日以上：</div>
                                 <div>近28日曾使用：</div>
                             </div>
                             <div id="tip_info">
@@ -210,12 +210,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div>使用人數：<span id="tip2_info3">100</span> 人</div>
                         </div>
                         <div id="tip3" class="tip">
-                            <h3>平均週使用人數</h3>
+                            <h3>週使用人數</h3>
                             <div>
                                 <div>
-                                    <div><span id="color3" class="plate"></span>平均週使用3日以上：</div>
-                                    <div><span id="color2" class="plate"></span>平均週使用2日：</div>
-                                    <div><span id="color1" class="plate"></span>平均週使用1日：</div>
+                                    <div><span id="color3" class="plate"></span>週使用3日以上：</div>
+                                    <div><span id="color2" class="plate"></span>週使用2日：</div>
+                                    <div><span id="color1" class="plate"></span>週使用1日：</div>
                                 </div>
                                 <div>
                                     <div><span id="tip3_info3">8</span> 人</div>
@@ -529,9 +529,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             d3.select("#tip3").style("visibility","visible")
                                 .style("top",e.offsetY-100+"px")
                                 .style("left",e.offsetX-88+"px")
-                            d3.select("#tip3_info1").text(d.data["avg_usage_over_3_days"]);
+                            d3.select("#tip3_info3").text(d.data["avg_usage_over_3_days"]);
                             d3.select("#tip3_info2").text(d.data["avg_usage_2_days"]);
-                            d3.select("#tip3_info3").text(d.data["avg_usage_1_days"]);
+                            d3.select("#tip3_info1").text(d.data["avg_usage_1_days"]);
                         })
                         .on("mouseout",()=>{
                             d3.select("#tip3").style("visibility","hidden")
