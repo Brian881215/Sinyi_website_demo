@@ -30,6 +30,6 @@ DATABASES = {
 # on Azure or any other reverse proxy.
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # replace this with your deployed app's public URL
-ALLOWED_HOSTS = ['to-website.azurewebsites.net', 'to-website-staging.azurewebsites.net', 'to-website-development.azurewebsites.net']
+ALLOWED_HOSTS = ['to.sinyi.com.tw', 'to-website.azurewebsites.net', 'to-website-staging.azurewebsites.net', 'to-website-development.azurewebsites.net']
 # don't allow debug on prod
 DEBUG = False
