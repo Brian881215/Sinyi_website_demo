@@ -1,0 +1,17 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="50" height="50" fill="none"/>
+<path d="M32.6383 6.18081L25.1828 13.6364L17.7273 6.18081" stroke="#5ECDA8" stroke-width="2" stroke-linecap="round"/>
+<path d="M32.6383 16.1808L25.1828 23.6364L17.7273 16.1808" stroke="#5ECDA8" stroke-width="2" stroke-linecap="round"/>
+<animateTransform attributeName="transform"
+  type="translate"
+  from="0 0"
+  to="0 20"
+  begin="0s" dur="1s"
+  repeatCount="indefinite"
+/>
+<animate attributeName="opacity"
+  from="1"
+  to="0"
+  dur="1s" 
+  repeatCount="indefinite"/>
+</svg>
