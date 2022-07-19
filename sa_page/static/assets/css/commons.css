@@ -183,7 +183,7 @@ body.thumbsupgo .row.boxwrap .carditem .pjimg:after {
   height: 300px;
   background-color: rgba(91, 136, 121, 0.3);
   display: block;
-  z-index: 99;
+  z-index: 2;
   top: 0px;
   margin-top: -300px;
   position: relative;
