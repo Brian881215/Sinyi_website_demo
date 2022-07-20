@@ -14,7 +14,7 @@ class ArticleImageAdmin(admin.StackedInline):
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'filepath', 'created_at')
+    list_display = ('id', 'title', 'category', 'filename', 'is_hidden', 'is_index', 'created_at')
     list_filter = ('category', )
     search_fields = ('title', 'category')
     inlines = [ArticleImageAdmin]
@@ -29,7 +29,7 @@ class FeatureImageAdmin(admin.StackedInline):
 
 @admin.register(Feature)
 class FeatureAdmin(admin.ModelAdmin):
-    list_display = ('title', 'sub_title', 'filepath', 'order')
+    list_display = ('id', 'title', 'sub_title', 'filepath', 'order', 'is_hidden')
     search_fields = ('title', )
     inlines = [FeatureImageAdmin]
 

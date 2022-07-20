@@ -43,11 +43,14 @@ class Article(models.Model):
         ('vlog', '轉型日記'),
         ('newinfo', '新知報導'),
     )
-    article_image = models.ImageField(upload_to="static/articles/cover/", null=False, blank=False, default="")
+    article_image = models.ImageField(upload_to="static/articles/cover/", null=False, blank=False)
+    index_image = models.ImageField(upload_to="static/articles/cover/", blank=True)
     title = models.CharField(max_length=255, null=False)
     context = models.TextField()
     html = models.FileField(upload_to="static/articles/", max_length=100, null=False)
     category = models.CharField(max_length=255, choices=article_type)
+    is_hidden = models.BooleanField(default=False)
+    is_index = models.BooleanField(default=False)
     created_at = models.DateField()
 
     def filename(self):
@@ -61,6 +64,7 @@ def post_save_file(sender, instance, *args, **kwargs):
     """ Clean Old file """
     try:
         instance.article_image.delete(save=False)
+        instance.index_image.delete(save=False)
         instance.html.delete(save=False)
     except Exception as e:
         pass
@@ -70,6 +74,7 @@ def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
     try:
         old_img = instance.__class__.objects.get(id=instance.id).article_image.path
+        old_idximg = instance.__class__.objects.get(id=instance.id).index_image.path
         old_html = instance.__class__.objects.get(id=instance.id).html.path
 
         try:
@@ -80,6 +85,15 @@ def pre_save_file(sender, instance, *args, **kwargs):
             import os
             if os.path.exists(old_img):
                 os.remove(old_img)
+
+        try:
+            new_idximg = instance.index_image.path
+        except:
+            new_idximg = None
+        if new_idximg != old_idximg:
+            import os
+            if os.path.exists(old_idximg):
+                os.remove(old_idximg)
 
         try:
             new_html = instance.html.path
@@ -127,6 +141,7 @@ class Feature(models.Model):
     sub_title = models.CharField(max_length=50, null=False, blank=False)
     html = models.FileField(upload_to='static/features/')
     order = models.PositiveSmallIntegerField()
+    is_hidden = models.BooleanField(default=False)
 
     def filepath(self):
         return f'features/{os.path.basename(self.html.name)}'
