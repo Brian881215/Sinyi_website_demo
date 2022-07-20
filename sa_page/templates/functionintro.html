@@ -1,0 +1,358 @@
+{% load static %}
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/img/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/img/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/img/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/img/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/img/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/img/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'assets/img/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" class="next-head">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" rel="stylesheet" class="next-head">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="theme-color" content="#ffffff">
+
+
+    <title>信義房屋 - Super Agent 打造您的職能守護神</title>
+    <meta name="description" content="Sinyi - Super Agent 打造您的職能守護神" />
+
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SuperAgent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務" />
+    <meta property="og:image" content="assets/img/logo-small.png" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:description" content="打造您的職能守護神、數位賦能 服務全能、一鍵生成 工作即報表、數據整合 秒懂客戶" />
+    <meta property="og:site_name" content="Super Agent" />
+
+
+    <link rel="home" href="/sa/" />
+	<link rel="canonical" href="/sa/">
+    <link rel="stylesheet" href="{% static 'assets/css/sa.css' %}">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet"  media="screen">
+    <link href="{% static 'assets/css/commons.css' %}" rel="stylesheet">
+
+    <div id="top"></div>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-ML8B9HB');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body class="functionintro">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="background" data-toggle-menu></div>
+
+        <div class="nav-container">
+            <div class="top">
+                <a href="/sa/" class="logo"></a>
+               
+                <nav class="main">   
+                    <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                    <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">功能介紹</span> <span class="line"></span></a>
+                    <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">數據總覽</span> <span class="line"></span></a>
+                    <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">點讚GO!</span> <span class="line"></span></a>
+                </nav>
+
+
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+            </div>
+
+            <div class="bottom">
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+
+                <div class="form-container tabs-container">
+                    <div class="tabs">
+                        <a href="/sa/#" class="heading tab active" data-open-tab="trialForm">聯絡我們</a>
+
+                    </div>
+
+
+                    <div class="tab-content-container">
+                        <div class="tab-content active" data-tab="trialForm">
+                            <p>同仁有任何想法，歡迎與SuperAgent團隊聯絡</p>
+                            <p>E-Mail:
+                                <a href="mailto:SuperAgent@sinyi.com.tw?subject=主旨&body=內容">SuperAgent@sinyi.com.tw</a></p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-bar-container">
+            <div class="menu-bar">
+                <a href="/sa/" class="logo small" data-trigger-page-transition></a>
+                <a href="/sa/#" class="menu-button" data-toggle-menu>
+                    <span class="menu-button-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
+                </a>
+
+                <a href="/sa/#" class="trial-link" data-toggle-trial><span class="text">Contact Us</span></a>
+            </div>
+
+        </div>
+    </header>
+
+
+   
+
+
+    <div class="wrapper">
+ 
+            <div class="submenu">
+                <ol>
+                    <li class="active namecard"><a href="#"><div class="menu-item"><span>數位名片1.0</span></div></a></li>
+                    <li class="community"><a href="#"><div class="menu-item"><span>社區百科1.0</span></div></a></li>
+                </ol>
+            </div>
+            <div class="rightcolumn">
+                <div class="horizontalstyle">
+                    <div class="nav-container">
+                        <div class="top">
+                            <a href="/sa/" class="logo black"></a>
+
+                            <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+                            <h2>功能介紹</h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">功能介紹 - 數位名片1.0</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+            
+                </div>
+                <div class="content">
+                    <section class="funcintro-intro">
+                        <div class="container">
+                            <div class="row" >
+                                <div class="funcintro-sectitle">
+                                    <h2 class="center">數位名片1.0版上線囉 !</h2>
+                                    <div class="scrolldownarrow"></div>
+                                </div>
+                                <div class="funcintro-block">
+                                    <h3 class="center">分享到社群，多元管道助攻</h3>
+                                    <p class="center">社群傳播提升能見度，榮耀成就數位化展現經營實力！</p>
+                                    <img src="{% static 'assets/img/functionintro/namecard-intro-1.svg' %}" />
+                                </div>
+                                <div class="funcintro-block">
+                                    <h3 class="center">開啟名片一鍵加Line，不錯過任何機會</h3>
+                                    <p class="center">最大化留下客戶聯絡方式</p>
+                                    <img src="{% static 'assets/img/functionintro/namecard-intro-2.svg' %}" />
+                                </div> 
+                                <div class="funcintro-block">
+                                    <h3 class="center">QR code 一掃即看，擴大線上線下客戶圈</h3>
+                                    <p class="center">最大化留下客戶聯絡方式</p>
+                                    <img src="{% static 'assets/img/functionintro/namecard-intro-3.svg' %}" />
+                                </div> 
+                            </div>
+                        </div>
+                    </section>
+                    <section class="funcintro-qa">
+
+                        <div class="container">
+                            
+                            <div class="row">
+
+                                <div class="qasliderow" id="qasliderow-namecard">
+                                    <h3 class="center">常見問題集</h3>
+                                    <ol>
+                                        <li>
+                                            <div class="title">如何分享？</div>
+                                            <div class="answer">
+                                                <div class="textbox">
+                                                點擊我的數位名片右方的<strong>QR code按鈕</strong>進入數位名片頁面，再點擊右上方<strong>分享</strong>，即可將個人數位名片分享給您的LINE好友，或是個人社群媒體如
+                                                Facebook、Instagram等。
+                                                </div>
+                                                <div class="imagebox">
+                                                    <img src="{% static 'assets/img/functionintro/namecard-answer-1.png' %}" alt="點擊我的數位名片右方的QR code按鈕進入數位名片頁面，再點擊右上方分享，即可將個人數位名片分享給您的LINE好友，或是個人社群媒體如
+                                                    Facebook、Instagram等">
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">如何預覽？</div>
+                                            <div class="answer">
+                                                <div class="textbox">
+                                                    點擊我的數位名片右方的<strong>數位名片檢視</strong>，即可在SA內檢視分享給客戶的數位名片內容。
+                                                </div>
+                                                <div class="imagebox">
+                                                    <img src="{% static 'assets/img/functionintro/namecard-answer-2.png' %}" alt="點擊我的數位名片右方的數位名片檢視，即可在SA內檢視分享給客戶的數位名片內容。">
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">如何設定LINE加好友?</div>
+                                            
+                                            <div class="answer">
+                                                <div class="textbox">
+                                                    在個人LINE中找到自己的行動條碼，點擊下方的複製連結後，再到SA我的數位名片右方的<strong>設定</strong>中，連入您的LINE加好友連結，存檔後即可在數位名片頁顯示<strong>LINE加好友</strong>的功能囉！
+                                                </div>
+                                                <div class="imagebox">
+                                                    <img src="{% static 'assets/img/functionintro/namecard-answer-3.png' %}" alt="在個人LINE中找到自己的行動條碼，點擊下方的複製連結後，再到SA我的數位名片右方的設定中，連入您的LINE加好友連結，存檔後即可在數位名片頁顯示LINE加好友的功能囉！">
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="title">數位名片1.0總覽</div>
+                                            
+                                            <div class="answer">
+                                                <div class="textbox">
+                                                   
+                                                </div>
+                                                <div class="imagebox">
+                                                    <img src="{% static 'assets/img/functionintro/namecard-answer-4_1.png' %}" alt="數位名片1.0總覽-簡介">
+                                                    <img src="{% static 'assets/img/functionintro/namecard-answer-4_2.png' %}" alt="數位名片1.0總覽-獎項">
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+            
+                              
+            
+                            </div>
+                        </div>
+            
+            
+                    </section>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="inner">
+                <div class="top">
+                    <div class="logo-container">
+                        <a href="/sa/" class="logo" data-trigger-page-transition></a>
+
+                    </div>
+
+
+                </div>
+
+                <div class="bottom">
+                    <nav class="footer">
+
+                        <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                        <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">功能介紹</span> <span class="line"></span></a>
+                        <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">數據總覽</span> <span class="line"></span></a>
+                        <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點贊Go!</span> <span class="line"></span></a>
+
+                    </nav>
+
+                    <div class="right">
+                        <nav class="footer-sub">
+                            <span>Copyright &copy; 2022 信義房屋股份有限公司 Transformation Office . All rights reserved.</span>
+
+                        </nav>
+
+
+
+                        <div id="gRecaptcha" class="g-recaptcha"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="messages-container">
+            <a href="/sa/#" class="close-icon"></a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/interface.js' %}"></script>
+
+    <script>
+        window.onRecaptchaLoad = function() {
+            window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
+                'sitekey': '6LeNkL4UAAAAAJcRfruukBp2lab65JDvT8AmeKTS',
+                'badge': 'inline',
+                'size': 'invisible',
+                'theme': 'dark'
+            });
+        };
+
+
+        $(document).ready(function(){
+            $("#qasliderow-namecard ol li .title").click(function(){
+                $(this).toggleClass('open');
+                $(this).siblings('.answer').slideToggle();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
