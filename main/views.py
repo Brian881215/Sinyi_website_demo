@@ -28,7 +28,7 @@ def article(request):
     articles = Article.objects.filter(is_hidden=False).order_by('-created_at')
     for article in articles:
         article.created_at = datetime.strftime(article.created_at, '%Y-%m-%d')
-    latest_article = Article.objects.filter(is_hidden=False, is_index=True).exclude(index_image='').order_by('-created_at').first()
+    latest_article = Article.objects.filter(is_hidden=False, is_index=True).order_by('-created_at').first()
     if latest_article:
         latest_article.created_at = datetime.strftime(latest_article.created_at, '%Y-%m-%d')
 
