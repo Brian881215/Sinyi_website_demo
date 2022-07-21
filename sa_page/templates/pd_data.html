@@ -320,7 +320,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         const section2 = (overview) =>{
 
-            $("#s2_span1").text(overview["regular_usage"][0]);
+            var s2_span1 = (overview["regular_usage"][0]*100).toFixed(1);
+
+            $("#s2_span1").text(s2_span1);
             $("#s2_span2").text(overview["regular_usage"][1]);
 
             const svgSize={ width: 618,height: 80 };
