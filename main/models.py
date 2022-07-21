@@ -44,7 +44,7 @@ class Article(models.Model):
         ('newinfo', '新知報導'),
     )
     article_image = models.ImageField(upload_to="static/articles/cover/", null=False, blank=False)
-    index_image = models.ImageField(upload_to="static/articles/index/", null=False, blank=False)
+    index_image = models.ImageField(upload_to="static/articles/index/", blank=True)
     title = models.CharField(max_length=255, null=False)
     context = models.TextField()
     html = models.FileField(upload_to="static/articles/", max_length=100, null=False)
@@ -74,7 +74,7 @@ def pre_save_file(sender, instance, *args, **kwargs):
     """ instance old file will delete from os """
     try:
         old_img = instance.__class__.objects.get(id=instance.id).article_image.path
-        old_idximg = instance.__class__.objects.get(id=instance.id).index_image.path
+        old_idximg = instance.__class__.objects.get(id=instance.id).index_image
         old_html = instance.__class__.objects.get(id=instance.id).html.path
 
         try:
@@ -86,14 +86,16 @@ def pre_save_file(sender, instance, *args, **kwargs):
             if os.path.exists(old_img):
                 os.remove(old_img)
 
-        try:
-            new_idximg = instance.index_image.path
-        except:
-            new_idximg = None
-        if new_idximg != old_idximg:
-            import os
-            if os.path.exists(old_idximg):
-                os.remove(old_idximg)
+        if old_idximg != '':
+            old_idximg = old_idximg.path
+            try:
+                new_idximg = instance.index_image.path
+            except:
+                new_idximg = None
+            if new_idximg != old_idximg:
+                import os
+                if os.path.exists(old_idximg):
+                    os.remove(old_idximg)
 
         try:
             new_html = instance.html.path
