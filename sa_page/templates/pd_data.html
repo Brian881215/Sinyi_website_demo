@@ -297,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             ]
         // 匯入資料
         const context = JSON.parse('{{context|safe}}');
-        // console.log(context);
+        console.log(context);
 
         const initial =()=>{
             var url=decodeURI(window.location.href);
@@ -595,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     .style("font-weight", "500")
                     .text(d => {
                         if(d.value.regular_percentage >= 1){
-                            return d.value.regular_percentage+"%";
+                            return (d.value.regular_percentage*100).toFixed(0)+"%";
                         }
                     })
         }
