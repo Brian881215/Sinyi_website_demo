@@ -15,8 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class SinyiSSO:
     def __init__(self, client_id, client_secret, redirect_domain,
-                        auth_server_uri, recource_server_uri,
-                        signin_page):
+                        auth_server_uri, recource_server_uri):
         log_dir = os.path.join(BASE_DIR, 'logs')
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)
@@ -30,7 +29,6 @@ class SinyiSSO:
         self.client_secret = client_secret
         self.auth_server_uri = auth_server_uri
         self.recource_server_uri = recource_server_uri
-        self.signin_page = signin_page
 
         self.auth_server_params = {
             'client_id': 'ClientId',

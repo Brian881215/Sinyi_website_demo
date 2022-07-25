@@ -34,7 +34,6 @@ SINYI_SSO = SinyiSSO(
     redirect_domain = os.environ['SINYISSO_REDIRECTDOMAIN'],
     auth_server_uri = os.environ['SINYISSO_AUTHSERVER'],
     recource_server_uri = os.environ['SINYISSO_RESOURCESERVER'],
-    signin_page = 'voting',
 )
 # User auth deadline
 SESSION_COOKIE_AGE = 28800
