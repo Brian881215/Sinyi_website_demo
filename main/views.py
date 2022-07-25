@@ -9,10 +9,10 @@ from datetime import datetime
 
 
 def index(request):
-    creatuser()
+    creatuser()\
 
-    features = Feature.objects.order_by('order')
-    showUpArticle = Article.objects.all().order_by('-created_at')[:8]
+    features = Feature.objects.filter(is_hidden=False).order_by('order')
+    showUpArticle = Article.objects.filter(is_hidden=False).order_by('-created_at')[:8]
     for article in showUpArticle:
         article.created_at = datetime.strftime(article.created_at, '%Y-%m-%d')
     index_video = Video.objects.filter(is_index=True).order_by('-created_at').first()
@@ -25,11 +25,13 @@ def video(request):
     return render(request, 'video.html', {'videos': videos})
 
 def article(request):
-    articles = Article.objects.all().order_by('-created_at')
+    articles = Article.objects.filter(is_hidden=False).order_by('-created_at')
     for article in articles:
         article.created_at = datetime.strftime(article.created_at, '%Y-%m-%d')
-    latest_article = Article.objects.order_by('-created_at').first()
-    latest_article.created_at = datetime.strftime(latest_article.created_at, '%Y-%m-%d')
+    latest_article = Article.objects.filter(is_hidden=False, is_index=True).exclude(index_image='').order_by('-created_at').first()
+    if latest_article:
+        latest_article.created_at = datetime.strftime(latest_article.created_at, '%Y-%m-%d')
+
     context = {'articles':articles, 'latest_article':latest_article}
     return render(request, 'article.html', context)
 
@@ -43,7 +45,7 @@ def article_details(request, pk):
     return HttpResponse(template.render(Context(locals())))
 
 def feature(request):
-    features = Feature.objects.order_by('order')
+    features = Feature.objects.filter(is_hidden=False).order_by('order')
     return render(request, 'feature.html', {'features': features})
 
 def feature_details(request, pk):

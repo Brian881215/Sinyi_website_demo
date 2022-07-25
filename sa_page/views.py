@@ -104,3 +104,6 @@ def voting(request):
     if solution: return render(request, f'voting/solution{solution}.html')
 
     return render(request, 'voting.html')
+
+def functionintro(request):
+    return render(request, 'functionintro.html')

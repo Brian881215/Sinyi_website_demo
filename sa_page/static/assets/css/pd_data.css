@@ -236,7 +236,7 @@ article {
     color:#23989F;
 }
 #s2_span1,#s2_span2 {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 600;
 }
 .s2_140 div span {
@@ -405,7 +405,7 @@ article {
     position: absolute;
 }
 #tip3 > div > div:nth-child(2){
-    left:130px;
+    left:115px;
 }
 #tip3 > div > div > div {
     height: 30px;
