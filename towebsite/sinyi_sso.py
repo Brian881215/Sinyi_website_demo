@@ -123,13 +123,19 @@ class SinyiSSO:
         if get_user_profile != True:
             return get_user_profile
 
-        return redirect(reverse(self.signin_page))
+        redirect_after_signin = request.session.get('redirect_after_signin', False)
+        if not redirect_after_signin:
+            self.logger.error('Could not get the redirect url after signing in.')
+            return HttpResponse('Could not get the redirect url after signing in.',
+                                status=500)
+        return redirect(redirect_after_signin)
 
     def login_required(self, f):
         @wraps(f)
         def assert_login(*args, **kwargs):
             if not args[0].session.get('is_auth', False):
                 self.logger.error('Unauthorized... Redirecting to sign_in page.')
+                args[0].session['redirect_after_signin'] = args[0].get_full_path_info()
                 return redirect(reverse('sign_in'))
             return f(*args, **kwargs)
 
