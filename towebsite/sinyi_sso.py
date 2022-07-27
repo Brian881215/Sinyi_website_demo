@@ -29,6 +29,7 @@ class SinyiSSO:
         self.client_secret = client_secret
         self.auth_server_uri = auth_server_uri
         self.recource_server_uri = recource_server_uri
+        self.redirect_domain = redirect_domain
 
         self.auth_server_params = {
             'client_id': 'ClientId',
@@ -73,7 +74,7 @@ class SinyiSSO:
         if session_state is None or session_state != return_state:
             self.logger.error(self.auth_error_message['state_error'])
             return HttpResponse(self.auth_error_message['state_error']+
-                                '<br/><a href="/auth/sign_in">Retry</a>',
+                                f'<br/><a href="{self.redirect_domain}/sign_in">Retry</a>',
                                 status=401)
 
         return True
@@ -89,7 +90,8 @@ class SinyiSSO:
         response = requests.post(sinyi_resource_server, json=body)
         if response.status_code != 200:
             self.logger.error('Unable to get user profile: '+response.text)
-            return HttpResponse(response.text,
+            return HttpResponse(response.text+
+                                f'<br/><a href="{self.redirect_domain}/sign_in">Retry</a>',
                                 status=response.status_code)
         user_profile = response.json()
 
@@ -97,7 +99,7 @@ class SinyiSSO:
             self.logger.error(self.auth_error_message['get_profile_error'])
             return HttpResponse(self.auth_error_message['get_profile_error']+
                                 '<br/>'+str(user_profile['ErrDesc'])+
-                                '<br/><a href="/auth/sign_in">Retry</a>',
+                                f'<br/><a href="{self.redirect_domain}/sign_in">Retry</a>',
                                 status=401)
         request.session['user_profile'] = user_profile
         request.session['is_auth'] = True
@@ -121,11 +123,8 @@ class SinyiSSO:
         if get_user_profile != True:
             return get_user_profile
 
-        redirect_after_signin = request.session.get('redirect_after_signin', False)
-        if not redirect_after_signin:
-            self.logger.error('Could not get the redirect url after signing in.')
-            return HttpResponse('Could not get the redirect url after signing in.',
-                                status=500)
+        redirect_after_signin = request.session.get('redirect_after_signin', '/')
+
         return redirect(redirect_after_signin)
 
     def login_required(self, f):
