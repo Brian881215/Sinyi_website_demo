@@ -284,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             ]
         // 匯入資料
         const context = JSON.parse('{{context|safe}}');
-        console.log(context);
+        // console.log(context);
 
         const initial =()=>{
             var url=decodeURI(window.location.href);
@@ -627,7 +627,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var width = svgSize.width - margin.left - margin.right;
             var height = svgSize.height - margin.top - margin.bottom;
 
-            // var colors = ["#FFFFFF", "#2AB3BC"];
             var svg = d3
                 .select("body")
                 .select("#section3 .d_chart")
@@ -665,11 +664,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  .attr("id","chart3_y")
 
             const myColor = d3.scaleLinear()
-                .range(["#C2F1F4", "#79E0CF","#2BB5C8"])
+                // .range(["#C2F1F4", "#55D2BE","#2BB5C8"])
+                .range(["#C2F1F4","#52CBB9"])
                 .domain([0,parseInt(d3.max(heatmap["data"],d=>d.users))])
-            
-            // console.log(heatmap["data"]);
-            console.log(parseInt(d3.max(heatmap["data"],d=>d.users)));
 
             chart.append("text")
                 .attr("y", 285)
@@ -738,7 +735,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             let btn_id = e.target.id;
             if(btn_id == "chart_btn1"){
                 $(".s3_title_span").html("過去 12 週服務常態使用狀況");
-                // $("#chart_btn1").attr("class","chart_btn_s")
                 section3_1(context["bar_chart"]);
 
                 localStorage.setItem("chartType","chart1");
@@ -746,7 +742,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 $(".scale > img").attr("src",string1+'1'+'.svg');
             }else if(btn_id == "chart_btn2"){
                 $(".s3_title_span").html("過去 1 週服務使用時間熱度");
-                // $("#chart_btn2").attr("class","chart_btn_s")
                 section3_2(context["heatmap"]);
                 $(".scale > img").attr("src",string1+'2'+'.svg');
                 localStorage.setItem("chartType","chart2");
