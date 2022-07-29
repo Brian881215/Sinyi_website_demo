@@ -308,7 +308,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             section2(context["overview"]);
 
-            if(localStorage.getItem("chartType")){
+            if(!(localStorage.getItem("chartType"))){
+                section3_1(context["bar_chart"]);
+            }
+
+            else{
                 chartType = localStorage.getItem("chartType")
                 if (chartType == "chart1"){
                     section3_1(context["bar_chart"]);
