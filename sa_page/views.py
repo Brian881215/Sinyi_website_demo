@@ -101,5 +101,8 @@ def voting(request):
 
     return render(request, 'voting.html')
 
-def functionintro(request):
-    return render(request, 'functionintro.html')
+def businesscard(request):
+    return render(request, 'businesscard.html')
+
+def community(request):
+    return render(request, 'community.html')
