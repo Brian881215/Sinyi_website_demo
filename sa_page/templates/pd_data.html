@@ -84,34 +84,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">數據總覽</span> <span class="line"></span></a>
                 <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">點讚GO!</span> <span class="line"></span></a>
             </nav>
-
-
             <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
         </div>
-
         <div class="bottom">
             <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
-
             <div class="form-container tabs-container">
                 <div class="tabs">
                     <a href="/sa/#" class="heading tab active" data-open-tab="trialForm">聯絡我們</a>
-
                 </div>
-
-
                 <div class="tab-content-container">
-                                            <div class="tab-content active" data-tab="trialForm">
-                            <p>同仁有任何想法，歡迎與SuperAgent團隊聯絡</p>
-												<p>E-Mail:
-													<a href="mailto:SuperAgent@sinyi.com.tw?subject=主旨&body=內容">SuperAgent@sinyi.com.tw</a></p>
-
-                        </div>
-
-                                    </div>
+                    <div class="tab-content active" data-tab="trialForm">
+                        <p>同仁有任何想法，歡迎與SuperAgent團隊聯絡</p>
+                            <p>E-Mail:<a href="mailto:SuperAgent@sinyi.com.tw?subject=主旨&body=內容">SuperAgent@sinyi.com.tw</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="menu-bar-container">
         <div class="menu-bar">
             <a href="/sa/" class="logo small" data-trigger-page-transition></a>
@@ -122,11 +111,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span></span>
                 </span>
             </a>
-
             <a href="/sa/#" class="trial-link" data-toggle-trial><span class="text">Contact Us</span></a>
         </div>
-
-            </div>
+    </div>
 </header>
 
 <!-- 右側內容 -->
@@ -316,6 +303,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 $(".d_nav_item").removeClass("d_nav_s");
                 $(`#l2_${index}`).attr("class","d_nav_s d_nav_item");
             }
+
+            var chartType = "chart1";
+
+            section2(context["overview"]);
+
+            if(!(localStorage.getItem("chartType"))){
+                section3_1(context["bar_chart"]);
+            }
+
+            else{
+                chartType = localStorage.getItem("chartType")
+                if (chartType == "chart1"){
+                    section3_1(context["bar_chart"]);
+                }
+                else {
+                    section3_2(context["heatmap"]);
+                }
+            }
         }
 
         const section2 = (overview) =>{
@@ -421,6 +426,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         const section3_1 = (bar_chart) => {
+            $(".s3_title_span").html("過去 12 週服務常態使用狀況");
+            $("#section3 .d_chart svg").remove();
+            $("#chart_btn button").removeClass();
+            $("#chart_btn1").attr("class","chart_btn_s")
+
+            var src_string = $(".scale img").attr("src")
+            var index = src_string.indexOf("scale");
+            var string_part = src_string.slice(0,index+5);
+            $(".scale > img").attr("src",string_part+'1'+'.svg');
+
             let s3_1_data=bar_chart;
 
             const svgSize={ width: 940,height: 338 };
@@ -601,12 +616,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         const section3_2 = (heatmap) => {
+            $(".s3_title_span").html("過去 1 週服務使用時間熱度");
+            $("#section3 .d_chart svg").remove();
+            $("#chart_btn button").removeClass();
+            $("#chart_btn2").attr("class","chart_btn_s")
+
+            var src_string = $(".scale img").attr("src")
+            var index = src_string.indexOf("scale");
+            var string_part = src_string.slice(0,index+5);
+            $(".scale > img").attr("src",string_part+'2'+'.svg');
+
             const svgSize={ width: 940,height: 338 };
             const margin = { top: 40, right: 100, bottom: 35, left: 70 };
             var width = svgSize.width - margin.left - margin.right;
             var height = svgSize.height - margin.top - margin.bottom;
 
-            var colors = ["#FFFFFF", "#2AB3BC"];
             var svg = d3
                 .select("body")
                 .select("#section3 .d_chart")
@@ -644,8 +668,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  .attr("id","chart3_y")
 
             const myColor = d3.scaleLinear()
-                .range(["#C2F1F4", "#79E0CF","#2BB5C8"])
-                .domain([0,d3.max(heatmap["data"],d=>d.users)])
+                // .range(["#C2F1F4", "#55D2BE","#2BB5C8"])
+                .range(["#C2F1F4","#52CBB9"])
+                .domain([0,parseInt(d3.max(heatmap["data"],d=>d.users))])
+
             chart.append("text")
                 .attr("y", 285)
                 .attr("x", width+15)
@@ -699,8 +725,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         initial();
-        section2(context["overview"]);
-        section3_1(context["bar_chart"]);
 
 
         // 切換圖表按鈕
@@ -715,15 +739,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             let btn_id = e.target.id;
             if(btn_id == "chart_btn1"){
                 $(".s3_title_span").html("過去 12 週服務常態使用狀況");
-                $("#chart_btn1").attr("class","chart_btn_s")
                 section3_1(context["bar_chart"]);
+
+                localStorage.setItem("chartType","chart1");
 
                 $(".scale > img").attr("src",string1+'1'+'.svg');
             }else if(btn_id == "chart_btn2"){
                 $(".s3_title_span").html("過去 1 週服務使用時間熱度");
-                $("#chart_btn2").attr("class","chart_btn_s")
                 section3_2(context["heatmap"]);
                 $(".scale > img").attr("src",string1+'2'+'.svg');
+                localStorage.setItem("chartType","chart2");
             }
         })
         // 二級選單 hover
@@ -786,7 +811,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $("#selection_box").css("visibility","hidden");
             $("#span1").html("總覽");
             $("#span2").html("");
-            window.location = `/sa/pd_data/`;
+            window.location = `/sa/pd_data`;
         })
 
 </script>

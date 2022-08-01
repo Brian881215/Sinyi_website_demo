@@ -92,7 +92,7 @@ def usage(request):
     for usage in hourly_usage:
         day = list(DAY)
         data = heatmap['data'][day.index(usage['weekday_name_abbreviated'])*24+usage['hour']]
-        data['users'] = str(usage['number_of_users'])
+        data['users'] = usage['number_of_users']
 
     context = {'overview': overview, 'bar_chart': bar_chart, 'heatmap': heatmap}
     context = json.dumps(context)
