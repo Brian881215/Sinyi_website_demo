@@ -822,6 +822,10 @@ body.functionintro .wrapper .rightcolumn .funcintro-block img {
   margin: 40px auto 40px auto;
   display: block;
 }
+body.functionintro .wrapper .rightcolumn .funcintro-block.greenbg {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
 body.functionintro .wrapper .rightcolumn section.funcintro-qa {
   width: 100%;
   padding-bottom: 80px;
@@ -899,6 +903,9 @@ body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .an
   width: calc(90% - 40px);
   height: auto;
   margin: 0px auto 0px auto;
+}
+body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .answer .imagebox:not(:first-child) {
+  margin-top: 20px;
 }
 
 @media (min-width: 1200px) {
