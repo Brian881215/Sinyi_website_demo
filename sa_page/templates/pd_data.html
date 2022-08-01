@@ -149,6 +149,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="content">
                 <div id="section1">
                     <h3>SA產品數據<span id="span1">總覽</span><span id="span2"></span></h3>
+                    <img id="help" src="{% static 'assets/img/pd_data/ic_help.svg' %}" />
+                    <div id="pop_instruction">
+                        <img id="pop_close" src ="{% static 'assets/img/pd_data/ic_close.svg' %}" />
+                        <h4>圖表相關說明</h4>
+                        <ul>
+                            <li>每週常態使用之定義：<br/>是以(過去4週使用總天數) / (過去4週服務開啟之週數) 做計算</li>
+                            <li>常態使用定義之過去4週不包含本週</li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="section2">
                     <div class="s2 s2_140">
@@ -417,7 +426,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 .enter()
                 .append("text")
                 .attr("x", d => xScale(d.date))
-                .attr("y", d => yScale(d.avg_usage_over_3_days)-10)
+                .attr("y", d => yScale(d.avg_usage_over_3_days)-7)
                 .attr("text-anchor", "middle")
                 .style("fill", "#23989F")
                 .attr("font-size",14.5)
@@ -813,7 +822,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $("#span2").html("");
             window.location = `/sa/pd_data`;
         })
+        $("#help").click(()=>{
+            $("#pop_instruction").css("visibility","visible");
+        })
 
+        $("#pop_close").click(()=>{
+            $("#pop_instruction").css("visibility","hidden");
+            // $("#pop_instruction").css("visibility","visible");
+        })
 </script>
 </body>
 </html>
