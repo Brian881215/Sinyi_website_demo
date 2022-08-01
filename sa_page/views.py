@@ -98,8 +98,14 @@ def usage(request):
     context = json.dumps(context)
     return render(request, 'pd_data.html', {'context': context})
 
-@login_required
 def voting(request):
+    solution = request.GET.get('solution', False)
+    if solution: return render(request, f'voting/solution{solution}.html')
+
+    return render(request, 'voting.html')
+
+@login_required
+def ssotest(request):
     solution = request.GET.get('solution', False)
     if solution: return render(request, f'voting/solution{solution}.html')
 
