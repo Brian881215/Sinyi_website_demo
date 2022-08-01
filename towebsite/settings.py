@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import json
+from .sinyi_sso import SinyiSSO
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,6 +26,17 @@ if env_file.exists():
     load_dotenv(env_file)
 else:
     print('.env not found. Read the secret setting from the env variables.')
+
+# Load sinyi sso module
+SINYI_SSO = SinyiSSO(
+    client_id = os.environ['SINYISSO_CLIENTID'],
+    client_secret = os.environ['SINYISSO_CLIENTSECRET'],
+    redirect_domain = os.environ['SINYISSO_REDIRECTDOMAIN'],
+    auth_server_uri = os.environ['SINYISSO_AUTHSERVER'],
+    recource_server_uri = os.environ['SINYISSO_RESOURCESERVER'],
+)
+# User auth deadline
+SESSION_COOKIE_AGE = 28800
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/

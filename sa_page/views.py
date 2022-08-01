@@ -1,14 +1,17 @@
 from datetime import timedelta
 from django.http import HttpResponseServerError
 from django.shortcuts import render
+from django.conf import settings
 from sa_page.models import *
 import copy
 import json
+
 
 DAY = {'Mon': '一', 'Tue': '二', 'Wed': '三', 'Thu':'四', 'Fri': '五', 'Sat': '六', 'Sun': '日'}
 TWELVE_WEEK_HEATMAP = [{'day': f'星期{day}', 'hour': str(hour), 'users': '0'}
                         for day in list(DAY.values())
                             for hour in range(24)]
+login_required = settings.SINYI_SSO.login_required
 
 
 def index(request):
@@ -96,6 +99,13 @@ def usage(request):
     return render(request, 'pd_data.html', {'context': context})
 
 def voting(request):
+    solution = request.GET.get('solution', False)
+    if solution: return render(request, f'voting/solution{solution}.html')
+
+    return render(request, 'voting.html')
+
+@login_required
+def ssotest(request):
     solution = request.GET.get('solution', False)
     if solution: return render(request, f'voting/solution{solution}.html')
 
