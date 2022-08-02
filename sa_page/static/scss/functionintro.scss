@@ -206,9 +206,20 @@ body.functionintro .wrapper .rightcolumn{
         }
 
        &.greenbg{
-            background: rgb(283,255,255);
-            background: linear-gradient(180deg, rgba(283,255,255,0) 0%, rgba(283,255,255,1) 100%);
-       }
+            background: rgb(238,255,255);
+            background: linear-gradient(180deg, rgba(238,255,255,0) 0%, rgba(238,255,255,1) 100%);
+
+           
+                background-image   : url(../img/line-bg.png),
+                                     linear-gradient(to right, rgba(238, 255, 255, 0) 0%,  rgba(238, 255, 255, 1) 100%);
+              
+                background-repeat  : no-repeat,
+                                     no-repeat;
+              
+                background-position: bottom right, 
+                                     right;
+        }
+       
     }
 
     section.funcintro-qa{
