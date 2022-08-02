@@ -828,6 +828,9 @@ body.functionintro .wrapper .rightcolumn .funcintro-block.greenbg {
   background-position: top right, right;
   background-size: cover, 100%;
 }
+body.functionintro .wrapper .rightcolumn .funcintro-block.nopaddingbottom {
+  padding-bottom: 0px;
+}
 body.functionintro .wrapper .rightcolumn section.funcintro-qa {
   width: 100%;
   padding-bottom: 80px;
