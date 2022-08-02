@@ -204,6 +204,22 @@ body.functionintro .wrapper .rightcolumn{
             display: block;
             
         }
+
+       &.greenbg{
+            
+
+           
+                background-image   : url(../img/line-bg.png),
+                                     linear-gradient(to bottom, rgba(238, 255, 255, 0) 0%,  rgba(238, 255, 255, 1) 100%);
+              
+                background-repeat  : no-repeat,
+                                     no-repeat;
+              
+                background-position: top right, 
+                                     right;
+                background-size:cover,100%;
+        }
+       
     }
 
     section.funcintro-qa{
@@ -289,12 +305,16 @@ body.functionintro .wrapper .rightcolumn{
                 padding:20px 0px 20px 0px;
                 background-color: #f2f2f2;
                 border-radius:10px;
-                img{
-                    display: block;
-                    width:calc(90% - 40px);
-                    height:auto;
-                    margin: 0px auto 0px auto;
-                }
+                    img{
+                        display: block;
+                        width:calc(90% - 40px);
+                        height:auto;
+                        margin: 0px auto 0px auto;
+                    }
+
+                    &:not(:first-child) {
+                        margin-top:20px;
+                    }
                }
 
             }

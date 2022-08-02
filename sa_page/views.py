@@ -40,7 +40,7 @@ def usage(request):
         regular_usage.reverse()
         hourly_usage = list(SaHourlyUsageOverview.objects.using('ADS').values())
 
-    if(len(regular_usage) != 12): return HttpResponseServerError('資料抓取未滿12週')
+    if(len(regular_usage) != 12): return HttpResponseServerError('資料抓坖未滿12週')
 
     overview = {}
     overview['regular_usage'] = [regular_usage[-1]['regular_percentage'],
@@ -87,7 +87,7 @@ def usage(request):
         last_date = last_date.strftime('%Y/%m/%d')
         heatmap['period'] = f'{first_date} - {last_date}'
     else:
-        heatmap['period'] = '區間範圍無資料'
+        heatmap['period'] = '址間範圝無資料'
 
     for usage in hourly_usage:
         day = list(DAY)
@@ -113,3 +113,9 @@ def ssotest(request):
 
 def functionintro(request):
     return render(request, 'functionintro.html')
+
+def businesscard(request):
+    return render(request, 'businesscard.html')
+
+def community(request):
+    return render(request, 'community.html')

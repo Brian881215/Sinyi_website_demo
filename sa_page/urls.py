@@ -7,5 +7,7 @@ urlpatterns = [
     path('pd_data/', usage, name='pd_data'),
     path('voting/', voting, name='voting'),
     path('ssotest/', ssotest, name='ssotest'),
-    path('functionintro/', functionintro, name='functionintro'),
+    path('functionintro/', businesscard, name='functionintro'),
+    path('functionintro/businesscard/', businesscard, name='businesscard'),
+    path('functionintro/community/', community, name='community'),
 ]
