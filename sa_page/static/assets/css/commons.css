@@ -823,11 +823,10 @@ body.functionintro .wrapper .rightcolumn .funcintro-block img {
   display: block;
 }
 body.functionintro .wrapper .rightcolumn .funcintro-block.greenbg {
-  background: rgb(238, 255, 255);
-  background: linear-gradient(180deg, rgba(238, 255, 255, 0) 0%, rgb(238, 255, 255) 100%);
-  background-image: url(../img/line-bg.png), linear-gradient(to right, rgba(238, 255, 255, 0) 0%, rgb(238, 255, 255) 100%);
+  background-image: url(../img/line-bg.png), linear-gradient(to bottom, rgba(238, 255, 255, 0) 0%, rgb(238, 255, 255) 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom right, right;
+  background-size: cover, 100%;
 }
 body.functionintro .wrapper .rightcolumn section.funcintro-qa {
   width: 100%;
