@@ -10,4 +10,5 @@ urlpatterns = [
     path('functionintro/', businesscard, name='functionintro'),
     path('functionintro/businesscard/', businesscard, name='businesscard'),
     path('functionintro/community/', community, name='community'),
+    path('functionintro/sellingprocess/', sellingprocess, name='sellingprocess'),
 ]
