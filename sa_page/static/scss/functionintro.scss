@@ -139,6 +139,17 @@ body.functionintro .wrapper .submenu li.community a > div.menu-item:before
     background-image: url(../img/functionintro/community-grey.svg);
 }
 
+body.functionintro .wrapper .submenu li.sellingprocess.active a > div.menu-item:before,
+body.functionintro .wrapper .submenu li.sellingprocess a:hover > div.menu-item:before
+{
+    background-image: url(../img/functionintro/sellingprocess.svg);
+}
+
+body.functionintro .wrapper .submenu li.sellingprocess a > div.menu-item:before
+{
+    background-image: url(../img/functionintro/sellingprocess-grey.svg);
+}
+
 
 
 
