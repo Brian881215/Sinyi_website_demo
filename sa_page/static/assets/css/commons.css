@@ -869,6 +869,16 @@ body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .ti
   font-size: 18px;
   border-bottom: 1px solid #efefef;
 }
+body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .title span.subitemtitle {
+  font-size: 14px;
+  color: #92A2B9;
+  margin-left: 100px;
+  font-weight: 400;
+  position: absolute;
+  display: block;
+  /* top: 23px; */
+  margin-top: -23px;
+}
 body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .title.open {
   border-bottom: 0px solid #efefef;
 }
