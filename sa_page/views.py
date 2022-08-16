@@ -119,3 +119,6 @@ def businesscard(request):
 
 def community(request):
     return render(request, 'community.html')
+
+def sellingprocess(request):
+    return render(request, 'sellingprocess.html')

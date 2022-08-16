@@ -139,6 +139,17 @@ body.functionintro .wrapper .submenu li.community a > div.menu-item:before
     background-image: url(../img/functionintro/community-grey.svg);
 }
 
+body.functionintro .wrapper .submenu li.sellingprocess.active a > div.menu-item:before,
+body.functionintro .wrapper .submenu li.sellingprocess a:hover > div.menu-item:before
+{
+    background-image: url(../img/functionintro/sellingprocess.svg);
+}
+
+body.functionintro .wrapper .submenu li.sellingprocess a > div.menu-item:before
+{
+    background-image: url(../img/functionintro/sellingprocess-grey.svg);
+}
+
 
 
 
@@ -260,6 +271,18 @@ body.functionintro .wrapper .rightcolumn{
                 font-weight: 900;
                 font-size:18px;
                 border-bottom:1px solid #efefef;
+
+                span.subitemtitle{
+                    font-size: 14px;
+                    color: #92A2B9;
+                    margin-left: 100px;
+                    font-weight: 400;
+                    position: absolute;
+                    display: block;
+                    /* top: 23px; */
+                    margin-top: -23px;
+              
+                }
 
             }
 

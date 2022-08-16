@@ -772,6 +772,15 @@ body.functionintro .wrapper .submenu li.community a > div.menu-item:before {
   background-image: url(../img/functionintro/community-grey.svg);
 }
 
+body.functionintro .wrapper .submenu li.sellingprocess.active a > div.menu-item:before,
+body.functionintro .wrapper .submenu li.sellingprocess a:hover > div.menu-item:before {
+  background-image: url(../img/functionintro/sellingprocess.svg);
+}
+
+body.functionintro .wrapper .submenu li.sellingprocess a > div.menu-item:before {
+  background-image: url(../img/functionintro/sellingprocess-grey.svg);
+}
+
 body.functionintro .wrapper .rightcolumn .funcintro-sectitle h1,
 body.functionintro .wrapper .rightcolumn .funcintro-sectitle h2,
 body.functionintro .wrapper .rightcolumn .funcintro-sectitle h3,
@@ -830,7 +839,6 @@ body.functionintro .wrapper .rightcolumn .funcintro-block.greenbg {
 }
 body.functionintro .wrapper .rightcolumn .funcintro-block.nopaddingbottom {
   padding-bottom: 0px;
-  
 }
 body.functionintro .wrapper .rightcolumn section.funcintro-qa {
   width: 100%;
@@ -860,6 +868,16 @@ body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .ti
   font-weight: 900;
   font-size: 18px;
   border-bottom: 1px solid #efefef;
+}
+body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .title span.subitemtitle {
+  font-size: 14px;
+  color: #92A2B9;
+  margin-left: 100px;
+  font-weight: 400;
+  position: absolute;
+  display: block;
+  /* top: 23px; */
+  margin-top: -23px;
 }
 body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .title.open {
   border-bottom: 0px solid #efefef;
