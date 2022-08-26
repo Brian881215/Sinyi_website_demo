@@ -13069,7 +13069,7 @@ header .nav-container nav.main {
 }
 
 header .nav-container nav.main .nav-link {
-    font-size: 28px;
+    font-size: 24px;
     color: hsla(0, 0%, 100%, 0.7);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13170,7 +13170,7 @@ header .nav-container nav.main .nav-link:hover .line:after {
 }
 
 header .nav-container nav.main .nav-link+.nav-link {
-    margin-top: 28px;
+    margin-top: 24px;
 }
 
 header .nav-container nav.sub .nav-link {
@@ -13353,7 +13353,7 @@ header .nav-container .bottom .form-container {
 }
 
 header .nav-container .bottom .form-container .heading {
-    font-size: 36px;
+    font-size: 28px;
     color: #0a192d;
     font-family: Proxima Nova Bold, sans-serif;
 }
