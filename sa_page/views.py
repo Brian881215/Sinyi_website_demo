@@ -122,3 +122,6 @@ def community(request):
 
 def sellingprocess(request):
     return render(request, 'sellingprocess.html')
+
+def events(request):
+    return render(request, 'events.html')
