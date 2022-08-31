@@ -1011,5 +1011,16 @@ body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .an
     width: calc(100% - 0px);
   }
 }
+/*引入活動快訊樣式*/
+/* 活動快訊頁框架 */
+ul.eventlist {
+  list-style-type: none;
+}
+ul.eventlist li {
+  background-color: #f2f2f2;
+  display: block;
+  padding: 16px;
+  color: #0A192D;
+}
 
 /*# sourceMappingURL=commons.css.map */
