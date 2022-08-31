@@ -23,9 +23,12 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" class="next-head">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" rel="stylesheet" class="next-head">
+
     <meta name="msapplication-TileColor" content="#ffffff">
+
 
     <meta name="theme-color" content="#ffffff">
 
@@ -44,11 +47,16 @@
     <meta property="og:site_name" content="Super Agent" />
 
 
+
     <link rel="home" href="/sa/" />
-	<link rel="canonical" href="/sa/">
+    <link rel="canonical" href="/sa/">
     <link rel="stylesheet" href="{% static 'assets/css/sa.css' %}">
-	<link href="{% static 'css/style.css' %}" rel="stylesheet"  media="screen">
-    <link href="{% static 'assets/css/commons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"  media="screen">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/commons.css' %}">
+
 
     <div id="top"></div>
     <!-- Google Tag Manager -->
@@ -72,7 +80,7 @@
 
 </head>
 
-<body class="functionintro">
+<body class="content thumbsupgo">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -83,8 +91,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <div class="top">
                 <a href="/sa/" class="logo"></a>
-               
-                <nav class="main">   
+
+                <nav class="main">
                     <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
                     <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                     <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">產品熱度</span> <span class="line"></span></a>
@@ -137,195 +145,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </header>
 
+    <div class="horizontalstyle">
+        <div class="nav-container">
+            <div class="top">
+                <a href="/sa/" class="logo black"></a>
 
-   
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+                <h2>活動快訊</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">活動快訊</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
+    </div>
 
     <div class="wrapper">
- 
-            <div class="submenu">
-                <ol>
-                    <li class="namecard"><a href="/sa/functionintro/businesscard/"><div class="menu-item"><span>數位名片1.0</span></div></a></li>
-                    <li class="community"><a href="/sa/functionintro/community/"><div class="menu-item"><span>社區檔案櫃</span></div></a></li>
-                    <li class="active sellingprocess"><a href="#"><div class="menu-item"><span>買方服務流程</span></div></a></li>
-                </ol>
+        <section class="content-split-container background-fixed heightauto" data-section-active data-section="0" data-video-intro>
+            <div class="container">
+                <ul class="bxslider">
+                    <li><a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_event_0905.html" target="_blank"><img src="{% static 'assets/img/banners/events_banner_1.png' %}" /></a></li>
+                    <!-- <li><img src="assets/img/thumbsupgo/banner2.png" /></li>
+                    <li><img src="assets/img/thumbsupgo/banner3.png" /></li> -->
+                </ul>
             </div>
-            <div class="rightcolumn">
-                <div class="horizontalstyle">
-                    <div class="nav-container">
-                        <div class="top">
-                            <a href="/sa/" class="logo black"></a>
-
-                            <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
-                            <h2>SA攻略</h2>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">活動快訊</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-            
-                </div>
-                <div class="content">
-                    <section class="funcintro-intro">
-                        <div class="container">
-                            test123
-                        </div>
-                    </section>
-                    <section class="funcintro-qa">
-
-                        <div class="container">
-                            
-                            <div class="row">
-
-                                <div class="qasliderow" id="qasliderow-namecard">
-                                    <h3 class="center">常見問題集</h3>
-                                    <ol>
-                                        <li>
-                                            <div class="title">客戶360<span class="subitemtitle">進入客戶360｜對客戶的認識｜客戶歷史｜線上行為</span></div>
-                                            <div class="answer">
-                                                <div class="textbox">
-                                                    <strong>輔助您環視客戶</strong>，了解客戶樣貌數據、信義足跡、線上行為，提前準備服務腳本。
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1.png' %}" alt="如何進入客戶360?">
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1_1.png' %}" alt="對客戶的認識">
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1_2.png' %}" alt="客戶的歷史">
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1_3.png' %}" alt="客戶線上行為">
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="title">客戶快找<span class="subitemtitle">如何找｜找自己的｜找全公司的</span></div>
-                                            <div class="answer">
-                                                <div class="textbox">
-                                                    同時查自己與公司的客戶資料，省去來回切換的麻煩。
-                                                   
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2.png' %}" alt="如何找客戶？">
-                                                   
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2_1.png' %}" alt="找自己的客戶">
-                                                   
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2_2.png' %}" alt="找公司的客戶">
-                                                   
-                                                </div>
-                                                
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="title">需求卡<span class="subitemtitle">建立需求卡｜複數需求卡</span></div>
-                                            
-                                            <div class="answer">
-                                                <div class="textbox">
-                                                    針對單一客戶建立<strong>多張需求卡</strong>，客戶管理便利。配案更靈活，推薦不混亂。
-                                                    
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-6.png' %}" alt="建立需求卡">
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-3.png' %}" alt="複數需求卡">
-                                                </div>
-                                               
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="title">推薦/帶看<span class="subitemtitle">所有的紀錄｜單一需求的紀錄</span></div>
-                                            
-                                            <div class="answer">
-                                                <div class="textbox">
-                                                    推薦過的案源與看過的案源一目瞭然。
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-4.png' %}" alt="針對此客戶的所有推薦/帶看">
-                                                 
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-4_1.png' %}" alt="針對單張需求卡的推薦/帶看">
-                                                 
-                                                </div>
-                                                
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="title">帶看任務<span class="subitemtitle">建立任務｜從人脈查看｜從行事曆查看</span></div>
-                                            
-                                            <div class="answer">
-                                                <div class="textbox">
-                                                    <strong>全新的任務體系概念</strong>，幫自己預約與客戶的服務我們稱做任務，除了可以在行事曆上提醒自己，任務若完成服務紀錄也隨之完成！
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5.png' %}" alt="建立任務">
-                                                  
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_1.png' %}" alt="查看已建立任務 (人脈)">
-                                                  
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_2.png' %}" alt="查看已建立任務 (任務首頁)">
-                                                  
-                                                </div>
-                                                <div class="imagebox">
-                                                    <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_3.png' %}" alt="完成任務">
-                                                  
-                                                </div>
-                                                
-                                            </div>
-                                        </li>
-                                        
-                                    </ol>
+        </section>
+        <section class="heightauto" data-section-active data-section="0" data-video-intro>
+            <div class="container">
+                <div class="row sectiontitle">
+                    <h2>活動快訊</h2>
+                    <ul>
+                        <li>
+                            <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_event_0905.html" target="_blank">
+                                <div>
+                                    <div class="event-small-cover"><img src="" alt=""></div>
+                                    <div class="content">
+                                        <h3 class="eventtitle">SHOW出我的自介送黑金版名片！</h3>
+                                        <p class="description">假自假自甲字</p>
+                                        <p class="duration">活動期間 2022/09/05(ㄧ)～2022/09/16(五)</p>
+                                        <a href="#">more</a>
+                                    </div>
                                 </div>
-            
-                              
-            
-                            </div>
-                        </div>
-            
-            
-                    </section>
+                            </a>
+                        </li>
+                    </ul>
+                    
                 </div>
             </div>
+        </section>
+       
 
-            <div id="fixedblock">
-                <!-- <div id="fixedblock-toggle-btn"><span class="close"></span></div> -->
+        <div id="fixedblock">
+            <!-- <div id="fixedblock-toggle-btn"><span class="close"></span></div> -->
+            <div class="block-body">
+                <div class="block-title">
+                    <h4><strong>Super Agent </strong>iPhone手機夥伴 搶先下載體驗！</h4>
+                </div>
                 <div class="block-body">
-                    <div class="block-title">
-                        <h4><strong>Super Agent </strong>iPhone手機夥伴 搶先下載體驗！</h4>
-                    </div>
-                    <div class="block-body">
-                        <p>SA團隊歷經半年開發，目前已可提供iOS下載體驗，搭配嶄新設計風格，SA首推三大功能：</p>
-                        <p><strong>
-                            1.「社區百科」： 開發銷售好幫手，社區大小資訊即時一手掌握<br>
-                            2.「數位名片」： 創造業務機會無遠弗屆，創新行銷通路廣結善緣<br>
-                            3.「買方服務流程」：客戶建檔到推薦帶看，一氣呵成好管理
-                        </strong></p>
-                        
-    
-                    </div>
-                    <div class="block-footer">
-                        <!-- <a href="#" class="blockbtns">我要回饋</a> -->
-                        <!-- <a href="#" class="blockbtns">下載體驗</a> -->
-                        <div class="qrcode"><img src="{% static 'assets/img/sa-download.png' %}"></div>
-                        <p class="note"><strong>[ 僅提供 iPhone 手機夥伴下載 ]</strong><br><br> 由於產品團隊採用敏捷式開發，為快速回應需求與動態調整迭代，SA發展過程中將優先鎖定iOS進行開發，請持有iPhone手機夥伴，踴躍下載搶先體驗！
-                        </p>
-                    </div>
+                    <p>SA團隊歷經半年開發，目前已可提供iOS下載體驗，搭配嶄新設計風格，SA首推三大功能：</p>
+                    <p><strong>
+                        1.「社區百科」： 開發銷售好幫手，社區大小資訊即時一手掌握<br>
+                        2.「數位名片」： 創造業務機會無遠弗屆，創新行銷通路廣結善緣<br>
+                        3.「買方服務流程」：客戶建檔到推薦帶看，一氣呵成好管理
+                    </strong></p>
+
+                </div>
+                <div class="block-footer">
+                    <!-- <a href="#" class="blockbtns">我要回饋</a> -->
+                    <!-- <a href="#" class="blockbtns">下載體驗</a> -->
+                    <div class="qrcode"><img src="{% static 'assets/img/sa-download.png' %}"></div>
+                    <p class="note"><strong>[ 僅提供 iPhone 手機夥伴下載 ]</strong><br><br> 由於產品團隊採用敏捷式開發，為快速回應需求與動態調整迭代，SA發展過程中將優先鎖定iOS進行開發，請持有iPhone手機夥伴，踴躍下載搶先體驗！
+                    </p>
                 </div>
             </div>
-
+        </div>
 
 
 
@@ -356,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
                             class="line"></span></a>
                         <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span
-                                class="line"></span></a>                         
+                                class="line"></span></a>  
                     </nav>
 
                     <div class="right">
@@ -379,6 +275,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
 
+
+
     <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
     <script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
     <script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
@@ -394,6 +292,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
     <script src="{% static 'js/interface.js' %}"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
     <script>
         window.onRecaptchaLoad = function() {
             window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
@@ -404,12 +304,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         };
 
+        $(document).ready(function() {
+            $('.bxslider').bxSlider({
+                speed: 600,
+                mode: 'horizontal',
+                infiniteLoop: true,
+                easing: 'ease-in-out',
+                adaptiveHeight: true,
+                responsive: true,
+                preloadImages: 'all',
+                auto: true,
+                autoHover: true,
+                preventDefaultSwipeY: true
 
-        $(document).ready(function(){
-            $("#qasliderow-namecard ol li .title").click(function(){
-                $(this).toggleClass('open');
-                $(this).siblings('.answer').slideToggle();
             });
+
+
+
         });
     </script>
 
