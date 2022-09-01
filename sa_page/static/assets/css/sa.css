@@ -14275,6 +14275,7 @@ a:hover {
     left: 0px;
     margin-top: -100px;
     margin-left: -100px;
+    cursor:pointer;
 }
 
 #fixedblock:hover:before {
@@ -14282,13 +14283,25 @@ a:hover {
     display: block;
     width: 140px;
     height: 140px;
-    background-image: url(../img/thumbsupgo/fixedblock-openbtn.png);
+    background-image: url(../img/thumbsupgo/fixedblock-openbtn-hover.png);
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
     left: 0px;
     margin-top: -100px;
     margin-left: -100px;
+}
+
+
+a#btnlinkblock{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0,255,255,0);
+    position: relative;
+    top: 0px;
+    margin-top: -88px;
+    display: block;
+    margin-left: -125px;
 }
 
 #fixedblock .block-title h4 {
