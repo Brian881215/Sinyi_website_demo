@@ -77,7 +77,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
+    <header class="menu-open">
         <div class="background" data-toggle-menu></div>
 
         <div class="nav-container">
@@ -86,10 +86,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                
                 <nav class="main">   
                     <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                    <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="newtag">NEW</span><span class="text" target="_blank">活動快訊</span> <span class="line"></span></a>
                     <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                     <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">產品熱度</span> <span class="line"></span></a>
                     <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">點讚GO!</span> <span class="line"></span></a>
                     <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text" target="_blank">手刀下載</span> <span class="line"></span></a>
+
                 </nav>
 
 
@@ -320,6 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div id="fixedblock">
+                <a id="btnlinkblock" href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" > </a>
                 <!-- <div id="fixedblock-toggle-btn"><span class="close"></span></div> -->
                 <div class="block-body">
                     <div class="block-title">
@@ -369,11 +372,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <nav class="footer">
 
                         <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                        <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span
+                            class="line"></span></a>   
                         <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                         <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">產品熱度</span> <span class="line"></span></a>
                         <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點讚GO!</span> <span class="line"></span></a>
                         <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
                             class="line"></span></a>
+                      
                     </nav>
 
                     <div class="right">
@@ -427,6 +433,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 $(this).toggleClass('open');
                 $(this).siblings('.answer').slideToggle();
             });
+        });
+
+        $(document).ready(function(){
+            function hidemenu(){
+               $("header.menu-open").removeClass("menu-open");
+            }
+            setTimeout(hidemenu, 2000);
         });
     </script>
 

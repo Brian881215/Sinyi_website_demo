@@ -1011,5 +1011,113 @@ body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .an
     width: calc(100% - 0px);
   }
 }
+/*引入活動快訊樣式*/
+/* 活動快訊頁框架 */
+.listcontainer {
+  padding: 0px 20px 0px 20px;
+}
+
+ul.eventlist {
+  list-style-type: none;
+}
+ul.eventlist li {
+  background-color: #f2f2f2;
+  display: block;
+  padding: 16px;
+  color: #0A192D;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+ul.eventlist li .event-small-cover {
+  width: 300px;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 8px;
+  float: left;
+  display: block;
+  margin-right: 30px;
+}
+ul.eventlist li .event-small-cover img {
+  width: 100%;
+  height: auto;
+}
+ul.eventlist li .eventrow-content {
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  width: calc(100% - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+ul.eventlist li .eventrow-content .text-wrap {
+  display: flex;
+  flex-direction: row;
+}
+ul.eventlist li .eventrow-content .text-wrap .inner-wrap {
+  width: calc(100% - 90px);
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+ul.eventlist li .eventrow-content .text-wrap .inner-wrap .eventtitle {
+  font-size: 22px;
+  width: 60%;
+}
+ul.eventlist li .eventrow-content .text-wrap .inner-wrap .description {
+  font-size: 15px;
+  line-height: 1.4;
+}
+ul.eventlist li .eventrow-content .text-wrap a.row-cta, ul.eventlist li .eventrow-content .text-wrap a.row-cta:link, ul.eventlist li .eventrow-content .text-wrap a.row-cta:visited {
+  width: 80px;
+  display: block;
+  padding-top: 25px;
+  color: #0A192D;
+  font-weight: bold;
+}
+ul.eventlist li .eventrow-content .text-wrap a.row-cta:hover {
+  color: #48d098;
+}
+ul.eventlist li .eventrow-content .duration {
+  bottom: 2px;
+  float: right;
+  display: block;
+  align-self: flex-end;
+  margin-top: auto;
+  color: #79879b;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  ul.eventlist li {
+    display: flex;
+    flex-direction: column;
+  }
+  ul.eventlist li .event-small-cover {
+    width: calc(100% - 0px);
+    height: 190px;
+    overflow: hidden;
+    border-radius: 8px;
+    float: none;
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
+  ul.eventlist li .eventrow-content {
+    width: calc(100% - 0px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  ul.eventlist li .eventrow-content .duration {
+    bottom: 2px;
+    float: right;
+    display: block;
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+}
 
 /*# sourceMappingURL=commons.css.map */

@@ -1,0 +1,142 @@
+/* 活動快訊頁框架 */
+
+.listcontainer{
+    padding:0px 20px 0px 20px;
+}
+
+ul.eventlist{
+    list-style-type:none;
+
+  
+
+    li{
+        background-color: #f2f2f2;
+        display: block;
+        padding: 16px;
+        color:#0A192D;
+        display:flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items:stretch;
+
+  
+
+        .event-small-cover{
+            width:300px;
+            height:190px;
+            overflow: hidden;
+            border-radius: 8px;
+            float:left;
+            display:block;
+            // flex-grow: 2;
+            // flex: 1;
+            margin-right:30px;
+            
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+
+        .eventrow-content{
+            flex-grow: 2;
+            flex-shrink: 1;
+            flex-basis: 0%;
+            
+            width:calc(100% - 300px);
+            display:flex;
+            flex-direction: column;
+            justify-content:flex-start;
+          
+            // background-color: yellow;
+
+            .text-wrap{
+                display:flex;
+                flex-direction: row;
+
+                .inner-wrap{
+
+                    width:calc(100% - 90px);
+                    flex-direction: row;
+                    justify-content:flex-start;
+                  
+                    // background-color: aqua;
+                    margin-right:10px;
+                    
+    
+                    .eventtitle{
+                        font-size:22px;
+                        width:60%;
+                        
+                    }
+                    .description{
+                        font-size:15px;
+                        line-height:1.4;
+                    }
+                }
+
+                a.row-cta,a.row-cta:link,a.row-cta:visited{
+                    width:80px;
+                    display:block;
+                    // background-color: red;
+                    padding-top:25px;
+                    color:#0A192D;
+                    font-weight: bold;
+                }
+                a.row-cta:hover{
+                   
+                    color:#48d098;
+                }
+            }
+
+            .duration{
+                bottom:2px;
+                float:right;
+                display:block;
+                align-self:flex-end;
+                margin-top:auto;
+                color:#79879b;
+                font-size: 14px;
+            }
+         
+        }
+    }
+}
+
+
+@media screen and (max-width:768px){
+    ul.eventlist li {
+       
+        display: flex;
+        flex-direction: column;
+       
+    }
+    ul.eventlist li .event-small-cover {
+        width: calc(100% - 0px);
+        height: 190px;
+        overflow: hidden;
+        border-radius: 8px;
+        float: none;
+        display: block;
+        margin-right: 0px;
+        margin-bottom: 16px;
+    
+    }
+
+    ul.eventlist li .eventrow-content {
+      
+        width: calc(100% - 0px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    ul.eventlist li .eventrow-content .duration {
+        bottom: 2px;
+        float: right;
+        display: block;
+        align-self: flex-end;
+        margin-top: 20px;
+    }
+
+}

@@ -4170,7 +4170,7 @@ webpackJsonp(
             (d = function () {
               (s = t(window).scrollTop()),
                 (r = t(window).scrollLeft()),
-                t("body").css("overflow", "hidden"),
+                // t("body").css("overflow", "hidden"),
                 t(window).scrollTop(s).scrollLeft(r);
             }),
             (c = function (e) {

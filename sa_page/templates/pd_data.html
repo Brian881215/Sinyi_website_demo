@@ -71,7 +71,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<header>
+<header class="menu-open">
     <div class="background" data-toggle-menu></div>
 
     <div class="nav-container">
@@ -80,10 +80,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <nav class="main">
                 <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="newtag">NEW</span><span class="text" target="_blank">活動快訊</span> <span class="line"></span></a>
                 <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                 <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">產品熱度</span> <span class="line"></span></a>
                 <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">點讚GO!</span> <span class="line"></span></a>
                 <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text" target="_blank">手刀下載</span> <span class="line"></span></a>
+
             </nav>
             <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
         </div>
@@ -118,117 +120,155 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <!-- 右側內容 -->
-<div id="d_container">
-    <section>
-        <img src="{% static 'assets/img/pd_data/img_logo.png' %}" alt="log" />
-        <nav>
-            <ul>
-                <li id="l1_s">
-                    <img src="{% static 'assets/img/pd_data/ic_sa.png' %}">
-                    <a href="">SA產品數據</a>
-                </li>
-                <li><a href="">數位名片</a></li>
-                <li><a href="">社區百科</a></li>
-                <li><a href="">信義足跡</a></li>
-            </ul>
-        </nav>
-    </section>
-    <aside>
-        <nav>
-            <h1>SA產品數據</h1>
-            <div id="d_nav">
+<div class="wrapper">
+    <div id="d_container">
+        <section>
+            <img src="{% static 'assets/img/pd_data/img_logo.png' %}" alt="log" />
+            <nav>
                 <ul>
-                    <li id="l2_0" class="d_nav_item d_nav_s">總覽</li>
-                    <li id="l2_1" class="d_nav_item">地理區<img src="{% static 'assets/img/pd_data/ic_down_arrow.svg' %}" /></li>
-                    <li id="l2_2" class="d_nav_item">年資<img src="{% static 'assets/img/pd_data/ic_down_arrow.svg' %}" /></li>
-                    <li id="l2_3" class="d_nav_item">職級<img src="{% static 'assets/img/pd_data/ic_down_arrow.svg' %}" /></li>
+                    <li id="l1_s">
+                        <img src="{% static 'assets/img/pd_data/ic_sa.png' %}">
+                        <a href="">SA產品數據</a>
+                    </li>
+                    <li><a href="">數位名片</a></li>
+                    <li><a href="">社區百科</a></li>
+                    <li><a href="">信義足跡</a></li>
                 </ul>
-            </div>
-            <div id="selection_box"></div>
-        </nav>
-        <article>
-            <div class="content">
-                <div id="section1">
-                    <h3>SA產品數據<span id="span1">總覽</span><span id="span2"></span></h3>
-                    <img id="help" src="{% static 'assets/img/pd_data/ic_help.svg' %}" />
-                    <div id="pop_instruction">
-                        <img id="pop_close" src ="{% static 'assets/img/pd_data/ic_close.svg' %}" />
-                        <h4>圖表相關說明</h4>
-                        <ul>
-                            <li>每週常態使用之定義：<br/>是以(過去4週使用總天數) / (過去4週服務開啟之週數) 做計算</li>
-                            <li>常態使用定義之過去4週不包含本週</li>
-                        </ul>
-                    </div>
+            </nav>
+        </section>
+        <aside style="margin-bottom:30px;">
+            <nav>
+                <h1>SA產品數據</h1>
+                <div id="d_nav">
+                    <ul>
+                        <li id="l2_0" class="d_nav_item d_nav_s">總覽</li>
+                        <li id="l2_1" class="d_nav_item">地理區<img src="{% static 'assets/img/pd_data/ic_down_arrow.svg' %}" /></li>
+                        <li id="l2_2" class="d_nav_item">年資<img src="{% static 'assets/img/pd_data/ic_down_arrow.svg' %}" /></li>
+                        <li id="l2_3" class="d_nav_item">職級<img src="{% static 'assets/img/pd_data/ic_down_arrow.svg' %}" /></li>
+                    </ul>
                 </div>
-                <div id="section2">
-                    <div class="s2 s2_140">
-                        <h4><img src="{% static 'assets/img/pd_data/ic_selection2_1.svg'%}" /><span>常態使用率</span></h4>
-                        <div id="s2_1"><span id="s2_span1">-</span><span class="s2_span">%</span></div>
+                <div id="selection_box"></div>
+            </nav>
+            <article>
+                <div class="content">
+                    <div id="section1">
+                        <h3>SA產品數據<span id="span1">總覽</span><span id="span2"></span></h3>
+                        <img id="help" src="{% static 'assets/img/pd_data/ic_help.svg' %}" />
+                        <div id="pop_instruction">
+                            <img id="pop_close" src ="{% static 'assets/img/pd_data/ic_close.svg' %}" />
+                            <h4>圖表相關說明</h4>
+                            <ul>
+                                <li>每週常態使用之定義：<br/>是以(過去4週使用總天數) / (過去4週服務開啟之週數) 做計算</li>
+                                <li>常態使用定義之過去4週不包含本週</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="s2 s2_140">
-                        <h4><img src="{% static 'assets/img/pd_data/ic_selection2_2.svg' %}" /><span>常態使用人數</span></h4>
-                        <div><sapn id="s2_span2">-</sapn><span class="s2_span">人</span></div>
+                    <div id="section2">
+                        <div class="s2 s2_140">
+                            <h4><img src="{% static 'assets/img/pd_data/ic_selection2_1.svg'%}" /><span>常態使用率</span></h4>
+                            <div id="s2_1"><span id="s2_span1">-</span><span class="s2_span">%</span></div>
+                        </div>
+                        <div class="s2 s2_140">
+                            <h4><img src="{% static 'assets/img/pd_data/ic_selection2_2.svg' %}" /><span>常態使用人數</span></h4>
+                            <div><sapn id="s2_span2">-</sapn><span class="s2_span">人</span></div>
+                        </div>
+                        <div class="s2">
+                            <h4><img src="{% static 'assets/img/pd_data/ic_selection2_3.svg' %}" /><span>過去 12 週常態使用趨勢（每週使用 3 日以上）</span></h4>
+                            <div class="d_chart"></div>
+                        </div>
                     </div>
-                    <div class="s2">
-                        <h4><img src="{% static 'assets/img/pd_data/ic_selection2_3.svg' %}" /><span>過去 12 週常態使用趨勢（每週使用 3 日以上）</span></h4>
-                        <div class="d_chart"></div>
-                    </div>
-                </div>
-                <div id="section3">
-                    <div class="frame">
-                        <div id="s3_title">
-                            <h4>
-                                <img src="{% static 'assets/img/pd_data/ic_selection3.svg'%}" />
-                                <span class="s3_title_span">過去 12 週服務常態使用狀況</span>
-                            </h4>
-                        </div>
-                        <div id="chart_btn">
-                            <button id="chart_btn1" class="chart_btn_s">常態使用率</button>
-                            <button id="chart_btn2" class="">使用時間熱度</button>
-                        </div>
-                        <div class="d_chart"></div>
-                        <div class="scale">
-                            <img src="{% static 'assets/img/pd_data/img_scale1.svg' %}" alt="比例尺" />
-                        </div>
-                        <div id="tip1" class="tip">
-                            <div>
-                                <div>週使用3日以上：</div>
-                                <div>近28日曾使用：</div>
+                    <div id="section3">
+                        <div class="frame">
+                            <div id="s3_title">
+                                <h4>
+                                    <img src="{% static 'assets/img/pd_data/ic_selection3.svg'%}" />
+                                    <span class="s3_title_span">過去 12 週服務常態使用狀況</span>
+                                </h4>
                             </div>
-                            <div id="tip_info">
-                                <div><span id="tip_info1">13</span>人</div>
-                                <div><span id="tip_info2">100</span>人</div>
+                            <div id="chart_btn">
+                                <button id="chart_btn1" class="chart_btn_s">常態使用率</button>
+                                <button id="chart_btn2" class="">使用時間熱度</button>
                             </div>
-                        </div>
-                        <div id="tip2" class="tip">
-                            <div>
-                                <div id="tip2_info1">星期一</div>
-                                <div><span id="tip2_info2">24</span> 時</div>
+                            <div class="d_chart"></div>
+                            <div class="scale">
+                                <img src="{% static 'assets/img/pd_data/img_scale1.svg' %}" alt="比例尺" />
                             </div>
-                            <div>使用人數：<span id="tip2_info3">100</span> 人</div>
-                        </div>
-                        <div id="tip3" class="tip">
-                            <h3>週使用人數</h3>
-                            <div>
+                            <div id="tip1" class="tip">
                                 <div>
-                                    <div><span id="color3" class="plate"></span>週使用3日以上：</div>
-                                    <div><span id="color2" class="plate"></span>週使用2日：</div>
-                                    <div><span id="color1" class="plate"></span>週使用1日：</div>
+                                    <div>週使用3日以上：</div>
+                                    <div>近28日曾使用：</div>
                                 </div>
-                                <div>
-                                    <div><span id="tip3_info3">8</span> 人</div>
-                                    <div><span id="tip3_info2">50</span> 人</div>
-                                    <div><span id="tip3_info1">127</span> 人</div>
+                                <div id="tip_info">
+                                    <div><span id="tip_info1">13</span>人</div>
+                                    <div><span id="tip_info2">100</span>人</div>
                                 </div>
                             </div>
+                            <div id="tip2" class="tip">
+                                <div>
+                                    <div id="tip2_info1">星期一</div>
+                                    <div><span id="tip2_info2">24</span> 時</div>
+                                </div>
+                                <div>使用人數：<span id="tip2_info3">100</span> 人</div>
+                            </div>
+                            <div id="tip3" class="tip">
+                                <h3>週使用人數</h3>
+                                <div>
+                                    <div>
+                                        <div><span id="color3" class="plate"></span>週使用3日以上：</div>
+                                        <div><span id="color2" class="plate"></span>週使用2日：</div>
+                                        <div><span id="color1" class="plate"></span>週使用1日：</div>
+                                    </div>
+                                    <div>
+                                        <div><span id="tip3_info3">8</span> 人</div>
+                                        <div><span id="tip3_info2">50</span> 人</div>
+                                        <div><span id="tip3_info1">127</span> 人</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </article>
-    </aside>
-</div>
+            </article>
+        </aside>
+    </div>
+    <footer>
+        <div class="inner">
+            <div class="top">
+                <div class="logo-container">
+                    <a href="/sa/" class="logo" data-trigger-page-transition></a>
 
+                </div>
+
+
+            </div>
+
+            <div class="bottom">
+                <nav class="footer">
+
+                    <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
+                    <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span class="line"></span></a>  
+                    <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
+                    <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">產品熱度</span> <span class="line"></span></a>
+                    <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點讚GO!</span> <span class="line"></span></a>
+                    <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
+                        class="line"></span></a>
+                   
+                </nav>
+
+                <div class="right">
+                    <nav class="footer-sub">
+                        <span>Copyright &copy; 2022 信義房屋股份有限公司 Transformation Office . All rights reserved.</span>
+
+                    </nav>
+
+
+
+                    <div id="gRecaptcha" class="g-recaptcha"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 
 <!-- javascript -->
 <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
@@ -831,6 +871,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $("#pop_instruction").css("visibility","hidden");
             // $("#pop_instruction").css("visibility","visible");
         })
+
+        $(document).ready(function(){
+            function hidemenu(){
+               $("header.menu-open").removeClass("menu-open");
+            }
+            setTimeout(hidemenu, 2000);
+        });
 </script>
 </body>
 </html>

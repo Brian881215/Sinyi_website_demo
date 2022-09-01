@@ -174,9 +174,9 @@ article {
 }
 .content {
     margin: 20px auto;
-    padding:0px 30px;
+    padding: 0px 30px 20px 30px;
     width: 1000px;
-    height: 620px;
+    height: auto;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     border-radius: 8px;
@@ -185,6 +185,7 @@ article {
     position: relative;
     padding-top:20px;
     height:60px;
+    width: 100%;
 }
 #section1 h3 {
     color:#0A192D;
@@ -244,10 +245,12 @@ article {
     display: flex;
     flex-direction: row;
     padding-top:10px;
-    height:120px;
+    padding-bottom:10px;
+    min-height:120px;
     border-top: 1px solid #E7ECF2;
     border-bottom: 1px solid #E7ECF2;
     box-sizing: border-box;
+    width: 100%;
 }
 .s2_140{
     position: relative;
@@ -298,11 +301,13 @@ article {
 #section3 {
     position: relative;
     padding-top: 20px;
+    width: 100%;
 }
 #s3_title {
     position: absolute;
     top:10px;
     left:8px;
+    
 }
 #s3_title h4 span {
     position: relative;
