@@ -78,7 +78,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
+    <header class="menu-open">
         <div class="background" data-toggle-menu></div>
 
         <div class="nav-container">
@@ -875,6 +875,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 'theme': 'dark'
             });
         };
+
+        $(document).ready(function(){
+            function hidemenu(){
+               $("header.menu-open").removeClass("menu-open");
+            }
+            setTimeout(hidemenu, 2000);
+        });
     </script>
 
 
