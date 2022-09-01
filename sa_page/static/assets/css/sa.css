@@ -13063,7 +13063,7 @@ header .nav-container .logo:hover {
 }
 
 header .nav-container nav.main {
-    overflow: hidden;
+    /* overflow: hidden; */
     -webkit-transition: opacity 0.6s ease-in-out;
     transition: opacity 0.6s ease-in-out;
 }
@@ -14485,4 +14485,18 @@ footer:after {
     width: 1px;
     height: 0px;
     clear: both;
+}
+
+.newtag{
+    width: 40px;
+    height: 20px;
+    color: #ffffff;
+    background-color: red;
+    border-radius: 20px;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    margin-right:10px;
+    margin-left:-50px;
 }
