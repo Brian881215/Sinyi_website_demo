@@ -14259,9 +14259,9 @@ a:hover {
     transition: margin 0.8s ease-in-out;
 }
 
-#fixedblock:hover {
+/* #fixedblock:hover {
     margin-right: 0px;
-}
+} */
 
 #fixedblock:before {
     content: "";
