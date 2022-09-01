@@ -13063,7 +13063,8 @@ header .nav-container .logo:hover {
 }
 
 header .nav-container nav.main {
-    /* overflow: hidden; */
+    padding-left:50px;
+    overflow: hidden;
     -webkit-transition: opacity 0.6s ease-in-out;
     transition: opacity 0.6s ease-in-out;
 }
@@ -13232,7 +13233,7 @@ header .nav-container .hidden-button {
 
 header .nav-container .top {
     background-color: #030928;
-    padding: calc(80px + 10vh) 0 80px 60px;
+    padding: calc(80px + 10vh) 0 80px 10px;
     height: calc(100vh - 180px);
     display: -webkit-box;
     display: -ms-flexbox;
