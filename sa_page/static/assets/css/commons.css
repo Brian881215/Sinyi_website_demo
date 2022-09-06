@@ -106,7 +106,7 @@ body.thumbsupgo .bx-wrapper .bx-controls-direction a {
 /*section*/
 body.thumbsupgo section.heightauto {
   height: auto;
-  min-height: unset;
+  min-height: calc(100vh - 417px);
   padding-top: 0px;
   padding-bottom: 40px;
 }
