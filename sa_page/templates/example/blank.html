@@ -23,9 +23,12 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" class="next-head">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" rel="stylesheet" class="next-head">
+
     <meta name="msapplication-TileColor" content="#ffffff">
+
 
     <meta name="theme-color" content="#ffffff">
 
@@ -48,7 +51,11 @@
     <link rel="home" href="/sa/" />
     <link rel="canonical" href="/sa/">
     <link rel="stylesheet" href="{% static 'assets/css/sa.css' %}">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="screen">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"  media="screen">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/commons.css' %}">
 
 
     <div id="top"></div>
@@ -73,124 +80,57 @@
 
 </head>
 
-<body class="content">
+<body class="content thumbsupgo">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <div class="background" data-toggle-menu></div>
-
-        <div class="nav-container">
-            <div class="top">
-                <a href="/sa/" class="logo"></a>
-
-                <nav class="main">
-                    <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
-                    <a href="{% static 'videos/sa_p_v1.mp4' %}" class="nav-link" data-trigger-page-transition><span class="text">新功能查看</span> <span class="line"></span></a>
-                    <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">數據總覽</span> <span class="line"></span></a>
-                    <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text" target="_blank">點贊Go!</span> <span class="line"></span></a>
-                </nav>
 
 
-                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
-            </div>
-
-            <div class="bottom">
-                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
-
-                <div class="form-container tabs-container">
-                    <div class="tabs">
-                        <a href="/sa/#" class="heading tab active" data-open-tab="trialForm">聯絡我們</a>
-
-                    </div>
+    <!-- 切元件 Navigation-->
+    <header w3-include-html="{% templates 'elements/header.html' %}" class="menu-open"></header>
+    <!--End Navigation -->
 
 
-                    <div class="tab-content-container">
-                        <div class="tab-content active" data-tab="trialForm">
-                            <p>同仁有任何想法，歡迎與SuperAgent團隊聯絡</p>
-                            <p>E-Mail:
-                                <a href="mailto:SuperAgent@sinyi.com.tw?subject=主旨&body=內容">SuperAgent@sinyi.com.tw</a></p>
 
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-bar-container">
-            <div class="menu-bar">
-                <a href="/sa/" class="logo small" data-trigger-page-transition></a>
-                <a href="/sa/#" class="menu-button" data-toggle-menu>
-                    <span class="menu-button-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </span>
-                </a>
-
-                <a href="/sa/#" class="trial-link" data-toggle-trial><span class="text">Contact Us</span></a>
-            </div>
-
-        </div>
-    </header>
+    <!-- 切元件 Breadcrumbs-->
+    <div w3-include-html="{% templates 'elements/breadcrumbs.html' %}"  class="horizontalstyle"></div>
+    <!--End Breadcrumbs -->
 
 
+    <!-- Content Block-->
     <div class="wrapper">
-        <section class="content-split-container background-fixed" data-section-active data-section="0" data-video-intro>
 
-        </section>
+        
 
-
-
-
-
-
-
-
-
-
-
-        <footer>
-            <div class="inner">
-                <div class="top">
-                    <div class="logo-container">
-                        <a href="/sa/" class="logo" data-trigger-page-transition></a>
-
-                    </div>
-
-
+        <!--content-list-->
+        <section class="heightauto" data-section-active data-section="0" data-video-intro>
+            <div class="container">
+                <div class="row sectiontitle">
+                    <h2>假字假字假字假字</h2>
                 </div>
-
-                <div class="bottom">
-                    <nav class="footer">
-
-                        <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
-                        <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">新功能查看</span> <span class="line"></span></a>
-                        <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">數據總覽</span> <span class="line"></span></a>
-                        <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點贊Go!</span> <span class="line"></span></a>
-
-                    </nav>
-
-                    <div class="right">
-                        <nav class="footer-sub">
-                            <span>Copyright &copy; 2022 信義房屋股份有限公司 Transformation Office . All rights reserved.</span>
-
-                        </nav>
-
-
-
-                        <div id="gRecaptcha" class="g-recaptcha"></div>
-                    </div>
-                </div>
+                <p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
             </div>
-        </footer>
+        </section>
+        <!--End content-list-->
+       
+
+        <!--切元件 Fixed download block -->
+        <div id="fixedblock" w3-include-html="{% templates 'elements/fixeddownloadblock.html' %}"></div>
+        <!-- End Fixed download block -->
+
+
+        <!-- 切元件 Footer -->
+        <footer w3-include-html="{% templates 'elements/footer.html' %}"></footer>
+        <!-- End Footer -->
+
 
         <div class="messages-container">
             <a href="/sa/#" class="close-icon"></a>
         </div>
+
     </div>
+    <!--End Content Block -->
+
 
 
     <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
@@ -208,6 +148,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
     <script src="{% static 'js/interface.js' %}"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+    <!-- w3.js 用來include html的功能-->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
+    <!-- end of w3.js 用來include html的功能-->    
+
     <script>
         window.onRecaptchaLoad = function() {
             window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
@@ -217,6 +166,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 'theme': 'dark'
             });
         };
+
+        $(document).ready(function() {
+            $('.bxslider').bxSlider({
+                speed: 600,
+                mode: 'horizontal',
+                infiniteLoop: true,
+                easing: 'ease-in-out',
+                adaptiveHeight: true,
+                responsive: true,
+                preloadImages: 'all',
+                auto: true,
+                autoHover: true,
+                preventDefaultSwipeY: true
+
+            });
+
+
+
+        });
+
+
+        $(document).ready(function(){
+            function hidemenu(){
+               $("header.menu-open").removeClass("menu-open");
+            }
+            setTimeout(hidemenu, 2000);
+        });
     </script>
 
 
