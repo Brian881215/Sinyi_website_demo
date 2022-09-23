@@ -1,3 +1,192 @@
+{% extends 'sa_base.html' %}
+{% load static %}
+{% block title %}買方服務流程{% endblock title %}
+{% block Content %}
+    <div class="submenu">
+        <ol>
+            <li class="namecard"><a href="/sa/functionintro/businesscard/"><div class="menu-item"><span>數位名片1.0</span></div></a></li>
+            <li class="community"><a href="/sa/functionintro/community/"><div class="menu-item"><span>社區檔案櫃</span></div></a></li>
+            <li class="active sellingprocess"><a href="#"><div class="menu-item"><span>買方服務流程</span></div></a></li>
+        </ol>
+    </div>
+    <div class="rightcolumn">
+        {% block Breadcrumbs%}
+            <div class="horizontalstyle">
+                <div class="nav-container">
+                    <div class="top">
+                        <a href="/sa/" class="logo black"></a>
+
+                        <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+                        <h2>SA攻略</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">SA攻略 - 買方服務流程</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+        {% endblock Breadcrumbs %}
+        <div class="content">
+            <section class="funcintro-intro">
+                <div class="container">
+                    <div class="row" >
+                        <div class="funcintro-sectitle">
+                            <h2 class="center">買方服務流程上線囉 !</h2>
+                            <div class="scrolldownarrow"></div>
+                        </div>
+                        <div class="funcintro-block greenbg nopaddingbottom">
+                            <h3 class="center">360度 秒懂客戶無死角</h3>
+                            <p class="center">提高專業度，服務不漏氣</p>
+                            <img src="{% static 'assets/img/functionintro/sellingprocess-intro-1.svg' %}" />
+                        </div>
+                        <div class="funcintro-block greenbg">
+                            <h3 class="center">複數需求卡，配案更靈活</h3>
+                            <p class="center">單一客戶複數需求卡，配案好閱讀，推薦不混亂</p>
+                            <img src="{% static 'assets/img/functionintro/sellingprocess-intro-2.svg' %}" />
+                        </div>
+                        <div class="funcintro-block greenbg nopaddingbottom">
+                            <h3 class="center">任務完成紀錄也完成</h3>
+                            <p class="center">任務完成服務紀錄即完成，服務歷程不漏接</p>
+                            <img src="{% static 'assets/img/functionintro/sellingprocess-intro-3.svg' %}" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="funcintro-qa">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="qasliderow" id="qasliderow-namecard">
+                            <h3 class="center">常見問題集</h3>
+                            <ol>
+                                <li>
+                                    <div class="title">客戶360<span class="subitemtitle">進入客戶360｜對客戶的認識｜客戶歷史｜線上行為</span></div>
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            <strong>輔助您環視客戶</strong>，了解客戶樣貌數據、信義足跡、線上行為，提前準備服務腳本。
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1.png' %}" alt="如何進入客戶360?">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1_1.png' %}" alt="對客戶的認識">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1_2.png' %}" alt="客戶的歷史">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-1_3.png' %}" alt="客戶線上行為">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">客戶快找<span class="subitemtitle">如何找｜找自己的｜找全公司的</span></div>
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            同時查自己與公司的客戶資料，省去來回切換的麻煩。
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2.png' %}" alt="如何找客戶？">
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2_1.png' %}" alt="找自己的客戶">
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2_2.png' %}" alt="找公司的客戶">
+
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">需求卡<span class="subitemtitle">建立需求卡｜複數需求卡</span></div>
+
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            針對單一客戶建立<strong>多張需求卡</strong>，客戶管理便利。配案更靈活，推薦不混亂。
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-6.png' %}" alt="建立需求卡">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-3.png' %}" alt="複數需求卡">
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">推薦/帶看<span class="subitemtitle">所有的紀錄｜單一需求的紀錄</span></div>
+
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            推薦過的案源與看過的案源一目瞭然。
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-4.png' %}" alt="針對此客戶的所有推薦/帶看">
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-4_1.png' %}" alt="針對單張需求卡的推薦/帶看">
+
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">帶看任務<span class="subitemtitle">建立任務｜從人脈查看｜從行事曆查看</span></div>
+
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            <strong>全新的任務體系概念</strong>，幫自己預約與客戶的服務我們稱做任務，除了可以在行事曆上提醒自己，任務若完成服務紀錄也隨之完成！
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5.png' %}" alt="建立任務">
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_1.png' %}" alt="查看已建立任務 (人脈)">
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_2.png' %}" alt="查看已建立任務 (任務首頁)">
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_3.png' %}" alt="完成任務">
+
+                                        </div>
+
+                                    </div>
+                                </li>
+
+                            </ol>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+{% endblock Content %}
+{% block fixedblock %}
+    {% include 'elements/fixeddownloadblock.html' %}
+{% endblock fixedblock %}
+
+
+
+{% comment %}
+
 {% load static %}
 <!doctype html>
 <html lang="zh">
@@ -83,8 +272,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <div class="top">
                 <a href="/sa/" class="logo"></a>
-               
-                <nav class="main">   
+
+                <nav class="main">
                     <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
                     <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="newtag">NEW</span><span class="text" target="_blank">活動快訊</span> <span class="line"></span></a>
                     <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
@@ -138,12 +327,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </header>
 
-
-   
-
-
     <div class="wrapper">
- 
+
             <div class="submenu">
                 <ol>
                     <li class="namecard"><a href="/sa/functionintro/businesscard/"><div class="menu-item"><span>數位名片1.0</span></div></a></li>
@@ -167,7 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </nav>
                         </div>
                     </div>
-            
+
                 </div>
                 <div class="content">
                     <section class="funcintro-intro">
@@ -186,19 +371,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <h3 class="center">複數需求卡，配案更靈活</h3>
                                     <p class="center">單一客戶複數需求卡，配案好閱讀，推薦不混亂</p>
                                     <img src="{% static 'assets/img/functionintro/sellingprocess-intro-2.svg' %}" />
-                                </div> 
+                                </div>
                                 <div class="funcintro-block greenbg nopaddingbottom">
                                     <h3 class="center">任務完成紀錄也完成</h3>
                                     <p class="center">任務完成服務紀錄即完成，服務歷程不漏接</p>
                                     <img src="{% static 'assets/img/functionintro/sellingprocess-intro-3.svg' %}" />
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </section>
                     <section class="funcintro-qa">
 
                         <div class="container">
-                            
+
                             <div class="row">
 
                                 <div class="qasliderow" id="qasliderow-namecard">
@@ -229,30 +414,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <div class="answer">
                                                 <div class="textbox">
                                                     同時查自己與公司的客戶資料，省去來回切換的麻煩。
-                                                   
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2.png' %}" alt="如何找客戶？">
-                                                   
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2_1.png' %}" alt="找自己的客戶">
-                                                   
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-2_2.png' %}" alt="找公司的客戶">
-                                                   
+
                                                 </div>
-                                                
+
                                             </div>
                                         </li>
                                         <li>
                                             <div class="title">需求卡<span class="subitemtitle">建立需求卡｜複數需求卡</span></div>
-                                            
+
                                             <div class="answer">
                                                 <div class="textbox">
                                                     針對單一客戶建立<strong>多張需求卡</strong>，客戶管理便利。配案更靈活，推薦不混亂。
-                                                    
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-6.png' %}" alt="建立需求卡">
@@ -260,63 +445,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-3.png' %}" alt="複數需求卡">
                                                 </div>
-                                               
+
                                             </div>
                                         </li>
                                         <li>
                                             <div class="title">推薦/帶看<span class="subitemtitle">所有的紀錄｜單一需求的紀錄</span></div>
-                                            
+
                                             <div class="answer">
                                                 <div class="textbox">
                                                     推薦過的案源與看過的案源一目瞭然。
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-4.png' %}" alt="針對此客戶的所有推薦/帶看">
-                                                 
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-4_1.png' %}" alt="針對單張需求卡的推薦/帶看">
-                                                 
+
                                                 </div>
-                                                
+
                                             </div>
                                         </li>
                                         <li>
                                             <div class="title">帶看任務<span class="subitemtitle">建立任務｜從人脈查看｜從行事曆查看</span></div>
-                                            
+
                                             <div class="answer">
                                                 <div class="textbox">
                                                     <strong>全新的任務體系概念</strong>，幫自己預約與客戶的服務我們稱做任務，除了可以在行事曆上提醒自己，任務若完成服務紀錄也隨之完成！
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5.png' %}" alt="建立任務">
-                                                  
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_1.png' %}" alt="查看已建立任務 (人脈)">
-                                                  
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_2.png' %}" alt="查看已建立任務 (任務首頁)">
-                                                  
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/sellingprocess-answer-5_3.png' %}" alt="完成任務">
-                                                  
+
                                                 </div>
-                                                
+
                                             </div>
                                         </li>
-                                        
+
                                     </ol>
                                 </div>
-            
-                              
-            
+
+
+
                             </div>
                         </div>
-            
-            
+
+
                     </section>
                 </div>
             </div>
@@ -334,8 +519,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             1.「數位名片」：自我介紹文字編輯<br>
                             2.「意見回饋」
                         </strong></p>
-                        
-    
+
+
                     </div>
                     <div class="block-footer">
                         <!-- <a href="#" class="blockbtns">我要回饋</a> -->
@@ -372,13 +557,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
                         <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span
-                            class="line"></span></a>   
+                            class="line"></span></a>
                         <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                         <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">產品熱度</span> <span class="line"></span></a>
                         <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點讚GO!</span> <span class="line"></span></a>
                         <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
                             class="line"></span></a>
-                      
+
                     </nav>
 
                     <div class="right">
@@ -446,3 +631,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
+
+{% endcomment %}

@@ -1,4 +1,84 @@
+{% extends 'sa_base.html'%}
 {% load static %}
+{% block title %}活動快訊{% endblock title %}
+
+{% block Content %}
+{% block Breadcrumbs %}
+<div class="horizontalstyle">
+    <div class="nav-container">
+        <div class="top">
+            <a href="/sa/" class="logo black"></a>
+
+            <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+            <h2>活動快訊</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">活動快訊</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock Breadcrumbs %}
+    <section class="content-split-container background-fixed heightauto" data-section-active data-section="0" data-video-intro>
+        <div class="container">
+            <ul class="bxslider">
+                <li><a href="https://sinyi-superagent-webapp-test-uscmmvx6lq-de.a.run.app/event/20220905/index.html" target="_blank"><img src="{% static 'assets/img/banners/events_banner_1.png' %}" /></a></li>
+                <!-- <li><img src="assets/img/thumbsupgo/banner2.png" /></li>
+                <li><img src="assets/img/thumbsupgo/banner3.png" /></li> -->
+            </ul>
+        </div>
+    </section>
+    <section class="heightauto" data-section-active data-section="0" data-video-intro>
+        <div class="container">
+            <div class="row sectiontitle">
+                <h2>活動快訊</h2>
+            </div>
+            <div class="listcontainer">
+                <ul class="eventlist">
+                    <li>
+
+
+                                <div class="event-small-cover"><img src="{% static 'assets/img/banners/event_0905_s-cover.png' %}" /></div>
+                                <div class="eventrow-content">
+                                    <div class="text-wrap">
+                                        <div class="inner-wrap">
+                                            <h3 class="eventtitle">[數位名片2.0] SHOW出我的自介</h3>
+                                            <p class="description">數位名片編輯自我介紹，並通過店長審核。
+                                                將審核後的數位名片截圖上傳至FB，並hashtag：「#SA數位名片」記得公開分喔！ 就送您活動限定 尊絕黑金版數位名片。</p>
+                                        </div>
+                                        <a class="row-cta" target="_blank" href="https://sinyi-superagent-webapp-test-uscmmvx6lq-de.a.run.app/event/20220905/index.html">MORE ></a>
+                                    </div>
+
+                                <div class="duration">活動期間 2022/09/05(ㄧ) 10:00 a.m. ～2022/09/16(五)</div>
+
+
+                                </div>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock Content %}
+{% block fixedblock %}
+    {% include 'elements/fixeddownloadblock.html' %}
+{% endblock fixedblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% load static %}
 <!doctype html>
 <html lang="zh">
 
@@ -82,8 +162,7 @@
 
 <body class="content thumbsupgo">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="menu-open">
         <div class="background" data-toggle-menu></div>
@@ -146,7 +225,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </header>
 
-
     <!--Breadcrumbs-->
     <div class="horizontalstyle">
         <div class="nav-container">
@@ -184,8 +262,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="listcontainer">
                     <ul class="eventlist">
                         <li>
-                          
-                            
+
+
                                     <div class="event-small-cover"><img src="{% static 'assets/img/banners/event_0905_s-cover.png' %}" /></div>
                                     <div class="eventrow-content">
                                         <div class="text-wrap">
@@ -196,19 +274,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             </div>
                                             <a class="row-cta" target="_blank" href="https://sinyi-superagent-webapp-test-uscmmvx6lq-de.a.run.app/event/20220905/index.html">MORE ></a>
                                         </div>
-                                            
+
                                        <div class="duration">活動期間 2022/09/05(ㄧ) 10:00 a.m. ～2022/09/16(五)</div>
-                                        
-                                        
+
+
                                     </div>
-                           
+
 
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-       
+
 
         <div id="fixedblock">
             <a id="btnlinkblock" href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" > </a>
@@ -223,7 +301,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         1.「數位名片」：自我介紹文字編輯<br>
                         2.「意見回饋」
                     </strong></p>
-                    
+
 
                 </div>
                 <div class="block-footer">
@@ -234,7 +312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </p>
                 </div>
             </div>
-        </div>
+
 
         <footer>
             <div class="inner">
@@ -251,13 +329,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <nav class="footer">
 
                         <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
-                        <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span class="line"></span></a>  
+                        <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span class="line"></span></a>
                         <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                         <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">產品熱度</span> <span class="line"></span></a>
                         <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點讚GO!</span> <span class="line"></span></a>
                         <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
                             class="line"></span></a>
-                       
+
                     </nav>
 
                     <div class="right">
@@ -278,6 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="/sa/#" class="close-icon"></a>
         </div>
     </div>
+
 
 
 
@@ -340,4 +419,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 
-</html>
+</html> {% endcomment %}

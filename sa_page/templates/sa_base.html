@@ -1,0 +1,80 @@
+{% load static %}
+<!doctype html>
+<html lang="zh">
+
+<head>
+
+    {% include 'elements/headInfo.html' %}
+
+    <title>{% block title %}這是sa_base喔!{% endblock title %}</title>
+
+</head>
+
+<body class="content thumbsupgo">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- 切元件 Navigation-->
+    {% comment %} <header w3-include-html="{% templates 'elements/header.html' %}" class="menu-open"></header> {% endcomment %}
+    <header class="menu-open">
+        {% include 'elements/navigation.html'%}
+    </header>
+    {% block superAgantLogo %}
+    {%endblock superAgantLogo%}
+    <!--End Navigation -->
+
+    <!-- 切元件 Breadcrumbs-->
+    {% comment %} <div w3-include-html="{% templates 'elements/breadcrumbs.html' %}"  class="horizontalstyle"></div> {% endcomment %}
+    {% comment %} <div class="horizontalstyle">
+        {% block Breadcrumbs %}
+        {% endblock Breadcrumbs %}
+    </div> {% endcomment %}
+    <!--End Breadcrumbs -->
+
+    <!-- Content Block-->
+
+    <div class="wrapper">
+        {% block Content %}
+
+            {% block Breadcrumbs %}
+            {% endblock Breadcrumbs %}
+
+        {% endblock Content %}
+        <!--content-list-->
+        {% comment %} <section class="heightauto" data-section-active data-section="0" data-video-intro>
+            <div class="container">
+                <div class="row sectiontitle">
+                    <h2>假字假字假字假字</h2>
+                </div>
+                <p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+            </div>
+        </section> {% endcomment %}
+        <!--End content-list-->
+
+        <!--切元件 Fixed download block -->
+        {% comment %} <div id="fixedblock" w3-include-html="{% templates 'elements/fixeddownloadblock.html' %}"></div> {% endcomment %}
+        {% block fixedblock %}
+
+        {% endblock fixedblock %}
+        <!-- End Fixed download block -->
+
+        <!-- 切元件 Footer -->
+        {% comment %} <footer w3-include-html="{% templates 'elements/footer.html' %}"></footer> {% endcomment %}
+        <footer>
+            {% include "elements/footer.html" %}
+        </footer>
+        <!-- End Footer -->
+
+
+        <div class="messages-container">
+            <a href="/sa/#" class="close-icon"></a>
+        </div>
+    </div>
+    <!--End Content Block -->
+
+    {% include 'elements/script.html' %}
+</body>
+
+</html>

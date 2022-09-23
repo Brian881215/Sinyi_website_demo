@@ -1,4 +1,135 @@
+{% extends 'sa_base.html' %}
 {% load static %}
+{% block title %}投票系統頁面{% endblock title %}
+
+{% block Content %}
+{% block Breadcrumbs %}
+<div class="horizontalstyle">
+    <div class="nav-container">
+        <div class="top">
+            <a href="/sa/" class="logo black"></a>
+            <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+            <h2>點讚GO!</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">點讚GO!</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock Breadcrumbs %}
+    <section class="content-split-container background-fixed heightauto" data-section-active data-section="0" data-video-intro>
+        <div class="container">
+            <ul class="bxslider">
+                <li><img src="{% static 'assets/img/thumbsupgo/banner1.png' %}" /></li>
+                <!-- <li><img src="assets/img/thumbsupgo/banner2.png" /></li>
+                <li><img src="assets/img/thumbsupgo/banner3.png" /></li> -->
+            </ul>
+        </div>
+    </section>
+    <section class="heightauto" data-section-active data-section="0" data-video-intro>
+        <div class="container">
+            <div class="row sectiontitle">
+                <h2>點讚GO!</h2>
+                <p>每人每週2讚，點讚數累積達一定量將優先進行開發！ 快來”讚助”你想要的功能！</p>
+            </div>
+            <div class="row boxwrap">
+                <div class="carditem">
+                    <a href="/sa/voting/?solution=1">
+                        <div class="pjimg">
+                            <img src="{% static 'assets/img/thumbsupgo/pjimg1.png' %}" alt="掌握社區開發先機" />
+                        </div>
+                    </a>
+                    <div class="pjcontain">
+                        <div class="pjtag">社區百科</div>
+                        <div class="pjtitle">
+                            <h3>掌握社區開發先機</h3>
+                        </div>
+                        <div class="pjdes">
+                            <p>當責社區太多，每天花很多時間比對資料？ 工作時間有限，顧此失彼流失黃金開發期？
+                                <br><br> 來來來！ 社區百科檔案櫃之開發王就～～這樣用！
+                            </p>
+                        </div>
+                        <div class="pjcta">
+                            <div class="dividerline"></div>
+                            <img class="kv-processbar" src="{% static 'assets/img/thumbsupgo/processbar.svg' %}">
+                            <div class="row">
+                                <a class="pjbtn" href="/sa/voting/?solution=1">看介紹</a>
+                                <a class="pjbtn" disabled="disabled" href="\">讚助此功能</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carditem">
+                    <a href="/sa/voting/?solution=2">
+                        <div class="pjimg">
+                            <img src="{% static 'assets/img/thumbsupgo/pjimg2.png' %}" alt="掌握社區開發先機" />
+                        </div>
+                    </a>
+                    <div class="pjcontain">
+                        <div class="pjtag">社區百科</div>
+                        <div class="pjtitle">
+                            <h3>社區行情盡收五指山</h3>
+                        </div>
+                        <div class="pjdes">
+                            <p>手機握在手上就像行情拿在手上！
+                                <br><br> 不管是帶看時客戶問同社區行情資訊，或是問你鄰近社區近期行情，都不用擔心被問倒。社區行情就像孫悟空一樣在你五指山！
+                            </p>
+                        </div>
+                        <div class="pjcta">
+                            <div class="dividerline"></div>
+                            <img class="kv-processbar" src="{% static 'assets/img/thumbsupgo/processbar.svg' %}">
+                            <div class="row">
+                                <a class="pjbtn" href="/sa/voting/?solution=2">看介紹</a>
+                                <a class="pjbtn" disabled="disabled" href="\">讚助此功能</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carditem">
+                    <a href="/sa/voting/?solution=3">
+                        <div class="pjimg">
+                            <img src="{% static 'assets/img/thumbsupgo/pjimg3.png' %}" alt="掌握社區開發先機" />
+                        </div>
+                    </a>
+                    <div class="pjcontain">
+                        <div class="pjtag">數位行銷</div>
+                        <div class="pjtitle">
+                            <h3>個人自媒體空間</h3>
+                        </div>
+                        <div class="pjdes">
+                            <p>給自己一個機會秀出最好的一面！
+                                <br><br> 數位名片再進化，除了榮耀成就外，再讓你用影音呈現出最好的一面給客戶，還可以結合主推案與主營社區，根本個人商城！
+                            </p>
+
+                        </div>
+                        <div class="pjcta">
+                            <img class="kv-processbar" src="{% static 'assets/img/thumbsupgo/processbar.svg' %}">
+                            <div class="dividerline"></div>
+                            <div class="row">
+                                <a class="pjbtn" href="/sa/voting/?solution=3">看介紹</a>
+                                <a class="pjbtn" disabled="disabled" href="\">讚助此功能</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock Content %}
+{% block fixedblock %}
+    {% include 'elements/fixeddownloadblock.html'%}
+{% endblock fixedblock %}
+{% comment %} {% load static %}
 <!doctype html>
 <html lang="zh">
 
@@ -83,7 +214,7 @@
 <body class="content thumbsupgo">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="menu-open">
         <div class="background" data-toggle-menu></div>
@@ -284,7 +415,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         1.「數位名片」：自我介紹文字編輯<br>
                         2.「意見回饋」
                     </strong></p>
-                    
+
 
                 </div>
                 <div class="block-footer">
@@ -321,13 +452,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
                         <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span
-                            class="line"></span></a>  
+                            class="line"></span></a>
                         <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                         <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">產品熱度</span> <span class="line"></span></a>
                         <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點讚GO!</span> <span class="line"></span></a>
                         <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
                             class="line"></span></a>
-                      
+
                     </nav>
 
                     <div class="right">
@@ -409,4 +540,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 
-</html>
+</html> {% endcomment %}
