@@ -14306,6 +14306,13 @@ a#btnlinkblock{
     margin-left: -125px;
 }
 
+@media (max-width:768px){
+    a#btnlinkblock {
+     
+        margin-left: calc(50% - 50px);
+    }
+}
+
 #fixedblock .block-title h4 {
     color: #ffffff;
     font-size: 22px;
@@ -14396,7 +14403,7 @@ a#btnlinkblock{
         position: relative;
         left: 0px;
         margin-top: 0px;
-        margin-left: 0px;
+        margin-left: calc(50% - 50px);
     }
     #fixedblock:hover {
         width: calc(100% - 40px);
@@ -14472,6 +14479,7 @@ body div.horizontalstyle h2 {
 @media screen and (max-width:768px) {
     body div.horizontalstyle {
         padding-left: 20px;
+        padding-top:240px;
     }
 }
 
