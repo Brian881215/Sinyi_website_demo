@@ -707,6 +707,7 @@ body.functionintro .wrapper .submenu li {
   border-radius: 10px;
   vertical-align: top;
   color: #92A2B9;
+  display: inline-table;
 }
 body.functionintro .wrapper .submenu li:hover {
   color: #0A192D;
@@ -754,6 +755,33 @@ body.functionintro .wrapper .submenu li span {
   font-weight: bold;
 }
 
+body.functionintro .wrapper .submenu li.newtag:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: red;
+  z-index: 3;
+  border-radius: 3px;
+  margin-top: 10px;
+  left: 25px;
+  position: absolute;
+}
+
+body.functionintro .wrapper .submenu li:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  display: block;
+  background-color: red;
+  position: absolute;
+  clear: both;
+}
+
+body.functionintro .wrapper .submenu li.newtag {
+  font-size: unset;
+}
+
 body.functionintro .wrapper .submenu li.namecard.active a > div.menu-item:before,
 body.functionintro .wrapper .submenu li.namecard a:hover > div.menu-item:before {
   background-image: url(../img/functionintro/glory.svg);
@@ -779,6 +807,15 @@ body.functionintro .wrapper .submenu li.sellingprocess a:hover > div.menu-item:b
 
 body.functionintro .wrapper .submenu li.sellingprocess a > div.menu-item:before {
   background-image: url(../img/functionintro/sellingprocess-grey.svg);
+}
+
+body.functionintro .wrapper .submenu li.productcart.active a > div.menu-item:before,
+body.functionintro .wrapper .submenu li.productcart a:hover > div.menu-item:before {
+  background-image: url(../img/functionintro/productcart.svg);
+}
+
+body.functionintro .wrapper .submenu li.productcart a > div.menu-item:before {
+  background-image: url(../img/functionintro/productcart-grey.svg);
 }
 
 body.functionintro .wrapper .rightcolumn .funcintro-sectitle h1,
@@ -955,23 +992,26 @@ body.functionintro .wrapper .rightcolumn section.funcintro-qa .qasliderow li .an
     width: 100%;
     position: relative;
     left: 0px;
-    height: 60px;
+    height: auto;
     top: 0px;
     padding-top: 10px;
     border-right: 0px solid #92A2B9;
     padding-bottom: 30px;
     border-bottom: 1px solid #92A2B9;
+    float: left;
+    z-index: 8;
   }
   body.functionintro .wrapper .submenu ol {
-    display: flex;
-    flex-direction: row;
+    display: block;
     width: 100%;
+    margin-top: 36px;
   }
   body.functionintro .wrapper .submenu ol > li {
-    width: auto;
-    padding: 2px 6px 2px 2px;
     font-size: 14px;
     margin-right: 12px;
+    width: 200px;
+    padding: 2px 12px 2px 12px;
+    float: left;
   }
   body.functionintro .wrapper .submenu li a > div.menu-item:before {
     content: "";
