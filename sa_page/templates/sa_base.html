@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="zh">
+<head>
+    {% comment %} {% include 'elements/headInfo.html' %} {% endcomment %}
+    {% block headerInfo %}
+        {% block title %}
+        <title>
+            這是sa_base喔!
+        </title>
+        {% endblock title %}
+    {% endblock headerInfo %}
+</head>
+<body {% block bodyClass %} class="content thumbsupgo" {% endblock bodyClass %}>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="menu-open">
+        {% include 'elements/navigation.html'%}
+    </header>
+    <div class="wrapper">
+        {% block Content %}
+            {% block Breadcrumbs %}
+            {% endblock Breadcrumbs %}
+        {% endblock Content %}
+        {% block fixedblock %}           
+        {% endblock fixedblock %}
+        <footer>
+            {% include "elements/footer.html" %}
+        </footer>
+        <div class="messages-container">
+            <a href="/sa/#" class="close-icon"></a>
+        </div>
+    </div>
+    {% block script %}
+    {% endblock script%}
+    {% comment %} {% include 'elements/script.html' %} {% endcomment %}
+</body>
+</html>

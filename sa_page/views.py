@@ -125,3 +125,6 @@ def sellingprocess(request):
 
 def events(request):
     return render(request, 'events.html')
+
+def sa_base(request):
+    return render(request, 'sa_base.html')

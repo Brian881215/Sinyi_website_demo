@@ -1,4 +1,194 @@
+{% extends 'sa_base.html'%}
 {% load static %}
+{% block headerInfo %}
+    {% block title %}
+        <title>活動快訊</title>
+    {% endblock title %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/img/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/img/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/img/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/img/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/img/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/img/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'assets/img/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" class="next-head">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" rel="stylesheet" class="next-head">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Sinyi - Super Agent 打造您的職能守護神" />
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SuperAgent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務" />
+    <meta property="og:image" content="assets/img/logo-small.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:description" content="打造您的職能守護神、數位賦能 服務全能、一鍵生成 工作即報表、數據整合 秒懂客戶" />
+    <meta property="og:site_name" content="Super Agent" />
+
+    <link rel="home" href="/sa/" />
+    <link rel="canonical" href="/sa/">
+    <link rel="stylesheet" href="{% static 'assets/css/sa.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"  media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/commons.css' %}">
+
+    <div id="top"></div>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-ML8B9HB');
+    </script>
+{% endblock headerInfo %}
+{% block bodyClass %}
+    class="content thumbsupgo"
+{% endblock bodyClass %}
+{% block Content %}
+{% block Breadcrumbs %}
+    <div class="horizontalstyle">
+        <div class="nav-container">
+            <div class="top">
+                <a href="/sa/" class="logo black"></a>
+
+                <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+                <h2>活動快訊</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">活動快訊</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+{% endblock Breadcrumbs %}
+    <section class="content-split-container background-fixed heightauto" data-section-active data-section="0" data-video-intro>
+        <div class="container">
+            <ul class="bxslider">
+                <li><a href="https://sinyi-superagent-webapp-test-uscmmvx6lq-de.a.run.app/event/20220905/index.html" target="_blank"><img src="{% static 'assets/img/banners/events_banner_1.png' %}" /></a></li>
+                <!-- <li><img src="assets/img/thumbsupgo/banner2.png" /></li>
+                <li><img src="assets/img/thumbsupgo/banner3.png" /></li> -->
+            </ul>
+        </div>
+    </section>
+    <section class="heightauto" data-section-active data-section="0" data-video-intro>
+        <div class="container">
+            <div class="row sectiontitle">
+                <h2>活動快訊</h2>
+            </div>
+            <div class="listcontainer">
+                <ul class="eventlist">
+                    <li>
+
+
+                                <div class="event-small-cover"><img src="{% static 'assets/img/banners/event_0905_s-cover.png' %}" /></div>
+                                <div class="eventrow-content">
+                                    <div class="text-wrap">
+                                        <div class="inner-wrap">
+                                            <h3 class="eventtitle">[數位名片2.0] SHOW出我的自介</h3>
+                                            <p class="description">數位名片編輯自我介紹，並通過店長審核。
+                                                將審核後的數位名片截圖上傳至FB，並hashtag：「#SA數位名片」記得公開分喔！ 就送您活動限定 尊絕黑金版數位名片。</p>
+                                        </div>
+                                        <a class="row-cta" target="_blank" href="https://sinyi-superagent-webapp-test-uscmmvx6lq-de.a.run.app/event/20220905/index.html">MORE ></a>
+                                    </div>
+
+                                <div class="duration">活動期間 2022/09/05(ㄧ) 10:00 a.m. ～2022/09/16(五)</div>
+
+
+                                </div>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock Content %}
+{% block fixedblock %}
+    {% include 'elements/fixeddownloadblock.html' %}
+{% endblock fixedblock %}
+{% block script %}
+    <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/interface.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+    <script>
+        window.onRecaptchaLoad = function() {
+            window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
+                'sitekey': '6LeNkL4UAAAAAJcRfruukBp2lab65JDvT8AmeKTS',
+                'badge': 'inline',
+                'size': 'invisible',
+                'theme': 'dark'
+            });
+        };
+
+        $(document).ready(function() {
+            $('.bxslider').bxSlider({
+                speed: 600,
+                mode: 'horizontal',
+                infiniteLoop: true,
+                easing: 'ease-in-out',
+                adaptiveHeight: true,
+                responsive: true,
+                preloadImages: 'all',
+                auto: true,
+                autoHover: true,
+                preventDefaultSwipeY: true
+
+            });
+
+
+
+        });
+
+
+        $(document).ready(function(){
+            function hidemenu(){
+               $("header.menu-open").removeClass("menu-open");
+            }
+            setTimeout(hidemenu, 2000);
+        });
+    </script>
+{% endblock script %}
+
+{% comment %} {% load static %}
 <!doctype html>
 <html lang="zh">
 
@@ -82,8 +272,7 @@
 
 <body class="content thumbsupgo">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML8B9HB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
 
@@ -149,7 +338,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </header>
 
-
     <!--Breadcrumbs-->
     <div class="horizontalstyle">
         <div class="nav-container">
@@ -187,8 +375,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="listcontainer">
                     <ul class="eventlist">
                         <li>
-                          
-                            
+
+
                                     <div class="event-small-cover"><img src="{% static 'assets/img/banners/event_0905_s-cover.png' %}" /></div>
                                     <div class="eventrow-content">
                                         <div class="text-wrap">
@@ -199,19 +387,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             </div>
                                             <a class="row-cta" target="_blank" href="https://sinyi-superagent-webapp-test-uscmmvx6lq-de.a.run.app/event/20220905/index.html">MORE ></a>
                                         </div>
-                                            
+
                                        <div class="duration">活動期間 2022/09/05(ㄧ) 10:00 a.m. ～2022/09/16(五)</div>
-                                        
-                                        
+
+
                                     </div>
-                           
+
 
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-       
+
 
         <div id="fixedblock">
             <a id="btnlinkblock" href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" > </a>
@@ -226,7 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         1.「數位名片」：自我介紹文字編輯<br>
                         2.「意見回饋」
                     </strong></p>
-                    
+
 
                 </div>
                 <div class="block-footer">
@@ -241,7 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         因此會以使用人數<strong>近九成的iOS系統</strong>來開發。</p>
                 </div>
             </div>
-        </div>
+
 
         <footer>
             <div class="inner">
@@ -258,13 +446,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <nav class="footer">
 
                         <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
-                        <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span class="line"></span></a>  
+                        <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="text">活動快訊</span> <span class="line"></span></a>
                         <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
                         <a href="/sa/pd_data/" class="nav-link" data-trigger-page-transition><span class="text">產品熱度</span> <span class="line"></span></a>
                         <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點讚GO!</span> <span class="line"></span></a>
                         <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
                             class="line"></span></a>
-                       
+
                     </nav>
 
                     <div class="right">
@@ -285,6 +473,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="/sa/#" class="close-icon"></a>
         </div>
     </div>
+
 
 
 
@@ -347,4 +536,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 
-</html>
+</html> {% endcomment %}

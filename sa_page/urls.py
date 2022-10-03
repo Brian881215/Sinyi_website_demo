@@ -3,6 +3,7 @@ from sa_page.views import *
 
 
 urlpatterns = [
+    path('sa_base/',sa_base, name="sa_base"),
     path('', index, name='index'),
     path('pd_data/', usage, name='pd_data'),
     path('voting/', voting, name='voting'),
