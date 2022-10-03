@@ -1,4 +1,301 @@
+{% extends 'sa_base.html' %}
 {% load static %}
+{% block headerInfo %}
+    {% block title %}
+    <title>
+        SA攻略_社區檔案櫃
+    </title>
+    {% endblock title %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/img/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/img/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/img/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/img/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/img/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/img/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'assets/img/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/img/favicon/manifest.json' %}">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" class="next-head">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;subset=chinese-traditional,japanese" rel="stylesheet" class="next-head">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Sinyi - Super Agent 打造您的職能守護神" />
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SuperAgent是承載數據與科技的數位平台，信義夥伴透過次世代智能協作，人人都是超級業務" />
+    <meta property="og:image" content="assets/img/logo-small.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:description" content="打造您的職能守護神、數位賦能 服務全能、一鍵生成 工作即報表、數據整合 秒懂客戶" />
+    <meta property="og:site_name" content="Super Agent" />
+
+    <link rel="home" href="/sa/" />
+	<link rel="canonical" href="/sa/">
+    <link rel="stylesheet" href="{% static 'assets/css/sa.css' %}">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet"  media="screen">
+    <link href="{% static 'assets/css/commons.css' %}" rel="stylesheet">
+
+    <div id="top"></div>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-ML8B9HB');
+    </script>
+    <!-- End Google Tag Manager -->
+{% endblock headerInfo %}
+{% block bodyClass %}
+    class="functionintro"
+{% endblock bodyClass %}
+{% block Content %}
+    <div class="submenu">
+        <ol>
+            <li class="namecard"><a href="/sa/functionintro/businesscard/"><div class="menu-item"><span>數位名片1.0</span></div></a></li>
+            <li class="active community"><a href="#"><div class="menu-item"><span>社區檔案櫃</span></div></a></li>
+            <li class="sellingprocess"><a href="/sa/functionintro/sellingprocess/"><div class="menu-item"><span>買方服務流程</span></div></a></li>
+        </ol>
+    </div>
+    <div class="rightcolumn">
+        <div class="horizontalstyle">
+            <div class="nav-container">
+                <div class="top">
+                    <a href="/sa/" class="logo black"></a>
+
+                    <a href="/sa/#" class="hidden-button" data-toggle-trial></a>
+                    <h2>SA攻略</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/sa/">首頁</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">SA攻略 - 社區檔案櫃</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="funcintro-intro">
+                <div class="container">
+                    <div class="row" >
+                        <div class="funcintro-sectitle">
+                            <h2 class="center">社區檔案櫃上線囉 !</h2>
+                            <div class="scrolldownarrow"></div>
+                        </div>
+                        <div class="funcintro-block greenbg nopaddingbottom">
+                            <h3 class="center">完整社區資訊握在手心 不擔心被客戶問倒</h3>
+                            <p class="center">拉開檔案櫃抽屜，細戶資料快速給你答案，立刻成為社區通。</p>
+                            <img src="{% static 'assets/img/functionintro/community-intro-1.svg' %}" />
+                        </div>
+                        <div class="funcintro-block greenbg">
+                            <h3 class="center">五大目錄瀏覽，掌握案源動態不求人</h3>
+                            <p class="center">有效資訊整合，讓您把時間與精神花在服務客戶上！</p>
+                            <img src="{% static 'assets/img/functionintro/community-intro-2.svg' %}" />
+                        </div>
+                        <div class="funcintro-block greenbg nopaddingbottom">
+                            <h3 class="center">只要你懂社區，社區就會幫你</h3>
+                            <p class="center">主營社區資訊維護得宜 獨家資訊都秀給你！</p>
+                            <img src="{% static 'assets/img/functionintro/community-intro-3.svg' %}" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="funcintro-qa">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="qasliderow" id="qasliderow-namecard">
+                            <h3 class="center">常見問題集</h3>
+                            <ol>
+                                <li>
+                                    <div class="title">為何要有社區檔案櫃？</div>
+                                    <div class="answer">
+                                        <div class="textbox">
+                                        <strong>社區百科</strong>著重<strong>社區資料</strong> / <strong>社區檔案</strong>櫃聚焦<strong>單一細戶資料</strong>。<br>
+                                        便利業務迅速了解細戶的資料與動態，掌握細戶動態無需辛苦備註，只要開啟社區檔案櫃！完整的資訊整合，讓您一眼可視重要資料，不再因為遺漏而遺憾。<br>
+                                        除了提供細戶資料，還針對責任範圍業務提供優於其他業務的第一手訊息。<br>
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-1.png' %}" alt="為何要有社區檔案櫃？">
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">行情概況</div>
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            提供<strong>實登資料</strong>與<strong>未實登的信義成交資料</strong>。樓棟戶別最新實價登錄清楚不漏接，歷史成交紀錄一覽無遺。
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-2.png' %}" alt="行情概況">
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-2_1.png' %}" alt="行情概況">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-2_2.png' %}" alt="行情概況">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-2_3.png' %}" alt="行情概況">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">銷售現況</div>
+
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            系統自動比對，輔助您掌握社區<strong>在售案源動態</strong>，了解案源熱度與比對後的有效數據。
+
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-3.png' %}" alt="銷售現況">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-3_1.png' %}" alt="銷售現況">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-3_2.png' %}" alt="銷售現況">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-3_3.png' %}" alt="銷售現況">
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-3_4.png' %}" alt="銷售現況">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">開發機會</div>
+
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            提醒<strong>案源開發機會</strong>，掌握潛案動態不求人，將許多原本需人工整理的資料，改為系統自動處理，讓業務把時間與精神花在服務客戶上。
+                                            只要看到檔案櫃出現新標籤，表示機會來嘍！
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-4.png' %}" alt="數位名片1.0總覽-簡介">
+
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">社區經營 / 當責社區</div>
+
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            社區經營：<br>
+                                            展示<strong>信義對於社區的經營成效</strong>，可查閱歷史資料了解細戶脈絡。同時也顯示業務同仁在社區的經營紀錄。<br>
+                                            <br>
+                                            當責社區：<br>
+                                            除了上述資料呈現，此欄位<strong>專為社區維護人提供優於其他業務的細戶資料</strong>。並維護社區資訊及添加細戶標籤，讓系統更能算出對您有利的獨家訊息。
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-5.png' %}" alt="數位名片1.0總覽-簡介">
+
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">物件細節</div>
+
+                                    <div class="answer">
+                                        <div class="textbox">
+                                            將細戶<strong>物件詳情標籤化</strong>，更便利於查看與篩選細戶，簡化到處查詢的繁瑣。
+                                        </div>
+                                        <div class="imagebox">
+                                            <img src="{% static 'assets/img/functionintro/community-answer-6.png' %}" alt="數位名片1.0總覽-簡介">
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+{% endblock Content %}
+{% block fixedblock %}
+    {% include 'elements/fixeddownloadblock.html' %}
+{% endblock fixedblock %}
+{% block script %}
+    <script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/interface.js' %}"></script>
+
+    <script>
+        window.onRecaptchaLoad = function() {
+            window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
+                'sitekey': '6LeNkL4UAAAAAJcRfruukBp2lab65JDvT8AmeKTS',
+                'badge': 'inline',
+                'size': 'invisible',
+                'theme': 'dark'
+            });
+        };
+
+
+        $(document).ready(function(){
+            $("#qasliderow-namecard ol li .title").click(function(){
+                $(this).toggleClass('open');
+                $(this).siblings('.answer').slideToggle();
+            });
+        });
+        $(document).ready(function(){
+            function hidemenu(){
+               $("header.menu-open").removeClass("menu-open");
+            }
+            setTimeout(hidemenu, 2000);
+        });
+    </script>
+
+{% endblock script %}
+
+{% comment %} {% load static %}
 <!doctype html>
 <html lang="zh">
 
@@ -7,7 +304,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-
 
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/img/favicon/apple-icon-57x57.png' %}">
     <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/img/favicon/apple-icon-60x60.png' %}">
@@ -83,8 +379,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="nav-container">
             <div class="top">
                 <a href="/sa/" class="logo"></a>
-               
-                <nav class="main">   
+
+                <nav class="main">
                     <a href="/sa/" class="nav-link" data-trigger-page-transition><span class="text">首頁</span> <span class="line"></span></a>
                     <a href="/sa/events/" class="nav-link" data-trigger-page-transition><span class="newtag">NEW</span><span class="text" target="_blank">活動快訊</span> <span class="line"></span></a>
                     <a href="/sa/functionintro/" class="nav-link" data-trigger-page-transition><span class="text">SA攻略</span> <span class="line"></span></a>
@@ -138,12 +434,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </header>
 
-
-   
-
-
     <div class="wrapper">
- 
+
             <div class="submenu">
                 <ol>
                     <li class="namecard"><a href="/sa/functionintro/businesscard/"><div class="menu-item"><span>數位名片1.0</span></div></a></li>
@@ -167,8 +459,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </nav>
                         </div>
                     </div>
-            
                 </div>
+
                 <div class="content">
                     <section class="funcintro-intro">
                         <div class="container">
@@ -186,19 +478,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <h3 class="center">五大目錄瀏覽，掌握案源動態不求人</h3>
                                     <p class="center">有效資訊整合，讓您把時間與精神花在服務客戶上！</p>
                                     <img src="{% static 'assets/img/functionintro/community-intro-2.svg' %}" />
-                                </div> 
+                                </div>
                                 <div class="funcintro-block greenbg nopaddingbottom">
                                     <h3 class="center">只要你懂社區，社區就會幫你</h3>
                                     <p class="center">主營社區資訊維護得宜 獨家資訊都秀給你！</p>
                                     <img src="{% static 'assets/img/functionintro/community-intro-3.svg' %}" />
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </section>
                     <section class="funcintro-qa">
 
                         <div class="container">
-                            
+
                             <div class="row">
 
                                 <div class="qasliderow" id="qasliderow-namecard">
@@ -215,7 +507,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/community-answer-1.png' %}" alt="為何要有社區檔案櫃？">
                                                 </div>
-                                                
+
                                             </div>
                                         </li>
                                         <li>
@@ -223,11 +515,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <div class="answer">
                                                 <div class="textbox">
                                                     提供<strong>實登資料</strong>與<strong>未實登的信義成交資料</strong>。樓棟戶別最新實價登錄清楚不漏接，歷史成交紀錄一覽無遺。
-                                                   
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/community-answer-2.png' %}" alt="行情概況">
-                                                   
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/community-answer-2_1.png' %}" alt="行情概況">
@@ -242,11 +534,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </li>
                                         <li>
                                             <div class="title">銷售現況</div>
-                                            
+
                                             <div class="answer">
                                                 <div class="textbox">
                                                     系統自動比對，輔助您掌握社區<strong>在售案源動態</strong>，了解案源熱度與比對後的有效數據。
-                                                    
+
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/community-answer-3.png' %}" alt="銷售現況">
@@ -267,7 +559,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </li>
                                         <li>
                                             <div class="title">開發機會</div>
-                                            
+
                                             <div class="answer">
                                                 <div class="textbox">
                                                     提醒<strong>案源開發機會</strong>，掌握潛案動態不求人，將許多原本需人工整理的資料，改為系統自動處理，讓業務把時間與精神花在服務客戶上。
@@ -275,14 +567,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/community-answer-4.png' %}" alt="數位名片1.0總覽-簡介">
-                                                 
+
                                                 </div>
-                                                
+
                                             </div>
                                         </li>
                                         <li>
                                             <div class="title">社區經營 / 當責社區</div>
-                                            
+
                                             <div class="answer">
                                                 <div class="textbox">
                                                     社區經營：<br>
@@ -293,14 +585,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 </div>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/community-answer-5.png' %}" alt="數位名片1.0總覽-簡介">
-                                                  
+
                                                 </div>
-                                                
+
                                             </div>
                                         </li>
                                         <li>
                                             <div class="title">物件細節</div>
-                                            
+
                                             <div class="answer">
                                                 <div class="textbox">
                                                     將細戶<strong>物件詳情標籤化</strong>，更便利於查看與篩選細戶，簡化到處查詢的繁瑣。
@@ -308,18 +600,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <div class="imagebox">
                                                     <img src="{% static 'assets/img/functionintro/community-answer-6.png' %}" alt="數位名片1.0總覽-簡介">
                                                 </div>
-                                                
+
                                             </div>
                                         </li>
                                     </ol>
                                 </div>
-            
-                              
-            
+
+
+
                             </div>
                         </div>
-            
-            
+
+
                     </section>
                 </div>
             </div>
@@ -337,8 +629,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             1.「數位名片」：自我介紹文字編輯<br>
                             2.「意見回饋」
                         </strong></p>
-                        
-    
+
+
                     </div>
                     <div class="block-footer">
                         <!-- <a href="#" class="blockbtns">我要回饋</a> -->
@@ -353,15 +645,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
 
         <footer>
             <div class="inner">
@@ -384,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="/sa/voting/" class="nav-link" data-trigger-page-transition><span class="text">點讚GO!</span> <span class="line"></span></a>
                         <a href="https://sinyi-superagent-webapp-uscmmvx6lq-de.a.run.app/sa_index.html" target="_blank" class="nav-link" ><span class="text">手刀下載</span> <span
                             class="line"></span></a>
-                     
+
                     </nav>
 
                     <div class="right">
@@ -450,4 +733,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 
-</html>
+</html> {% endcomment %}

@@ -1,0 +1,53 @@
+{% load static %}
+<script type="text/javascript" src="{% static 'assets/js/manifest-sa.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/sa.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/script_sa.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/smoothscroll.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'js/interface.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+<script>
+    window.onRecaptchaLoad = function() {
+        window.grecaptchaClientId = grecaptcha.render('gRecaptcha', {
+            'sitekey': '6LeNkL4UAAAAAJcRfruukBp2lab65JDvT8AmeKTS',
+            'badge': 'inline',
+            'size': 'invisible',
+            'theme': 'dark'
+        });
+    };
+
+    $(document).ready(function() {
+        $('.bxslider').bxSlider({
+            speed: 600,
+            mode: 'horizontal',
+            infiniteLoop: true,
+            easing: 'ease-in-out',
+            adaptiveHeight: true,
+            responsive: true,
+            preloadImages: 'all',
+            auto: true,
+            autoHover: true,
+            preventDefaultSwipeY: true
+
+        });
+
+
+
+    });
+
+
+    $(document).ready(function(){
+        function hidemenu(){
+           $("header.menu-open").removeClass("menu-open");
+        }
+        setTimeout(hidemenu, 2000);
+    });
+</script>

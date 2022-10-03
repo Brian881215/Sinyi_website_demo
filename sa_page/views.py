@@ -126,8 +126,13 @@ def sellingprocess(request):
 def events(request):
     return render(request, 'events.html')
 
+<<<<<<< HEAD
 def customertagfilter(request):
     return render(request, 'customertagfilter.html')
 
 def productcart(request):
     return render(request, 'productcart.com')
+=======
+def sa_base(request):
+    return render(request, 'sa_base.html')
+>>>>>>> goldenTagRule

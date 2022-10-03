@@ -87,7 +87,8 @@
 
 
     <!-- 切元件 Navigation-->
-    <header w3-include-html="{% templates 'elements/header.html' %}" class="menu-open"></header>
+    {% comment %} <header w3-include-html="{% templates 'elements/header.html' %}" class="menu-open"></header> {% endcomment %}
+    {%block navigation %}{% endblock %}
     <!--End Navigation -->
 
 
@@ -100,7 +101,7 @@
     <!-- Content Block-->
     <div class="wrapper">
 
-        
+
 
         <!--content-list-->
         <section class="heightauto" data-section-active data-section="0" data-video-intro>
@@ -112,7 +113,7 @@
             </div>
         </section>
         <!--End content-list-->
-       
+
 
         <!--切元件 Fixed download block -->
         <div id="fixedblock" w3-include-html="{% templates 'elements/fixeddownloadblock.html' %}"></div>
@@ -155,7 +156,7 @@
     <script>
         w3.includeHTML();
     </script>
-    <!-- end of w3.js 用來include html的功能-->    
+    <!-- end of w3.js 用來include html的功能-->
 
     <script>
         window.onRecaptchaLoad = function() {
